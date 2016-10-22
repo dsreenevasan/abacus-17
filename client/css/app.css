@@ -1,0 +1,82 @@
+.menu1{
+    position: fixed;
+    height: 4%;
+    width: 2.4%;
+    padding: 0px 0px 0px 10px;
+
+}
+
+.list{
+    position: fixed;
+    height: 0;
+    transition: height 0s ease-out;
+    overflow: hidden;
+    padding-left: 2%;
+}
+
+.list1, .list2{
+    position: fixed;
+    height: 0;
+    transition: height 0s ease-out;
+    overflow: hidden;
+    padding-left: 0.5%;
+    padding-top: 0.5%;
+    margin-left:1.9%;
+    width: 0;
+}
+
+.menu:hover, .menu1:hover{
+    background: rgba(0,0,0,0.2);
+}
+
+.menu:hover .list{
+    height: 4%;
+    transition: height 0s ease-out;
+    background: rgba(0,0,0,0.2);
+    padding: 10px 10px 10px 2%;
+
+}
+
+.menu1:hover .list1{
+    height: 11%;
+    width: 7%;
+    transition: height 0s ease-out;
+    background: rgba(0,0,0,0.2);
+}
+
+.menu1:hover .list2{
+    height: 15%;
+    width: 7%;
+    transition: height 0s ease-out;
+    background: rgba(0,0,0,0.2);
+}
+
+.overlay-div:hover #background{
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -ms-filter: blur(4px);
+    -o-filter: blur(4px);
+    filter: blur(4px);
+}
+
+.overlay-div:hover .overlay {
+    height: 100%;
+    transition: height 0s ease-in;
+    overflow: visible;
+}
+
+.overlay {
+    position: absolute;
+    width: 93%;
+    height: 0;
+    background: rgba(0,0,0,.3) fixed;
+    opacity: 1;
+    z-index: 10;
+    color: navajowhite;
+    overflow: hidden;
+    text-align: center;
+}
+
+.chosen:hover{
+    font-size: larger;
+}

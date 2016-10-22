@@ -1,0 +1,44 @@
+<div ng-controller="SampleController as ctrl" ng-keydown="ctrl.move($event)" tabindex="1" style="margin: 0% 0 0 0">
+
+    <!--<div style="height: 100px; width: 200px; margin-top: 5.2%; background-color: teal; margin-left: 40%; position: fixed;
+             -webkit-transition: margin-left 1s ease-out;">
+        hey there
+    </div>
+    <div style="height: 100px; width: 200px; margin-top: 10.4%; background-color: teal; margin-left: 40%; position: fixed;
+             -webkit-transition: margin-left 1s ease-out;">
+        hey there
+    </div>-->
+    <div class="row" style="padding-top: 15%; margin-left: 13%; width: 87%" ng-init="ctrl.setFocus()" id="navigation">
+        <div class="column col-md-1" ng-repeat="event in ctrl.events" ng-if="ctrl.windowWidth > 999 && $index == 0"
+             style="margin-left: {{ctrl.marginLeft}}; -webkit-transition: margin-left 1s ease-out;">
+            <div style="height: 100px; width: 150px; margin-top: 40%; background-color: teal;
+             -webkit-transition: margin-left 1s ease-out;">
+                {{event.name}}{{$index}}
+            </div>
+        </div>
+        <div class="column col-md-1" ng-repeat="event in ctrl.events" ng-if="ctrl.windowWidth > 999 && $index  != 0"
+             style="margin-left: 100px; -webkit-transition: margin-left 1s ease-out;" >
+            <div style="height: 100px; width: 150px; margin-top: 40%; background-color: teal;
+             -webkit-transition: margin-left 1s ease-out;">
+                {{event.name}}{{$index}}
+            </div>
+        </div>
+        <div style="height: 200px; width: 300px; margin-top: 0%; background-color: teal; margin-left: 25.5%; position: fixed;
+             -webkit-transition: margin-left 1s ease-out;" ng-swipe-left="ctrl.changeLeft()" ng-swipe-right="ctrl.changeRight()">
+            {{ctrl.bigDivEvent}}
+        </div>
+        <!--<div class="column col-md-3">
+            <div style=" height: 100px; width: 200px; background-color: teal; margin-left: {{ctrl.marginLeft}};
+             -webkit-transition: margin-left 1s ease-out;"></div>
+        </div>-->
+    </div>
+    <!--<div style="height: 100px; width: 200px; margin-top: 4.6%; background-color: teal; margin-left: 40%; position: fixed;
+             -webkit-transition: margin-left 1s ease-out;">
+        heyigaerioghoi
+    </div>
+    <div style="height: 100px; width: 200px; margin-top: 9.6%; background-color: teal; margin-left: 40%; position: fixed;
+             -webkit-transition: margin-left 1s ease-out;">
+        heyigaerioghoi
+    </div>-->
+
+</div>

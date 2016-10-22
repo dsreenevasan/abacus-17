@@ -1,0 +1,20 @@
+{
+  "name": "Abacus-Web",
+  "version": "0.0.0",
+  "description": "Abacus 2017 website ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Abacus",
+    "2k17",
+    "WebSite"
+  ],
+  "author": "Abacus Tech Team '17",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.14.0",
+    "bower": "~1.7.9"
+  }
+}
