@@ -8,22 +8,60 @@
              -webkit-transition: margin-left 1s ease-out;">
         hey there
     </div>-->
-    <div class="row" style="padding-top: 15%; margin-left: 13%; width: 87%" ng-init="ctrl.setFocus()" id="navigation">
-        <div class="column col-md-1" ng-repeat="event in ctrl.events" ng-if="ctrl.windowWidth > 999 && $index == 0"
-             style="margin-left: {{ctrl.marginLeft}}; -webkit-transition: margin-left 1s ease-out;">
+    <div class="row" style="padding-top: 10%; margin-left: 0%; width: 87%" ng-init="ctrl.setFocus()" id="navigation">
+        <div class="column col-md-1" ng-repeat="event in ctrl.events"
+             ng-if="ctrl.windowWidth > 999"
+             style="margin-left: {{ctrl.margins[(ctrl.divPosition+$index+7) %7]}};
+             -webkit-transition: margin-left 1s ease-out; margin-top: 8%; position: fixed">
+
+            <div style="height: 20vh; width: 10vw; margin-top: 40%; background-color: teal;">
+                {{event.name}}{{$index}}
+            </div>
+        </div>
+        <!--<div class="column col-md-1" ng-repeat="event in ctrl.events" ng-if="ctrl.windowWidth > 999 && $index  != 0"
+             style="margin-left: 10%; -webkit-transition: margin-left 1s ease-out; margin-top: 8%" >
             <div style="height: 100px; width: 150px; margin-top: 40%; background-color: teal;
              -webkit-transition: margin-left 1s ease-out;">
                 {{event.name}}{{$index}}
             </div>
-        </div>
-        <div class="column col-md-1" ng-repeat="event in ctrl.events" ng-if="ctrl.windowWidth > 999 && $index  != 0"
-             style="margin-left: 100px; -webkit-transition: margin-left 1s ease-out;" >
-            <div style="height: 100px; width: 150px; margin-top: 40%; background-color: teal;
+        </div>-->
+        <!--<div class="column col-md-1" ng-if="ctrl.windowWidth > 999"
+             style="margin-left: {{ctrl.margins[0]}}; -webkit-transition: margin-left 1s ease-out; margin-top: 8%; position: fixed">
+            <div style="height: 20vh; width: 10vw; margin-top: 40%; background-color: teal;
              -webkit-transition: margin-left 1s ease-out;">
-                {{event.name}}{{$index}}
+                textathon
             </div>
         </div>
-        <div style="height: 200px; width: 300px; margin-top: 0%; background-color: teal; margin-left: 25.5%; position: fixed;
+        <div class="column col-md-1" ng-if="ctrl.windowWidth > 999"
+             style="margin-left: {{ctrl.margins[1]}}; -webkit-transition: margin-left 1s ease-out; margin-top: 8%; position: fixed">
+            <div style="height: 20vh; width: 10vw; margin-top: 40%; background-color: teal;
+             -webkit-transition: margin-left 1s ease-out;">
+                ninjaCoding
+            </div>
+        </div>
+        <div class="column col-md-1" ng-if="ctrl.windowWidth > 999"
+             style="margin-left: {{ctrl.margins[2]}}; -webkit-transition: margin-left 1s ease-out; margin-top: 8%; position: fixed">
+            <div style="height: 20vh; width: 10vw; margin-top: 40%; background-color: teal;
+             -webkit-transition: margin-left 1s ease-out;">
+                OSPC
+            </div>
+        </div>
+        <div class="column col-md-1" ng-if="ctrl.windowWidth > 999"
+             style="margin-left: {{ctrl.margins[3]}}; -webkit-transition: margin-left 1s ease-out; margin-top: 8%; position: fixed">
+            <div style="height: 20vh; width: 10vw; margin-top: 40%; background-color: teal;
+             -webkit-transition: margin-left 1s ease-out;">
+                Geeks2g
+            </div>
+        </div>
+        <div class="column col-md-1" ng-if="ctrl.windowWidth > 999"
+             style="margin-left: {{ctrl.margins[4]}}; -webkit-transition: margin-left 1s ease-out; margin-top: 8%; position: fixed">
+            <div style="height: 20vh; width: 10vw; margin-top: 40%; background-color: teal;
+             -webkit-transition: margin-left 1s ease-out;">
+                Housefull
+            </div>
+        </div>-->
+
+        <div style="height: 60vh; width: 30vw; margin-top: 0%; background-color: teal; margin-left: 36%; position: fixed;
              -webkit-transition: margin-left 1s ease-out;" ng-swipe-left="ctrl.changeLeft()" ng-swipe-right="ctrl.changeRight()">
             {{ctrl.bigDivEvent}}
         </div>

@@ -80,3 +80,15 @@
 .chosen:hover{
     font-size: larger;
 }
+
+.rollDiv{
+    height: 20vh;
+    width: 10vw;
+    margin-top: 40%;
+    background-color: teal;
+}
+
+.noDisplay{
+    transition: none;
+    transition-delay: 0.3s;
+}

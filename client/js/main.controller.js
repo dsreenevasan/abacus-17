@@ -15,13 +15,13 @@
     ctrl.maxWidth = 0;
 
     ctrl.displayNav = function() {
-      ctrl.maxWidth = ctrl.maxWidth == 0 ? '50px' : 0;
+      ctrl.maxWidth = ctrl.maxWidth === 0 ? '50px' : 0;
       ctrl.showNav = !ctrl.showNav;
     };
 
     ctrl.stateChange = function() {
       $state.go('sample');
-    }
+    };
   }
 
 })();
