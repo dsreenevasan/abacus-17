@@ -16,7 +16,8 @@
         ctrl.windowWidth = $(window).width();
         console.log($(window).width());
 
-        ctrl.events = [{name: 'Debugging'}, {name: 'Heptathlon'}, {name: 'textathon'}, {name: 'ninjaCoding'}, {name: 'OSPC'}, {name: 'Geeks 2g'}, {name: 'House full'}];
+        document.getElementById('mainTab').focus();
+        ctrl.events = [{name: 'Geeks3g'}, {name: 'Debugging'}, {name: 'Heptathlon'}, {name: 'textathon'}, {name: 'ninjaCoding'}, {name: 'OSPC'}, {name: 'Geeks 2g'}, {name: 'House full'}, {name: 'DB mania'}];
         ctrl.marginLeftValue = ctrl.leftMargin;
         console.log(getWidth(30));
         ctrl.midDiv = Math.floor(ctrl.events.length/2);
@@ -38,8 +39,8 @@
             return percentage/100*ctrl.windowWidth;
         }
 
-        ctrl.marginValue = [-15, 5, 25, 45, 65, 85, 105];
-        ctrl.margins = ['-15%', '5%', '25%', '45%', '65%', '85%', '105%'];
+        ctrl.marginValue = [-35, -15, 5, 25, 45, 65, 85, 105, 125];
+        ctrl.margins = ['-35%', '-15%', '5%', '25%', '45%', '65%', '85%', '105%', '125%'];
 
         ctrl.move = function(key){
             console.log(key.keyCode);

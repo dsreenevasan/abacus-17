@@ -1,4 +1,4 @@
-<div ng-controller="SampleController as ctrl" ng-keydown="ctrl.move($event)" tabindex="1" style="margin: 0% 0 0 0">
+<div ng-controller="SampleController as ctrl" id="mainTab" ng-keydown="ctrl.move($event)" tabindex="1" style="margin: 0% 0 0 0">
 
     <!--<div style="height: 100px; width: 200px; margin-top: 5.2%; background-color: teal; margin-left: 40%; position: fixed;
              -webkit-transition: margin-left 1s ease-out;">
@@ -8,13 +8,24 @@
              -webkit-transition: margin-left 1s ease-out;">
         hey there
     </div>-->
+    <div class="column col-md-1" ng-repeat="event in ctrl.events"
+         ng-if="ctrl.windowWidth > 999"
+         style="margin-top: {{ctrl.margins[(ctrl.divPosition+$index+9) %9]}};
+             -webkit-transition: margin-top 1s ease-out; margin-left: 45%; position: fixed"
+         ng-style="ctrl.marginValue[(ctrl.divPosition+$index+9) %9] < -16 || ctrl.marginValue[(ctrl.divPosition+$index+9) %9] > 106  && {'display': 'none'} || {}">
+
+        <div style="height: 20vh; width: 10vw; background-color: teal">
+            {{event.name}}{{$index}}
+        </div>
+    </div>
     <div class="row" style="padding-top: 10%; margin-left: 0%; width: 87%" ng-init="ctrl.setFocus()" id="navigation">
         <div class="column col-md-1" ng-repeat="event in ctrl.events"
              ng-if="ctrl.windowWidth > 999"
-             style="margin-left: {{ctrl.margins[(ctrl.divPosition+$index+7) %7]}};
-             -webkit-transition: margin-left 1s ease-out; margin-top: 8%; position: fixed">
+             style="margin-left: {{ctrl.margins[(ctrl.divPosition+$index+9) %9]}};
+             -webkit-transition: margin-left 1s ease-out; margin-top: 8%; position: fixed"
+             ng-style="ctrl.marginValue[(ctrl.divPosition+$index+9) %9] < -16 || ctrl.marginValue[(ctrl.divPosition+$index+9) %9] > 106  && {'display': 'none'} || {}">
 
-            <div style="height: 20vh; width: 10vw; margin-top: 40%; background-color: teal;">
+            <div style="height: 20vh; width: 10vw; margin-top: 40%; background-color: teal">
                 {{event.name}}{{$index}}
             </div>
         </div>
