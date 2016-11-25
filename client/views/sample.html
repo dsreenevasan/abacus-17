@@ -8,19 +8,19 @@
              -webkit-transition: margin-left 1s ease-out;">
         hey there
     </div>-->
-    <div class="column col-md-1" ng-repeat="event in ctrl.events"
+    <div class="column col-md-1" ng-repeat="event in ctrl.genre"
          ng-if="ctrl.windowWidth > 999"
-         style="margin-top: {{ctrl.margins[(ctrl.divPosition+$index+9) %9]}};
+         style="margin-top: {{ctrl.marginsTop[(ctrl.verticalDivPosition+$index+5) %5]}};
              -webkit-transition: margin-top 1s ease-out; margin-left: 45%; position: fixed"
-         ng-style="ctrl.marginValue[(ctrl.divPosition+$index+9) %9] < -16 || ctrl.marginValue[(ctrl.divPosition+$index+9) %9] > 106  && {'display': 'none'} || {}">
+         ng-style="ctrl.marginTopValue[(ctrl.verticalDivPosition+$index+5) %5] < 6 || ctrl.marginTopValue[(ctrl.verticalDivPosition+$index+5) %5] > 50.6  && {'display': 'none'} || {}">
 
-        <div style="height: 20vh; width: 10vw; background-color: teal">
+        <div style="height: 5vh; width: 10vw; background-color: teal">
             {{event.name}}{{$index}}
         </div>
     </div>
     <div class="row" style="padding-top: 10%; margin-left: 0%; width: 87%" ng-init="ctrl.setFocus()" id="navigation">
-        <div class="column col-md-1" ng-repeat="event in ctrl.events"
-             ng-if="ctrl.windowWidth > 999"
+        <div class="column col-md-1" ng-repeat="event in ctrl.horizontalDivEvents"
+             ng-if="ctrl.windowWidth > 999 && event.category.id == (ctrl.midDiv+1)%ctrl.genre.length"
              style="margin-left: {{ctrl.margins[(ctrl.divPosition+$index+9) %9]}};
              -webkit-transition: margin-left 1s ease-out; margin-top: 8%; position: fixed"
              ng-style="ctrl.marginValue[(ctrl.divPosition+$index+9) %9] < -16 || ctrl.marginValue[(ctrl.divPosition+$index+9) %9] > 106  && {'display': 'none'} || {}">
