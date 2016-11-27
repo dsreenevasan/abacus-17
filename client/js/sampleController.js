@@ -15,7 +15,7 @@
         ctrl.verticalDivPosition = 0;
         /*$window.location.reload();*/
         ctrl.windowWidth = $(window).width();
-        console.log($(window).width());
+        /*console.log($(window).width());*/
 
         document.getElementById('mainTab').focus();
         ctrl.events = [{name: 'IBM', category: {id: 1}}, {name: 'IOT', category: {id: 1}},
@@ -33,7 +33,7 @@
         ctrl.genre = [{id: 1, name: 'Workshops'}, {id: 2, name: 'General - Online'}, {id: 3,name: 'General - Onsite'},
                     {id: 4, name: 'Coding - Online'}, {id: 0, name: 'Coding - Onsite'}];
         ctrl.marginLeftValue = ctrl.leftMargin;
-        console.log(getWidth(30));
+        /*console.log(getWidth(30));*/
         /*ctrl.midDiv = Math.floor(ctrl.events.length/2);*/
         ctrl.midDiv = Math.floor(ctrl.genre.length/2);
         setMargin();
@@ -65,21 +65,21 @@
                    ctrl.horizontalDivEvents.push(value);
                }
             });
-            console.log("id" + id + "hordivevents" + ctrl.horizontalDivEvents);
+            /*console.log("id" + id + "hordivevents" + ctrl.horizontalDivEvents);*/
         }
 
         function setHorizontalMidDiv(horizontalMidDiv){
             ctrl.bigDivEvent = ctrl.horizontalDivEvents[horizontalMidDiv%ctrl.horizontalDivEvents.length].name;
         }
 
-        ctrl.marginValue = [-35, -15, 5, 25, 45, 65, 85, 105, 125];
-        ctrl.margins = ['-35%', '-15%', '5%', '25%', '45%', '65%', '85%', '105%', '125%'];
+        ctrl.marginValue = [-35, -15, 3, 13, 45, 65, 85, 105, 125];
+        ctrl.margins = ['-35%', '-15%', '3%', '13%', '45%', '77%', '87%', '105%', '125%'];
 
-        ctrl.marginTopValue = [-4, 7.5, 24, 39.5, 105];
-        ctrl.marginsTop = ['-4%', '7.5%', '37.5%', '39.5%', '105%'];
+        ctrl.marginTopValue = [-4, 4.9, 31.5, 39.5, 105];
+        ctrl.marginsTop = ['-4%', '4.9%', '31.5%', '39.5%', '105%'];
 
         ctrl.move = function(key){
-            console.log(key.keyCode);
+            /*console.log(key.keyCode);*/
             if(key.keyCode == 39){      //right
 
                 /*ctrl.midDiv--;*/
@@ -111,7 +111,7 @@
                 ctrl.verticalDivPosition--;
                 ctrl.midDiv++;
                 setBigDiv();
-                console.log('midDiv' + ctrl.midDiv);
+                /*console.log('midDiv' + ctrl.midDiv);*/
             }
             else if(key.keyCode == 40) {  //down
                 ctrl.bigDivEvent = undefined;
@@ -121,23 +121,15 @@
                 }
                 ctrl.midDiv--;
                 setBigDiv();
-                console.log('midDiv' + ctrl.midDiv);
+                /*console.log('midDiv' + ctrl.midDiv);*/
             }
-            console.log("vertical Div" + ctrl.verticalDivPosition);
+            /*console.log("vertical Div" + ctrl.verticalDivPosition);*/
         };
 
-        ctrl.changeLeft = function(){
-            console.log("ngTouch");
+        ctrl.change = function(code){
+          /*console.log("keycode - " + code);*/
             var obj = {
-                keyCode: 37
-            };
-            ctrl.move(obj);
-        };
-
-        ctrl.changeRight = function(){
-            console.log("ngTouch");
-            var obj = {
-                keyCode: 39
+                keyCode : code
             };
             ctrl.move(obj);
         };
