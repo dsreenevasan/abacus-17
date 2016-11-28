@@ -73,10 +73,10 @@
         }
 
         ctrl.marginValue = [-35, -15, 3, 13, 45, 65, 85, 105, 125];
-        ctrl.margins = ['-35%', '-15%', '3%', '13%', '45%', '77%', '87%', '105%', '125%'];
+        ctrl.margins = ['-35vw', '-15vw', '3vw', '13vw', '45vw', '77vw', '87vw', '105vw', '125vw'];
 
         ctrl.marginTopValue = [-4, 4.9, 31.5, 39.5, 105];
-        ctrl.marginsTop = ['-4%', '4.9%', '31.5%', '39.5%', '105%'];
+        ctrl.marginsTop = ['-4%', '10vh', '65vh', '80vh', '105%'];
 
         ctrl.move = function(key){
             /*console.log(key.keyCode);*/

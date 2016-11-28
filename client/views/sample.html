@@ -1,28 +1,23 @@
-<div ng-controller="SampleController as ctrl" id="mainTab" ng-keydown="ctrl.move($event)" tabindex="1"
-     style="margin: 0% 0 0 0; background: url('../images/chip_computer_microchip_processor_5659_1920x1080.jpg');
-     background-size: 100% 100%; height: 100vh">
+<div ng-controller="SampleController as ctrl" id="mainTab" ng-keydown="ctrl.move($event)" tabindex="1" class="eventsMainDiv">
 
-    <div style="height: 10vh; width: 1920px; position:fixed; z-index: 100; background-color: white"></div>
-    <div style="margin: 90vh 0 0 0; height: 10vh; width: 1920px; position:fixed; z-index: 100; background-color: white"></div>
+    <div class="topTransparentDiv"></div>
+    <div class="bottomTransparentDiv"></div>
 
-    <div style="height: 100vh; width: 33vw; margin: 0 0 0 32.5%; position: fixed; z-index: 0; background-color: rgba(0, 0, 0, 0.8)"></div>
-    <div style="z-index: 0; margin: 15% 0 0 0; height: 30vh; width: 100vw; background-color: rgba(0, 0, 0, 0.8); position: fixed"></div>
+    <div class="verticalBackgroundDiv"></div>
+    <div class="horizontalBackgroundDiv"></div>
 
-    <div class="column col-md-1" ng-repeat="event in ctrl.genre"
-         ng-if="ctrl.windowWidth > 999"
-         style="margin-top: {{ctrl.marginsTop[(ctrl.verticalDivPosition+$index+5) %5]}}; z-index: 1;
-             -webkit-transition: margin-top 1s ease-out; margin-left: 34%; position: fixed; height: 12vh; width: 30vw; background-color: teal">
+    <div class="column col-md-1 verticalMainDiv" ng-repeat="event in ctrl.genre"
+         style="margin-top: {{ctrl.marginsTop[(ctrl.verticalDivPosition+$index+5) %5]}};">
         <!--ng-style="ctrl.marginTopValue[(ctrl.verticalDivPosition+$index+5) %5] < 6 || ctrl.marginTopValue[(ctrl.verticalDivPosition+$index+5) %5] > 50.6  && {'display': 'none'} || {}"-->
         {{event.name}}{{$index}}
         <!--<div style="height: 12vh; width: 30vw; background-color: teal">
             {{event.name}}{{$index}}
         </div>-->
     </div>
-    <div class="row" style="padding-top: 10%; margin-left: 0%; width: 100%; z-index: 1" ng-init="ctrl.setFocus()" id="navigation">
-        <div class="column col-md-1" ng-repeat="event in ctrl.horizontalDivEvents"
-             ng-if="ctrl.windowWidth > 999 && event.category.id == (ctrl.midDiv+1)%ctrl.genre.length"
-             style="margin-left: {{ctrl.margins[(ctrl.divPosition+$index+9) %9]}}; background-color: #0000ee;
-             -webkit-transition: margin-left 1s ease-out; margin-top: 8%; position: fixed; height: 18vh"
+    <div class="row horizontalDivRow" ng-init="ctrl.setFocus()" id="navigation">
+        <div class="column col-md-1 horizontalMainDiv" ng-repeat="event in ctrl.horizontalDivEvents"
+             ng-if="event.category.id == (ctrl.midDiv+1)%ctrl.genre.length"
+             style="margin-left: {{ctrl.margins[(ctrl.divPosition+$index+9) %9]}};"
              ng-style="ctrl.marginValue[(ctrl.divPosition+$index+9) %9] < -16 || ctrl.marginValue[(ctrl.divPosition+$index+9) %9] > 106  && {'display': 'none'} || {}">
 
             {{event.name}}{{$index}}
@@ -31,17 +26,16 @@
             </div>-->
         </div>
 
-        <div style="height: 60vh; width: 50vw; margin-top: 0%; background-color: rgba(0, 0, 0, 0.7); margin-left: 24%; position: fixed; z-index: 1;
-             -webkit-transition: margin-left 1s ease-out;" ng-swipe-up="ctrl.change(38)" ng-swipe-down="ctrl.change(40)" ng-swipe-left="ctrl.change(37)" ng-swipe-right="ctrl.change(39)">
-            <div style="margin: 2% 2% 2% 2%; height: 55vh; width: 96%; background-color: teal">
+        <div class="mainMidDiv" ng-swipe-up="ctrl.change(38)" ng-swipe-down="ctrl.change(40)" ng-swipe-left="ctrl.change(37)" ng-swipe-right="ctrl.change(39)">
+            <div class="mainInnerDiv">
                 <div style="height: 5vh; width: 80%;">{{ctrl.bigDivEvent}}</div>
-                <div style="width: 4vw; height: 100%; float: right; ">
-                    <i style="margin: 50% 0 0 25%; font-size: 2em" class="fa fa-anchor" aria-hidden="true"></i><br>
-                    <i style="margin: 50% 0 0 25%; font-size: 2em" class="fa fa-anchor" aria-hidden="true"></i><br>
-                    <i style="margin: 50% 0 0 25%; font-size: 2em" class="fa fa-anchor" aria-hidden="true"></i><br>
-                    <i style="margin: 50% 0 0 25%; font-size: 2em" class="fa fa-anchor" aria-hidden="true"></i><br>
+                <div style="width: 3vw; height: 100%; float: right; ">
+                    <i class="fa fa-anchor fa-2x fa-icons" aria-hidden="true"></i><br>
+                    <i class="fa fa-anchor fa-2x fa-icons" aria-hidden="true"></i><br>
+                    <i class="fa fa-anchor fa-2x fa-icons" aria-hidden="true"></i><br>
+                    <i class="fa fa-anchor fa-2x fa-icons" aria-hidden="true"></i><br>
                 </div>
-                <div style="height: 10vh; width: 100%; margin: 41.5% 0 0 0; background-color: rgba(0, 0, 0, 0.5)">{{ctrl.bigDivEvent}}</div>
+                <div class="mainMidBottomDiv">{{ctrl.bigDivEvent}}</div>
             </div>
         </div>
     </div>
