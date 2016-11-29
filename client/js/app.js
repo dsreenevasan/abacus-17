@@ -34,7 +34,7 @@
         'ngAnimate',
         'snap',
         'fullPage.js',
-        'ngTouch'
+        'swipe'
     ]);
     /*.run(
      function($location) {
