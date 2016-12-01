@@ -1,12 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Julius+Sans+One);
-
-html{width: 100%;height: 100%;}
-body{margin: 0px;padding: 0px;background-color: #111;}
-
-
 .eye{
     width: 20px; height: 8px;
-    background-color: #eee;
+    background-color: #FFF;
     border-radius:0px 0px 20px 20px;
     position: relative;
     top: 40px;
@@ -54,14 +49,13 @@ body{margin: 0px;padding: 0px;background-color: #111;}
     -webkit-backface-visibility: hidden;
     margin: 60px auto;
     width: 180px; height: 180px;
-    background-color: #111;
+    background-color: #FFF;
     border-radius: 0px 0px 50px 50px;
     position: relative;
     z-index: -1;
     left: 0%;
     top: 20%;
     overflow: hidden;
-    display: none
 }
 
 .hands{
@@ -86,11 +80,15 @@ body{margin: 0px;padding: 0px;background-color: #111;}
     font-family: 'Julius Sans One', sans-serif;
     font-size:30px;
     font-weight:400;
-    color:#eee;
+    color:#000;
     left: 10%;
     top: 5%;
 }
 
 [ng-cloak].circ{
     display: block !important;
+}
+
+.circ{
+    display: none;
 }
