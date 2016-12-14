@@ -25,6 +25,18 @@
                     visible: false
                 }
             }
+        },
+        {
+            name: 'bg',
+            state:
+            {
+                url:'/bg',
+                templateUrl: 'views/bg.html',
+                data: {
+                    text: "Sample",
+                    visible: false
+                }
+            }
         }
     ];
 
