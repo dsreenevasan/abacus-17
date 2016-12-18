@@ -1,4 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Julius+Sans+One);
+
+html{width: 100%;height: 100%;}
+body{margin: 0px;padding: 0px;background-color: #111;}
+
+.circ{
+    display: none;
+}
+
 .eye{
     width: 20px; height: 8px;
     background-color: #FFF;

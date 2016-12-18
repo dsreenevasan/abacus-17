@@ -49,6 +49,18 @@
                     visible: false
                 }
             }
+        },
+        {
+            name: 'login',
+            state:
+            {
+                url:'/login',
+                templateUrl: 'views/login.html',
+                data: {
+                    text: "Login",
+                    visible: false
+                }
+            }
         }
     ];
 
