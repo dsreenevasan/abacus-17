@@ -6,15 +6,17 @@
     box-sizing: border-box;
 }
 
-body {
+
+/**
+* Title
+**/
+
+.login{
     font-family: "Open Sans";
     font-size: 16px;
     background-color: #E9C677;
 }
 
-/**
-* Title
-**/
 .title {
     text-align: center;
     transform: translateY(20px);
@@ -57,7 +59,7 @@ body {
     opacity: 1;
 }
 
-form {
+/*form {
     padding: 90px 0;
     position: relative;
     z-index: 2;
@@ -88,6 +90,42 @@ form input:hover {
 }
 
 form input:focus {
+    background-color: white;
+    width: 300px;
+    color: #53e3a6;
+}*/
+
+.login-form{
+    padding: 90px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.login-form .form-input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 250px;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: black;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    font-weight: 300;
+}
+
+.login-form .form-input:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.login-form .form-input:focus {
     background-color: white;
     width: 300px;
     color: #53e3a6;

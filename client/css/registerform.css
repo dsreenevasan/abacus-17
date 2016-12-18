@@ -4,32 +4,33 @@
     box-sizing: border-box;
 }
 
-form {
+.register-form {
     max-width: 300px;
     margin: 10px auto;
     padding: 10px 20px;
     background: #f4f7f8;
     border-radius: 8px;
     z-index: 6;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-h1 {
+.register-h1 {
     margin: 0 0 30px 0;
     text-align: center;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-textarea,
-select {
+.register-input[type="text"],
+.register-input[type="password"],
+.register-input[type="date"],
+.register-input[type="datetime"],
+.register-input[type="email"],
+.register-input[type="number"],
+.register-input[type="search"],
+.register-input[type="tel"],
+.register-input[type="time"],
+.register-input[type="url"],
+.register-textarea,
+.register-select {
     background: rgba(255,255,255,0.1);
     border: none;
     font-size: 16px;
@@ -44,18 +45,18 @@ select {
     margin-bottom: 30px;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+.register-input[type="radio"],
+.register-input[type="checkbox"] {
     margin: 0 4px 8px 0;
 }
 
-select {
+.register-select {
     padding: 6px;
     height: 32px;
     border-radius: 2px;
 }
 
-button {
+.register-button {
     padding: 19px 39px 18px 39px;
     color: #FFF;
     background-color: #4bc970;
@@ -70,22 +71,24 @@ button {
     margin-bottom: 10px;
 }
 
-fieldset {
+.register-fieldset {
     margin-bottom: 30px;
     border: none;
 }
 
-legend {
+.register-legend {
     font-size: 1.4em;
     margin-bottom: 10px;
+    color: white;
 }
 
-label {
+.register-label {
     display: block;
     margin-bottom: 8px;
+    color: white;
 }
 
-label.light {
+.register-label.light {
     font-weight: 300;
     display: inline;
 }
@@ -106,7 +109,7 @@ label.light {
 
 @media screen and (min-width: 480px) {
 
-    form {
+    .register-form {
         max-width: 480px;
     }
 

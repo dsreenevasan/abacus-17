@@ -5,8 +5,13 @@ canvas {
 
 }
 #canvas-wrap{position: relative}
-#overlay{position: absolute;left: 12px;
-    top:10px; margin-left: 100vh;    }
+#overlay{
+    width: 50vw;
+    position: absolute;
+    left: 12px;
+    top:10px;
+    margin-left: 25vw;
+}
 
 body{
 
