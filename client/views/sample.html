@@ -24,7 +24,8 @@
         <div class="column col-md-1 horizontalMainDiv" ng-repeat="event in ctrl.eventDetails[ctrl.centreDiv.genreId].events"
              style="margin-left: {{ctrl.eventDetails[ctrl.centreDiv.genreId].margins[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length]}};
              background-image: url({{event.image}}); background-size: 100% 100%"
-                ng-if="ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] > -16 && ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] < 106">
+                ng-if="(ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] > -16
+                && ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] < 106)">
 
             {{event.name}}{{$index}}
             <!--<div style="height: 16vh; width: 8vw; margin-top: 40%; background-color: teal">
@@ -56,3 +57,10 @@
     </div>
 
 </div>
+
+<!--
+ng-hide="((ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == -15
+                &&ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition-1+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == 105)
+                || (ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == 105
+                &&ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+1+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == -15))"
+-->

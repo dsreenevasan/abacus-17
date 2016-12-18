@@ -253,6 +253,17 @@
             console.log("change display");
         };
 
+        /*function hideCondition(direction){
+            if(direction === 'left'){
+                ctrl.hideCondition = "(ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == 105" +
+                    "&&ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+1+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == -15)";
+            }
+            else{
+                ctrl.hideCondition = "(ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == -15" +
+                "&&ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition-1+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == 105)";
+            }
+        }*/
+
     }
 
 })();
