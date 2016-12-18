@@ -19,8 +19,8 @@
       ctrl.showNav = !ctrl.showNav;
     };
 
-    ctrl.stateChange = function($page) {
-      $state.go($page);
+    ctrl.stateChange = function(page) {
+      $state.go(page);
     };
   }
 

@@ -15,10 +15,10 @@
             }
         },
         {
-            name: 'sample',
+            name: 'events',
             state:
             {
-                url:'/sample',
+                url:'/events',
                 templateUrl: 'views/sample.html',
                 data: {
                     text: "Sample",

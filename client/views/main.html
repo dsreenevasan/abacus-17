@@ -19,18 +19,18 @@
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+					<span class="sr-only main-span">Toggle navigation</span>
+					<span class="icon-bar main-span"></span>
+					<span class="icon-bar main-span"></span>
+					<span class="icon-bar main-span"></span>
 				</button>
-				<a class="navbar-brand" ng-click="">Transparent to Solid Nav</a>
+				<a class="navbar-brand" ng-click="" style="color: black">Transparent to Solid Nav</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a ng-click="">About</a></li>
-					<li><a ng-click="">Link</a></li>
-					<li><a ng-click="">Another Link</a></li>
+					<li><a ng-click="ctrl.stateChange('events')" style="color: black">Events</a></li>
+					<li><a ng-click="ctrl.stateChange('login')" style="color: black">Login</a></li>
+					<li><a ng-click="ctrl.stateChange('register')" style="color: black">Register</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -81,7 +81,8 @@
 		<div ng-class="{ 'column col-md-10' : ctrl.maxWidth != 0, 'column col-md-12' : ctrl.maxWidth == 0 }">
 
 			<div id="fullpage">
-				<div class="section " id="section0">
+				<div class="section " id="section0" style="height: 80vh">
+					<!--<div class='city' style="zoom: 2; margin: -50vh 0 0 -20vw">-->
 					<div class='city'>
 						<div class='landscape'>
 							<div class='inner'>
@@ -149,11 +150,11 @@
 						<div class='foreground'>
 							<div class='inner'>
 								<div class='welcome'>
-									<h1>
+									<h1 class="main-h1">
 										Welcome to
 									</h1>
-									<h2>
-										<span></span>Abacus
+									<h2 style="margin-top: -0.1vh">
+										<span class="main-span"></span>Abacus
 									</h2>
 								</div>
 								<div class='trees'>
@@ -192,44 +193,44 @@
 						</div>
 					</div>
 				</div>
-				<div class="section" id="section1">
+				<div class="section" id="section1" style="height: 80vh">
 
 					<div class="row aboutusdiv">
-						<h1><span>Abacus 17</span></h1>
-						<p>Abacus, the national level technical symposium, conducted by CSEA primarily focuses on showcasing the skills of some of the best brains in the country.
+						<h1 class="main-h1"><span class="main-span">Abacus 17</span></h1>
+						<p class="main-p">Abacus, the national level technical symposium, conducted by CSEA primarily focuses on showcasing the skills of some of the best brains in the country.
 							Abacus, over the years has weaved a technical web, connecting smart minds in digital era, thus helping them unleash their expertness.
 							With an interesting array of events and workshops piled up, Abacus 2016 is all set to set trends</p>
-						<h1><span>CSEA</span></h1>
-						<p>Abacus, the national level technical symposium, conducted by CSEA primarily focuses on showcasing the skills of some of the best brains in the country.
+						<h1 class="main-h1"><span class="main-span">CSEA</span></h1>
+						<p class="main-p">Abacus, the national level technical symposium, conducted by CSEA primarily focuses on showcasing the skills of some of the best brains in the country.
 							Abacus, over the years has weaved a technical web, connecting smart minds in digital era, thus helping them unleash their expertness.
 							With an interesting array of events and workshops piled up, Abacus 2016 is all set to set trends</p>
 
 					</div>
 				</div>
-				<div class="section" id="section2">
-					<div style="color: white; font-size: xx-large; padding: 5% 0 0 0">
+				<!--<div class="section" id="section2">
+					<div style="color: white; font-size: xx-large; padding: 5% 0 0 0; height: 80vh">
 						Page 3
 					</div>
 					<br>
-					<!--<div class="row">
+					&lt;!&ndash;<div class="row">
 						<div class="column col-md-4" style="height: 80vh; background: green;"></div>
 						<div class="column col-md-4" style="height: 80vh; background: yellow;"></div>
 						<div class="column col-md-4" style="height: 80vh; background: darkviolet;"></div>
-					</div>-->
+					</div>&ndash;&gt;
 					<div class="slide" id="slide1">
 						<div class="intro">
-							<h1>Page for start up event</h1>
+							<h1 class="main-h1">Page for start up event</h1>
 						</div>
 					</div>
 
 					<div class="slide" id="slide2">
-						<h1>Slide 2</h1>
+						<h1 class="main-h1">Slide 2</h1>
 					</div>
 
 				</div>
 				<div class="section" id="section3">
 					contacts page is to be here
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>

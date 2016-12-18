@@ -396,26 +396,26 @@
     color: #666;
 }
 
-h1 {
+.main-h1 {
     margin: 2em 0;
     color: #00a99d;
 }
 
-p {
+.main-p {
     max-width: 50em;
     /*margin: 2em auto;*/
     font-size: 26px;
 }
 
-h1 {
+.main-h1 {
     text-align: center;
     overflow: hidden;
 }
-h1 span {
+.main-h1 .main-span {
     display: inline-block;
     position: relative;
 }
-h1 span:before, h1 span:after {
+.main-h1 .main-span:before, .main-h1 .main-span:after {
     content: "";
     border-bottom: 2px solid #00a99d;
     width: 3em;
@@ -423,10 +423,10 @@ h1 span:before, h1 span:after {
     position: absolute;
     bottom: .5em;
 }
-h1 span:before {
+.main-h1 .main-span:before {
     right: 100%;
 }
-h1 span:after {
+.main-h1 .main-span:after {
     left: 100%;
 }
 
