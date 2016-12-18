@@ -1,0 +1,21 @@
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+#regform{
+    position: absolute;
+    z-index: 6;
+    left: 12px;
+    top:10px;
+}
+body{
+
+    background-color:transparent;
+}

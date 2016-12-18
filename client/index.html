@@ -19,13 +19,13 @@
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <!--<link href="bower_components/tooltipster/src/css/tooltipster.css" rel="stylesheet" type="text/css">
     <link href="bower_components/tooltipster/src/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.css" rel="stylesheet" type="text/css">
-    <link href="css/tooltipster-shadow.css" type="text/css">
-    <link href="bower_components/tabulous/demo/src/tabulous.css" rel="stylesheet" type="text/css">-->
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">-->
+    <link href="css/tooltipster-shadow.css" type="text/css"> -->
+    <link href="bower_components/tabulous/demo/src/tabulous.css" rel="stylesheet" type="text/css">
+    <!--<link href="bower_components/ngprogress/ngProgress.css" rel="stylesheet" type="text/css">-->
 
     <!--Google Fonts-->
-    <!--<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300%7COpen+Sans:400,800,700,600,300' rel='stylesheet' type='text/css'>-->
-
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300%7COpen+Sans:400,800,700,600,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>
 
     <!--Color Scheme Setting-->
     <!--<link href="css/color.css" rel="stylesheet" type="text/css">
@@ -34,7 +34,12 @@
     <link href="css/app.css" rel="stylesheet" type="text/css">-->
 
     <!-- custom css -->
+
+    <link href="css/preloader.css" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" href="css/custom.css" type="text/css">
+    <link href="css/registerform.css" rel="stylesheet" type="text/css">
+    <link href="css/colorchanging.css" rel="stylesheet" type="text/css">
 
     <!--endbuild-->
 
@@ -42,16 +47,33 @@
 
 
 </head>
+<style>
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;  }
+</style>
 <body ng-app="abacus">
-<div class="">
-    <div ui-view ></div>
+
+<!--<div class="loadingscreen bodypart" ng-cloak="">
+    <div class="loading wave" >
+        Abacus
+    </div>
+</div>-->
+<div class="circ" ng-cloak="" >
+    <!--<div ng-controller="IndexController as ctrl" ></div>-->
+    <div class="load">Patience....</div>
+    <div class="hands"></div>
+    <div class="body"></div>
+    <div class="head">
+        <div class="eye"></div>
+    </div>
 </div>
+
+<div ui-view ></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.5/trianglify.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-
 
 <!--build:js js/main.min.js -->
 <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
@@ -71,9 +93,11 @@
 <script src="bower_components/angular-snap/angular-snap.js"></script>
 <script src="bower_components/snapjs/snap.js"></script>
 
+<!--<script src="bower_components/ngprogress/build/ngprogress.min.js"></script>-->
 <script src="bower_components/angular-swipe/dist/angular-swipe.min.js"></script>
 <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>-->
+
 
 
 <!--Custom js file-->
@@ -81,7 +105,7 @@
 <script src="js/indexController.js"></script>
 <script src="js/main.controller.js"></script>
 <script src="js/sampleController.js"></script>
-
+<script src="scripts/colorchanging.js"></script>
 <!-- endbuild -->
 </body>
 </html>

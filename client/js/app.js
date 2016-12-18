@@ -37,6 +37,18 @@
                     visible: false
                 }
             }
+        },
+        {
+            name: 'register',
+            state:
+            {
+                url:'/register',
+                templateUrl: 'views/register.html',
+                data: {
+                    text: "Register",
+                    visible: false
+                }
+            }
         }
     ];
 
