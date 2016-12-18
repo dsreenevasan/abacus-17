@@ -387,17 +387,47 @@
     }
 }
 
-canvas {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    cursor: pointer;
+
+
+.aboutusdiv {
+    margin: 10% 5%;
+    text-align: center;
+    font-family: sans-serif;
+    color: #666;
 }
 
-#bg{
-    background:#E1D38A;
-    background-size:cover;
-    font-family:sans-serif;
-    /*text-align:center;*/
-    height: 100vh;
+h1 {
+    margin: 2em 0;
+    color: #00a99d;
 }
+
+p {
+    max-width: 50em;
+    /*margin: 2em auto;*/
+    font-size: 26px;
+}
+
+h1 {
+    text-align: center;
+    overflow: hidden;
+}
+h1 span {
+    display: inline-block;
+    position: relative;
+}
+h1 span:before, h1 span:after {
+    content: "";
+    border-bottom: 2px solid #00a99d;
+    width: 3em;
+    margin: 0 1.5em;
+    position: absolute;
+    bottom: .5em;
+}
+h1 span:before {
+    right: 100%;
+}
+h1 span:after {
+    left: 100%;
+}
+
+

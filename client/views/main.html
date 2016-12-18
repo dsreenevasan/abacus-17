@@ -1,17 +1,41 @@
 <div class="container" ng-controller="MainController as ctrl" style="height: 1000px; width: 100%; padding: 0 0 0 0;">
-	<div id="header">
+	<!--<div id="header">
 		<label> logo and nav bar comes here</label>
 		<button class="btn btn-info" style="float: right; margin: 1% 10% 0 0 " ng-click="ctrl.stateChange('sample')">Events</button>
 		<button class="btn btn-info" style="float: right; margin: 1% 10% 0 0 " ng-click="ctrl.stateChange('login')">Login</button>
 
 		<!--<snap-content  ng-style="ctrl.maxWidth == 0 && {'color': '#f5f5f5', 'margin': '100% 0 0 1%', 'font-size': 'x-large'} || {'color': '#f5f5f5', 'margin': '0% 0 0 15%', 'font-size': 'x-large'}">
 
+		&lt;!&ndash;<snap-content  ng-style="ctrl.maxWidth == 0 && {'color': '#f5f5f5', 'margin': '100% 0 0 1%', 'font-size': 'x-large'} || {'color': '#f5f5f5', 'margin': '0% 0 0 15%', 'font-size': 'x-large'}">
+
+
 			<a ng-click="ctrl.displayNav()" >
 				<i ng-hide="ctrl.maxWidth != 0" class="fa fa-bars fa-2x" ></i>
 				<i ng-show="ctrl.maxWidth != 0" class="fa fa-times fa-2x" ></i>
 			</a>
-		</snap-content>-->
-	</div>
+		</snap-content>&ndash;&gt;
+	</div>-->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" ng-click="">Transparent to Solid Nav</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a ng-click="">About</a></li>
+					<li><a ng-click="">Link</a></li>
+					<li><a ng-click="">Another Link</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
 	<div class="row" style="background: black">
 		<!--<div ng-class="{ 'column col-md-2' : ctrl.maxWidth != 0 , '' : ctrl.maxWidth == 0 }">
 			&lt;!&ndash;<snap-content  ng-style="ctrl.maxWidth == 0 && {'color': '#f5f5f5', 'margin': '15% 0 0 5%', 'font-size': 'x-large'} || {'color': '#f5f5f5', 'margin': '15% 0 0 10%', 'font-size': 'x-large'}">
@@ -58,14 +82,133 @@
 
 			<div id="fullpage">
 				<div class="section " id="section0">
-					<div class="intro">
-						<h1 >Home Page</h1>
-						<p style="color: #f5f5f5">Something about abacus</p>
+					<div class='city'>
+						<div class='landscape'>
+							<div class='inner'>
+								<div class='moon'></div>
+								<div class='cityscape'>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='foreground'>
+							<div class='inner'>
+								<div class='welcome'>
+									<h1>
+										Welcome to
+									</h1>
+									<h2>
+										<span></span>Abacus
+									</h2>
+								</div>
+								<div class='trees'>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="section" id="section1">
+
+					<div class="row aboutusdiv">
+						<h1><span>Abacus 17</span></h1>
+						<p>Abacus, the national level technical symposium, conducted by CSEA primarily focuses on showcasing the skills of some of the best brains in the country.
+							Abacus, over the years has weaved a technical web, connecting smart minds in digital era, thus helping them unleash their expertness.
+							With an interesting array of events and workshops piled up, Abacus 2016 is all set to set trends</p>
+						<h1><span>CSEA</span></h1>
+						<p>Abacus, the national level technical symposium, conducted by CSEA primarily focuses on showcasing the skills of some of the best brains in the country.
+							Abacus, over the years has weaved a technical web, connecting smart minds in digital era, thus helping them unleash their expertness.
+							With an interesting array of events and workshops piled up, Abacus 2016 is all set to set trends</p>
+
+					</div>
+				</div>
+				<div class="section" id="section2">
 					<div style="color: white; font-size: xx-large; padding: 5% 0 0 0">
-						Page 2
+						Page 3
 					</div>
 					<br>
 					<!--<div class="row">
@@ -75,7 +218,7 @@
 					</div>-->
 					<div class="slide" id="slide1">
 						<div class="intro">
-							<h1>Slides for any use</h1>
+							<h1>Page for start up event</h1>
 						</div>
 					</div>
 
@@ -84,19 +227,8 @@
 					</div>
 
 				</div>
-				<div class="section" id="section2">
-					<div style="color: white; font-size: xx-large; padding: 5% 0 0 0">
-						Page 3 - some divs for different uses
-					</div>
-					<br>
-					<div class="row">
-						<div class="column col-md-4" style="height: 100vh; background: green;">
-							<div class="row" style="height: 50vh; background: bisque"></div>
-							<div class="row" style="height: 50vh; background: orange"></div>
-						</div>
-						<div class="column col-md-4" style="height: 100vh; background: darkgray;"></div>
-						<div class="column col-md-4" style="height: 100vh; background: fuchsia;"></div>
-					</div>
+				<div class="section" id="section3">
+					contacts page is to be here
 				</div>
 			</div>
 		</div>

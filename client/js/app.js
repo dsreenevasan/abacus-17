@@ -40,9 +40,8 @@
         },
         {
             name: 'register',
-            state:
-            {
-                url:'/register',
+            state: {
+                url: '/register',
                 templateUrl: 'views/register.html',
                 data: {
                     text: "Register",
