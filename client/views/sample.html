@@ -1,41 +1,56 @@
-<div ng-controller="SampleController as ctrl" id="mainTab" ng-keydown="ctrl.move($event)" tabindex="1" class="eventsMainDiv">
+<div ng-controller="SampleController as ctrl" id="bg" ng-keydown="ctrl.move($event)" tabindex="1" class="eventsMainDiv">
 
-    <div class="topTransparentDiv"></div>
-    <div class="bottomTransparentDiv"></div>
+    <div class="topTransparentDiv">
+        <i class="fa fa-home fa-icons" aria-hidden="true" ng-click="ctrl.go('main')" style="margin-left: 2vw; color: white"  title="Home"></i><br>
+    </div>
+    <div class="bottomTransparentDiv">
+        <label style="float: left" class="footer">Copyright 2016 @ CSEA.<br> All rights reserved.</label>
+        <label style="float: right"class="footer">For further queries,<br> Contact <strong style="color: #f5f5f5">webteam@abacus.org.in</strong></label>
+    </div>
 
     <div class="verticalBackgroundDiv"></div>
     <div class="horizontalBackgroundDiv"></div>
 
-    <div class="column col-md-1 verticalMainDiv" ng-repeat="event in ctrl.genre"
-         style="margin-top: {{ctrl.marginsTop[(ctrl.verticalDivPosition+$index+5) %5]}};">
+    <div class="column col-md-1 verticalMainDiv" ng-repeat="genre in ctrl.eventDetails"
+         style="margin-top: {{ctrl.marginsTop[(ctrl.verticalDivPosition + $index + ctrl.eventDetails.length) %ctrl.eventDetails.length]}};"
+            ng-if="ctrl.marginTopValue[(ctrl.verticalDivPosition + $index + ctrl.eventDetails.length) %ctrl.eventDetails.length] < 125">
         <!--ng-style="ctrl.marginTopValue[(ctrl.verticalDivPosition+$index+5) %5] < 6 || ctrl.marginTopValue[(ctrl.verticalDivPosition+$index+5) %5] > 50.6  && {'display': 'none'} || {}"-->
-        {{event.name}}{{$index}}
+        {{genre.genre}}{{$index}}
         <!--<div style="height: 12vh; width: 30vw; background-color: teal">
             {{event.name}}{{$index}}
         </div>-->
     </div>
     <div class="row horizontalDivRow" ng-init="ctrl.setFocus()" id="navigation">
-        <div class="column col-md-1 horizontalMainDiv" ng-repeat="event in ctrl.horizontalDivEvents"
-             ng-if="event.category.id == (ctrl.midDiv+1)%ctrl.genre.length"
-             style="margin-left: {{ctrl.margins[(ctrl.divPosition+$index+9) %9]}};"
-             ng-style="ctrl.marginValue[(ctrl.divPosition+$index+9) %9] < -16 || ctrl.marginValue[(ctrl.divPosition+$index+9) %9] > 106  && {'display': 'none'} || {}">
+        <div class="column col-md-1 horizontalMainDiv" ng-repeat="event in ctrl.eventDetails[ctrl.centreDiv.genreId].events"
+             style="margin-left: {{ctrl.eventDetails[ctrl.centreDiv.genreId].margins[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length]}};
+             background-image: url({{event.image}}); background-size: 100% 100%"
+                ng-if="ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] > -16 && ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] < 106">
 
             {{event.name}}{{$index}}
             <!--<div style="height: 16vh; width: 8vw; margin-top: 40%; background-color: teal">
                 {{event.name}}{{$index}}
             </div>-->
         </div>
-
-        <div class="mainMidDiv" ng-swipe-up="ctrl.change(38)" ng-swipe-down="ctrl.change(40)" ng-swipe-left="ctrl.change(37)" ng-swipe-right="ctrl.change(39)">
+        <div class="mainMidDiv" ng-swipe-up="ctrl.change(38)" ng-swipe-down="ctrl.change(40)" ng-swipe-left="ctrl.change(37)" ng-swipe-right="ctrl.change(39)"
+             style="background-image: url({{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].image}}); background-size: 100% 100%">
             <div class="mainInnerDiv">
-                <div style="height: 5vh; width: 80%;">{{ctrl.bigDivEvent}}</div>
-                <div style="width: 3vw; height: 100%; float: right; ">
-                    <i class="fa fa-anchor fa-2x fa-icons" aria-hidden="true"></i><br>
-                    <i class="fa fa-anchor fa-2x fa-icons" aria-hidden="true"></i><br>
-                    <i class="fa fa-anchor fa-2x fa-icons" aria-hidden="true"></i><br>
-                    <i class="fa fa-anchor fa-2x fa-icons" aria-hidden="true"></i><br>
+                <div class="midContentsDiv" ng-if="ctrl.show == 1">{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].description}}</div>
+                <div class="midContentsDiv" ng-if="ctrl.show == 2">
+                    <ul>
+                        <li ng-repeat="rules in ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].rules.points">{{rules}}</li>
+                    </ul>
                 </div>
-                <div class="mainMidBottomDiv">{{ctrl.bigDivEvent}}</div>
+                <div class="midContentsDiv" ng-if="ctrl.show == 3" >
+                    <li ng-repeat="format in ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].format.rounds">{{format}}</li>
+                </div>
+                <div class="midContentsDiv" ng-if="ctrl.show == 4">{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].contact}}</div>
+                <div class="midDivNavRing">
+                    <i class="fa fa-file-text fa-icons" aria-hidden="true" ng-click="ctrl.show = 1" title="Description"></i><br>
+                    <i class="fa fa-gavel fa-icons" aria-hidden="true" ng-click="ctrl.show = 2" title="Rules"></i><br>
+                    <i class="fa fa-pencil fa-icons" aria-hidden="true" ng-click="ctrl.show = 3" title="Format"></i><br>
+                    <i class="fa fa-phone fa-icons" aria-hidden="true" ng-click="ctrl.show = 4" title="Contact"></i><br>
+                </div>
+                <div id="bottomDiv" class=mainMidBottomDiv>{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].name}}</div>
             </div>
         </div>
     </div>

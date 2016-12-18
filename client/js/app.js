@@ -28,12 +28,22 @@
         },
         {
             name: 'register',
-            state:
-            {
-                url:'/register',
+            state: {
+                url: '/register',
                 templateUrl: 'views/register.html',
                 data: {
-                    text: "Register",
+                    text: "Register"
+                }
+            }
+        },
+        {           
+            name: 'bg',
+            state:
+            {
+                url:'/bg',
+                templateUrl: 'views/bg.html',
+                data: {
+                    text: "Sample",
                     visible: false
                 }
             }
