@@ -46,10 +46,10 @@
                 </div>
                 <div class="midContentsDiv" ng-if="ctrl.show == 4">{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].contact}}</div>
                 <div class="midDivNavRing">
-                    <i class="fa fa-file-text fa-icons" aria-hidden="true" ng-click="ctrl.show = 1" title="Description"></i><br>
-                    <i class="fa fa-gavel fa-icons" aria-hidden="true" ng-click="ctrl.show = 2" title="Rules"></i><br>
-                    <i class="fa fa-pencil fa-icons" aria-hidden="true" ng-click="ctrl.show = 3" title="Format"></i><br>
-                    <i class="fa fa-phone fa-icons" aria-hidden="true" ng-click="ctrl.show = 4" title="Contact"></i><br>
+                    <i class="fa fa-file-text fa-icons" aria-hidden="true" ng-click="ctrl.show = 1" title="Description" data-toggle="tooltip" data-placement="left"></i><br>
+                    <i class="fa fa-gavel fa-icons" aria-hidden="true" ng-click="ctrl.show = 2" title="Rules" data-toggle="tooltip" data-placement="left"></i><br>
+                    <i class="fa fa-pencil fa-icons" aria-hidden="true" ng-click="ctrl.show = 3" title="Format" data-toggle="tooltip" data-placement="left"></i><br>
+                    <i class="fa fa-phone fa-icons" aria-hidden="true" ng-click="ctrl.show = 4" title="Contact" data-toggle="tooltip" data-placement="left"></i><br>
                 </div>
                 <div id="bottomDiv" class=mainMidBottomDiv>{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].name}}</div>
             </div>

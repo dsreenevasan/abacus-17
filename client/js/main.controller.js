@@ -5,9 +5,9 @@
     .module('abacus')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['$state', '$compile', '$scope', '$window'];
+  MainController.$inject = ['$state', '$compile', '$scope', '$window' ,'$uibModal'];
 
-  function MainController($state, $compile, $scope, $window){
+  function MainController($state, $compile, $scope, $window, $uibModal){
 
     var ctrl = this;
     console.log("Success!");
@@ -31,6 +31,23 @@
 
     ctrl.stateChange = function(page) {
       $state.go(page);
+    };
+
+    ctrl.openModal = function(participant){
+      var modalInstance = $uibModal.open({
+        templateUrl: '../views/login.html',
+        backdrop: false,
+        size: 'lg',
+        resolve: {
+          
+        }
+      });
+      modalInstance.result.then(function () {
+            
+          },
+          function () {
+            
+          });
     };
   }
 
