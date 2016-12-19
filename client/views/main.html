@@ -15,7 +15,7 @@
 			</a>
 		</snap-content>&ndash;&gt;
 	</div>-->
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<!--<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -32,8 +32,41 @@
 					<li><a ng-click="ctrl.stateChange('login')" style="color: black">Login</a></li>
 					<li><a ng-click="ctrl.stateChange('register')" style="color: black">Register</a></li>
 				</ul>
-			</div><!--/.nav-collapse -->
+			</div>&lt;!&ndash;/.nav-collapse &ndash;&gt;
 		</div>
+	</nav>-->
+	<nav class="navbar navbar-default navbar-custom navbar-fixed-top" >
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand">Abacus'17</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+
+					<li><a ng-click="ctrl.stateChange('events')" style="color: black">Events</a></li>
+					<li><a ng-click="ctrl.stateChange('login')" style="color: black">Login</a></li>
+					<li><a ng-click="ctrl.stateChange('register')" style="color: black">Register</a></li>
+					<!--<li ng-repeat="title in ctrl.titles" ng-show="ctrl.dataLoaded">
+						<a ng-click="ctrl.scrollTo($index)">{{title}}</a>
+					</li>-->
+					<!--<li>
+                        <a href="http://frontend.cegtechforum.com/">FrontEnd</a>
+                    </li>-->
+
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
 	</nav>
 
 	<div class="row" style="background: black">
@@ -207,16 +240,16 @@
 
 					</div>
 				</div>
-				<!--<div class="section" id="section2">
+				<div class="section" id="section2">
 					<div style="color: white; font-size: xx-large; padding: 5% 0 0 0; height: 80vh">
 						Page 3
 					</div>
 					<br>
-					&lt;!&ndash;<div class="row">
+					<!--<div class="row">
 						<div class="column col-md-4" style="height: 80vh; background: green;"></div>
 						<div class="column col-md-4" style="height: 80vh; background: yellow;"></div>
 						<div class="column col-md-4" style="height: 80vh; background: darkviolet;"></div>
-					</div>&ndash;&gt;
+					</div>-->
 					<div class="slide" id="slide1">
 						<div class="intro">
 							<h1 class="main-h1">Page for start up event</h1>
@@ -230,7 +263,7 @@
 				</div>
 				<div class="section" id="section3">
 					contacts page is to be here
-				</div>-->
+				</div>
 			</div>
 		</div>
 	</div>
