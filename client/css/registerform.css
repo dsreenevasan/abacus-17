@@ -79,13 +79,13 @@
 .register-legend {
     font-size: 1.4em;
     margin-bottom: 10px;
-    color: white;
+    /*color: white;*/
 }
 
 .register-label {
     display: block;
     margin-bottom: 8px;
-    color: white;
+    /*color: white;*/
 }
 
 .register-label.light {
