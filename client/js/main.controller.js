@@ -5,10 +5,12 @@
     .module('abacus')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['$state', '$compile', '$scope', '$window' ,'$uibModal'];
+  MainController.$inject = ['$state', '$compile', '$scope', '$window' ,'$uibModal','$document'];
 
-  function MainController($state, $compile, $scope, $window, $uibModal){
+  function MainController($state, $compile, $scope, $window, $uibModal,$document){
 
+    var bodyRef = angular.element( $document[0].body );
+    console.log($document[0]);
     var ctrl = this;
     console.log("Success!");
     ctrl.showNav = false;
@@ -33,21 +35,32 @@
       $state.go(page);
     };
 
-    ctrl.openModal = function(participant){
+    ctrl.openModal = function(page, size){
+      $.fn.fullpage.setAllowScrolling(false);
+      $.fn.fullpage.setKeyboardScrolling(false);
+      $.fn.fullpage.moveTo(1);
+      bodyRef.addClass('ovh');
       var modalInstance = $uibModal.open({
-        templateUrl: '../views/login.html',
-        backdrop: false,
-        size: 'lg',
+        templateUrl: '../views/' + page + '.html',
+        backdrop: true,
+        size: size,
         resolve: {
           
         }
       });
-      modalInstance.result.then(function () {
-            
-          },
-          function () {
-            
-          });
+      modalInstance.result.then(function (selectedItem) {
+        // Remove it on closing
+        $.fn.fullpage.setAllowScrolling(true);
+        $.fn.fullpage.setKeyboardScrolling(true);
+        bodyRef.removeClass('ovh');
+
+      }, function () {
+        // Remove it on dismissal
+        $.fn.fullpage.setAllowScrolling(true);
+        $.fn.fullpage.setKeyboardScrolling(true);
+        bodyRef.removeClass('ovh');
+
+      });
     };
   }
 

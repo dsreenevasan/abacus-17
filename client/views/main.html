@@ -15,7 +15,7 @@
 			</a>
 		</snap-content>&ndash;&gt;
 	</div>-->
-	<!--<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -24,20 +24,20 @@
 					<span class="icon-bar main-span"></span>
 					<span class="icon-bar main-span"></span>
 				</button>
-				<a class="navbar-brand" ng-click="" style="color: black">Transparent to Solid Nav</a>
+				<a class="navbar-brand"  style="color: white">ABACUS '17</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a ng-click="ctrl.stateChange('events')" style="color: black">Events</a></li>
-					<li><a ng-click="ctrl.openModal()" style="color: black">Login</a></li>
-					<li><a ng-click="ctrl.stateChange('register')" style="color: black">Register</a></li>
+					<li><a ng-click="ctrl.stateChange('events')" style="color: white">Events</a></li>
+					<li><a ng-click="ctrl.openModal('login', 'sm')" style="color: white">Login</a></li>
+					<li><a ng-click="ctrl.openModal('register', 'md')" style="color: white">Register</a></li>
 				</ul>
-			</div>&lt;!&ndash;/.nav-collapse &ndash;&gt;
+			</div><!--/.nav-collapse -->
 		</div>
-	</nav>-->
-	<nav class="navbar navbar-default navbar-custom navbar-fixed-top" >
+	</nav>
+	<!--<nav class="navbar navbar-default navbar-custom navbar-fixed-top" >
 		<div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
+			&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;
 			<div class="navbar-header page-scroll">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
 					<span class="sr-only">Toggle navigation</span>
@@ -48,26 +48,26 @@
 				<a class="navbar-brand">Abacus'17</a>
 			</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
+			&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 
 					<li><a ng-click="ctrl.stateChange('events')" style="color: black">Events</a></li>
-					<li><a ng-click="ctrl.stateChange('login')" style="color: black">Login</a></li>
+					<li><a ng-click="ctrl.openModal()" style="color: black">Login</a></li>
 					<li><a ng-click="ctrl.stateChange('register')" style="color: black">Register</a></li>
-					<!--<li ng-repeat="title in ctrl.titles" ng-show="ctrl.dataLoaded">
+					&lt;!&ndash;<li ng-repeat="title in ctrl.titles" ng-show="ctrl.dataLoaded">
 						<a ng-click="ctrl.scrollTo($index)">{{title}}</a>
-					</li>-->
-					<!--<li>
+					</li>&ndash;&gt;
+					&lt;!&ndash;<li>
                         <a href="http://frontend.cegtechforum.com/">FrontEnd</a>
-                    </li>-->
+                    </li>&ndash;&gt;
 
 				</ul>
 			</div>
-			<!-- /.navbar-collapse -->
+			&lt;!&ndash; /.navbar-collapse &ndash;&gt;
 		</div>
-		<!-- /.container -->
-	</nav>
+		&lt;!&ndash; /.container &ndash;&gt;
+	</nav>-->
 	<div class="bottomTransparentDiv">
 		<label style="float: left" class="footer">Copyright 2016 @ CSEA.<br> All rights reserved.</label>
 		<label style="float: right"class="footer">For further queries,<br> Contact <strong style="color: #f5f5f5">webteam@abacus.org.in</strong></label>
@@ -118,8 +118,8 @@
 
 			<div id="fullpage">
 				<div class="section " id="section0" style="height: 80vh">
-					<div class='city' style="zoom: 2; margin: -54vh 0 0 -20vw">
-					<!--<div class='city'>-->
+					<!--<div class='city' style="zoom: 2; margin: -54vh 0 0 -20vw">-->
+					<div class='city'>
 						<div class='landscape'>
 							<div class='inner'>
 								<div class='moon'></div>
@@ -189,7 +189,7 @@
 									<h1 class="main-h1">
 										Welcome to
 									</h1>
-									<h2 style="margin-top: -0.1vh">
+									<h2 style="margin-top: -0.1vh; color: #ffff00">
 										<span class="main-span"></span>Abacus
 									</h2>
 								</div>
@@ -229,9 +229,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="section" id="section1" style="height: 80vh">
+				<div class="section" id="section1" style="height: 80vh " >
 
-					<div class="row aboutusdiv">
+					<div class="row newfullpage" >
 						<h1 class="main-h1"><span class="main-span">Abacus 17</span></h1>
 						<p class="main-p">Abacus, the national level technical symposium, conducted by CSEA primarily focuses on showcasing the skills of some of the best brains in the country.
 							Abacus, over the years has weaved a technical web, connecting smart minds in digital era, thus helping them unleash their expertness.
@@ -243,16 +243,16 @@
 
 					</div>
 				</div>
-				<div class="section" id="section2">
+				<!--<div class="section" id="section2">
 					<div style="color: white; font-size: xx-large; padding: 5% 0 0 0; height: 80vh">
 						Page 3
 					</div>
 					<br>
-					<!--<div class="row">
+					&lt;!&ndash;<div class="row">
 						<div class="column col-md-4" style="height: 80vh; background: green;"></div>
 						<div class="column col-md-4" style="height: 80vh; background: yellow;"></div>
 						<div class="column col-md-4" style="height: 80vh; background: darkviolet;"></div>
-					</div>-->
+					</div>&ndash;&gt;
 					<div class="slide" id="slide1">
 						<div class="intro">
 							<h1 class="main-h1">Page for start up event</h1>
@@ -266,7 +266,7 @@
 				</div>
 				<div class="section" id="section3">
 					contacts page is to be here
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>
@@ -301,22 +301,27 @@
 			navigation: false,
 			navigationPosition: 'right',
 			keyboardScrolling: true,
-			controlArrows: true
-		});
-	});
+			controlArrows: true,
 
-
-	$(document).ready(function() {
-		// Transition effect for navbar
-		$(window).scroll(function() {
-			// checks if window is scrolled more than 500px, adds/removes solid class
-			if($(this).scrollTop() > 500) {
-				$('.navbar').addClass('solid');
-			} else {
-				$('.navbar').removeClass('solid');
+			afterLoad: function(anchorLink, index){
+				// Section indexes in fullpage start at 1
+				/*if(index === $('#fullpage .section').length){
+					window.location.href = "http://stackoverflow.com";
+				}*/
+				console.log(index);
+				if(index>1)
+					$('.navbar').addClass('solid');
+				else
+					$('.navbar').removeClass('solid');
 			}
 		});
+
+
 	});
+
+
+
 
 </script>
 
+777
