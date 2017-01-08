@@ -5,7 +5,7 @@
 }
 
 .register-form {
-    max-width: 300px;
+    /*max-width: 300px;*/
     margin: 10px auto;
     padding: 10px 20px;
     background: #f4f7f8;
@@ -110,7 +110,7 @@
 @media screen and (min-width: 480px) {
 
     .register-form {
-        max-width: 480px;
+        /*max-width: 480px;*/
     }
 
 }

@@ -60,6 +60,18 @@
                     visible: false
                 }
             }
+        },
+        {
+            name: 'underconstruction',
+            state:
+            {
+                url:'/uc',
+                templateUrl: 'views/underconstruction.html',
+                data: {
+                    text: "Underconstruction",
+                    visible: false
+                }
+            }
         }
     ];
 

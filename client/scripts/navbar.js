@@ -1,6 +1,3 @@
-/**
- * Created by vagul on 12/17/2016.
- */
 $(document).ready(function() {
     // Transition effect for navbar 
     $(window).scroll(function() {
