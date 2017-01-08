@@ -141,6 +141,47 @@
     font-size: 1.2em;
 }
 
+.aboutusdiv {
+    margin: 3vh 3vw 0 3vw;
+    text-align: center;
+    font-family: sans-serif;
+    color: #666;
+}
+
+.main-h1 {
+    margin: auto;
+    color: #00a99d;
+}
+
+.main-p {
+    /*max-width: 50em;*/
+    /*margin: 2em auto;*/
+    font-size: 2em;
+}
+
+.main-h1 {
+    text-align: center;
+    overflow: hidden;
+}
+.main-h1 .main-span {
+    display: inline-block;
+    position: relative;
+}
+.main-h1 .main-span:before, .main-h1 .main-span:after {
+    content: "";
+    border-bottom: 2px solid #00a99d;
+    width: 3em;
+    margin: 0 1.5em;
+    position: absolute;
+    bottom: .5em;
+}
+.main-h1 .main-span:before {
+    right: 100%;
+}
+.main-h1 .main-span:after {
+    left: 100%;
+}
+
 @media(max-width: 640px){
 
     .topTransparentDiv{
@@ -261,6 +302,47 @@
 
     .footer{
         font-size: 0.7em;
+    }
+
+    .aboutusdiv {
+        margin: 2vh 1.5vw 0 1.5vw;
+        text-align: center;
+        font-family: sans-serif;
+        color: #666;
+    }
+
+    .main-h1 {
+        margin: auto;
+        color: #00a99d;
+    }
+
+    .main-p {
+        /*max-width: 50em;*/
+        /*margin: 2em auto;*/
+        font-size: 3vh;
+    }
+
+    .main-h1 {
+        text-align: center;
+        overflow: hidden;
+    }
+    .main-h1 .main-span {
+        display: inline-block;
+        position: relative;
+    }
+    .main-h1 .main-span:before, .main-h1 .main-span:after {
+        content: "";
+        border-bottom: 2px solid #00a99d;
+        width: 3em;
+        margin: 0 1.5em;
+        position: absolute;
+        bottom: .5em;
+    }
+    .main-h1 .main-span:before {
+        right: 100%;
+    }
+    .main-h1 .main-span:after {
+        left: 100%;
     }
 }
 
@@ -385,49 +467,45 @@
     .footer{
         font-size: 1em;
     }
-}
 
+    .aboutusdiv {
+        margin: 3vh 3vw 0 3vw;
+        text-align: center;
+        font-family: sans-serif;
+        color: #666;
+    }
 
+    .main-h1 {
+        margin: auto;
+        color: #00a99d;
+    }
 
-.aboutusdiv {
-    margin: 10% 5%;
-    text-align: center;
-    font-family: sans-serif;
-    color: #666;
-}
+    .main-p {
+        /*max-width: 50em;*/
+        /*margin: 2em auto;*/
+        font-size: 3vh;
+    }
 
-.main-h1 {
-    margin: 2em 0;
-    color: #00a99d;
+    .main-h1 {
+        text-align: center;
+        overflow: hidden;
+    }
+    .main-h1 .main-span {
+        display: inline-block;
+        position: relative;
+    }
+    .main-h1 .main-span:before, .main-h1 .main-span:after {
+        content: "";
+        border-bottom: 2px solid #00a99d;
+        width: 3em;
+        margin: 0 1.5em;
+        position: absolute;
+        bottom: .5em;
+    }
+    .main-h1 .main-span:before {
+        right: 100%;
+    }
+    .main-h1 .main-span:after {
+        left: 100%;
+    }
 }
-
-.main-p {
-    max-width: 50em;
-    /*margin: 2em auto;*/
-    font-size: 26px;
-}
-
-.main-h1 {
-    text-align: center;
-    overflow: hidden;
-}
-.main-h1 .main-span {
-    display: inline-block;
-    position: relative;
-}
-.main-h1 .main-span:before, .main-h1 .main-span:after {
-    content: "";
-    border-bottom: 2px solid #00a99d;
-    width: 3em;
-    margin: 0 1.5em;
-    position: absolute;
-    bottom: .5em;
-}
-.main-h1 .main-span:before {
-    right: 100%;
-}
-.main-h1 .main-span:after {
-    left: 100%;
-}
-
-

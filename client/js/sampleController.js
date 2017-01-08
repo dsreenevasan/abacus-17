@@ -17,6 +17,10 @@
         /*Setting focus to the div to listen to arrow keys*/
         document.getElementById('bg').focus();
 
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
         /*Background color generation*/
         var rn = Math.floor((Math.random() * 150) + 60);
         var rs = Math.floor((Math.random() * 11) + 4);

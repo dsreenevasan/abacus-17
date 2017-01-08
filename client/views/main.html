@@ -115,28 +115,23 @@
 
 			<div id="fullpage">
 				<div class="section " id="section0" style="height: 80vh">
-					<div class='city' style="zoom: 2; margin: -54vh 0 0 -20vw">
+					<div class='city' style="zoom: 1.9; margin: -57.6vh 0 0 0">
 					<!--<div class='city'>-->
-						<div class='landscape'>
+						<div class='landscape' style="margin: 0 0 0 -19.5vw">
 							<div class='inner'>
 								<div class='moon'></div>
 								<div class='cityscape'>
 									<div class='building'>
 										<div class='windows'></div>
-										<div class='radio'></div>
+										<div class='radio1'></div>
+										<div class='radio2'></div>
+										<div class='radio3'></div>
 									</div>
 									<div class='building'>
 										<div class='windows'></div>
-										<div class='radio'></div>
-									</div>
-									<div class='building'>
-										<div class='windows'></div>
-									</div>
-									<div class='building'>
-										<div class='windows'></div>
-									</div>
-									<div class='building'>
-										<div class='windows'></div>
+										<div class='radio1'></div>
+										<div class='radio4'></div>
+										<div class='radio3'></div>
 									</div>
 									<div class='building'>
 										<div class='windows'></div>
@@ -146,9 +141,8 @@
 									</div>
 									<div class='building'>
 										<div class='windows'></div>
-									</div>
-									<div class='building'>
-										<div class='windows'></div>
+										<div class='radio1'></div>
+										<div class='radio5'></div>
 									</div>
 									<div class='building'>
 										<div class='windows'></div>
@@ -161,18 +155,50 @@
 									</div>
 									<div class='building'>
 										<div class='windows'></div>
+										<div class='radio4'></div>
+										<div class='radio5'></div>
+										<div class='radio6'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio7'></div>
+										<div class='radio2'></div>
+										<div class='radio8'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio9'></div>
+										<div class='radio10'></div>
+										<div class='radio2'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio1'></div>
+										<div class='radio4'></div>
+										<div class='radio6'></div>
 									</div>
 									<div class='building'>
 										<div class='windows'></div>
 									</div>
-									<div class='building'>
+									<div class='building' data-toggle="tooltip" data-placement="right" title="Events" ng-click="ctrl.stateChange('events')">
 										<div class='windows'></div>
 									</div>
 									<div class='building'>
 										<div class='windows'></div>
+										<div class='radio7'></div>
+										<div class='radio10'></div>
+										<div class='radio2'></div>
 									</div>
 									<div class='building'>
 										<div class='windows'></div>
+										<div class='radio7'></div>
+										<div class='radio2'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio7'></div>
+										<div class='radio1'></div>
+										<div class='radio5'></div>
 									</div>
 									<div class='building'>
 										<div class='windows'></div>
@@ -180,17 +206,17 @@
 								</div>
 							</div>
 						</div>
-						<div class='foreground'>
+						<div class='foreground' style="margin: 0 0 0 -19.5vw">
 							<div class='inner'>
 								<div class='welcome'>
 									<h1 class="main-h1">
 										Welcome to
 									</h1>
 									<h2 style="margin-top: -0.1vh">
-										<span class="main-span"></span>Abacus
+										<span class="main-span">Abacus</span>
 									</h2>
 								</div>
-								<div class='trees'>
+								<!--<div class='trees'>
 									<div class='tree'></div>
 									<div class='tree'></div>
 									<div class='tree'></div>
@@ -221,7 +247,7 @@
 									<div class='tree'></div>
 									<div class='tree'></div>
 									<div class='tree'></div>
-								</div>
+								</div>-->
 							</div>
 						</div>
 					</div>
@@ -233,6 +259,7 @@
 						<p class="main-p">Abacus, the national level technical symposium, conducted by CSEA primarily focuses on showcasing the skills of some of the best brains in the country.
 							Abacus, over the years has weaved a technical web, connecting smart minds in digital era, thus helping them unleash their expertness.
 							With an interesting array of events and workshops piled up, Abacus 2016 is all set to set trends</p>
+						<br>
 						<h1 class="main-h1"><span class="main-span">CSEA</span></h1>
 						<p class="main-p">Abacus, the national level technical symposium, conducted by CSEA primarily focuses on showcasing the skills of some of the best brains in the country.
 							Abacus, over the years has weaved a technical web, connecting smart minds in digital era, thus helping them unleash their expertness.
@@ -287,22 +314,6 @@
 
 <script>
 
-	//destroying
-	if($('html').hasClass('fp-enabled')){
-	    $.fn.fullpage.destroy('all');
-	}
-
-	$(document).ready(function () {
-		$('#fullpage').fullpage({
-			css3: false,
-			navigation: false,
-			navigationPosition: 'right',
-			keyboardScrolling: true,
-			controlArrows: true
-		});
-	});
-
-
 	$(document).ready(function() {
 		// Transition effect for navbar
 		$(window).scroll(function() {
@@ -314,6 +325,22 @@
 			}
 		});
 	});
+
+	//destroying
+	if($('html').hasClass('fp-enabled')){
+	    $.fn.fullpage.destroy('all');
+	}
+
+	$(document).ready(function () {
+		$('#fullpage').fullpage({
+			css3: true,
+			navigation: false,
+			navigationPosition: 'right',
+			keyboardScrolling: true,
+			controlArrows: true
+		});
+	});
+
 
 </script>
 
