@@ -332,13 +332,13 @@ html {
     -webkit-tap-highlight-color: transparent;
 }
 html,
-body {
+.underConstructionDiv {
     height: 100%;
 }
 * {
     box-sizing: border-box;
 }
-body {
+.underConstructionDiv {
     background: -webkit-linear-gradient(bottom, #ffa191, #ffc247);
     background: linear-gradient(to top, #ffa191, #ffc247);
     -webkit-font-smoothing: antialiased;

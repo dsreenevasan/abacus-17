@@ -19,6 +19,7 @@
 
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="tooltip"]').tooltip();
         });
 
         /*Background color generation*/
@@ -62,7 +63,7 @@
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["Basic Questions on Database. (40 Questions)", "You will be given a schema and asked to build schema diagram ,queries, triggers, functions and procedures."]},
                     contact: "Jayabharathi - +91 7418527055, Monesha - +91 8940245749",
-                    image: "../images/events/db.jpg"},
+                    image: "../images/events/tech/db_mania.jpg"},
                 { id: 4, name: "Game of Nerds",
                     description: "'Live as if you were to die tomorrow; Learn as if you were to live forever!'-Mahatma Gandhi" +
                     "To all the masters of technology! Unleash your mastery in the various fields of Computer Science" +

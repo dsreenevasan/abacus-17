@@ -48,6 +48,7 @@
         templateUrl: '../views/' + page + '.html',
         backdrop: true,
         size: size,
+        /*windowTopClass: 'modal-margin',*/
         resolve: {
           
         }

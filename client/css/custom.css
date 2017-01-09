@@ -513,3 +513,13 @@
 
     overflow:hidden;
 }
+
+.login-modal {
+    width: 30vw;/*
+    margin: 0 0 0 10vw;
+    padding: 0 0 0 0;*/
+}
+
+.modal-margin {
+    margin-top: 10vh;
+}

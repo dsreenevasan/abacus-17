@@ -88,6 +88,13 @@
      $location.path('');
      }
      )*/
+
+    abacus.run(function($rootScope, $uibModalStack) {
+        $rootScope.$on('$locationChangeStart', function (event) {
+            $uibModalStack.dismissAll();
+        });
+    });
+
     abacus.config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/main');
 
