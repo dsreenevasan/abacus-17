@@ -18,22 +18,22 @@
 
 .landscape {
     position: relative;
-    min-width: 1400px;
-    height: 600px;
+    min-width: 100vw;
+    height: 84vh;
     background: linear-gradient(to bottom, #23282d 0%, #181b1f 100%);
     background: #23282d; }
 
 .landscape:after {
     left: 0;
     bottom: 0;
-    width: 100%;
-    height: 150px;
+    width: 100vw;
+    height: 28vh;
     background: linear-gradient(to bottom, transparent 0%, #23282d 100%); }
 
 .inner {
     position: relative;
-    width: 1400px;
-    height: 100%;
+    width: 100vw;
+    height: 80vh;
     margin: 0 auto; }
 
 .building {
@@ -141,7 +141,9 @@
 .building:nth-child(7) {
     width: 150px;
     height: 200px;
-    right: 0; }
+    right: 0;
+    left: 1300px;
+}
 
 .building:nth-child(8) {
     width: 160px;
@@ -197,7 +199,7 @@
     width: 250px;
     height: 80px;
     left: 1040px; }
-
+/*
 .radio {
     position: absolute;
     top: -5px;
@@ -212,16 +214,128 @@
     left: 9px;
     width: 2px;
     height: 90px;
-    background: #1f2327; }
+    background: #1f2327; }*/
 
-.radio:after {
+/*.radio:after {
     top: -70px;
+    margin: 15vh 0 0 4.6vw;
     left: 9px;
-    width: 2px;
-    height: 2px;
-    border-radius: 50%;
-    box-shadow: 0 5px 0 red, 0 5px 5px red, 0 5px 10px red, 0 25px 0 red, 0 25px 5px red, 0 25px 10px red, 0 45px 0 red, 0 45px 5px red, 0 45px 10px red;
-    animation: 2s radio infinite; }
+    width: 6px;
+    height: 3.5px;
+    !*border-radius: 50%;*!
+    box-shadow: 0 5px 0 yellow, 0 5px 5px yellow, 0 5px 10px yellow, 0 25px 0 yellow, 0 25px 5px yellow, 0 25px 10px yellow, 0 45px 0 yellow, 0 45px 5px yellow, 0 45px 10px yellow;
+    animation: 2s radio infinite; }*/
+
+.radio1:after {
+    top: -70px;
+    margin: 19vh 0 0 0;
+    left: 9px;
+    width: 6px;
+    height: 3.5px;
+    /*border-radius: 50%;*/
+    box-shadow: 50px 5px 0 yellow, 50px 5px 5px yellow, 50px 5px 10px yellow;
+    /*105px 125px 0 yellow, 105px 125px 5px yellow, 105px 125px 10px yellow, 0 65px 0 yellow, 0 65px 5px yellow, 0 65px 10px yellow;*/
+    animation: 2.5s radio infinite;
+}
+
+.radio2:after {
+    top: -70px;
+    margin: 15vh 0 0 0;
+    left: 9px;
+    width: 6px;
+    height: 3.5px;
+    /*border-radius: 50%;*/
+    box-shadow: 0 65px 0 yellow, 0 65px 5px yellow, 0 65px 10px yellow;
+    animation: 4.3s radio infinite;
+}
+
+.radio3:after {
+    top: -70px;
+    margin: 15vh 0 0 0;
+    left: 9px;
+    width: 6px;
+    height: 3.5px;
+    /*border-radius: 50%;*/
+    box-shadow: 105px 125px 0 yellow, 105px 125px 5px yellow, 105px 125px 10px yellow;
+    animation: 5s radio infinite;
+}
+
+.radio4:after {
+    top: -70px;
+    margin: 5.5vh 0 0 0;
+    left: 9px;
+    width: 6px;
+    height: 3.5px;
+    /*border-radius: 50%;*/
+    box-shadow: 0 65px 0 yellow, 0 65px 5px yellow, 0 65px 10px yellow;
+    animation: 2.2s radio infinite;
+}
+
+.radio5:after {
+    top: -70px;
+    margin: 9.5vh 0 0 0;
+    left: 9px;
+    width: 6px;
+    height: 3.5px;
+    /*border-radius: 50%;*/
+    box-shadow: 105px 105px 0 yellow, 105px 105px 5px yellow, 105px 105px 10px yellow;
+    animation: 3.5s radio infinite;
+}
+
+.radio6:after {
+    top: -70px;
+    margin: 5.5vh 0 0 0;
+    left: 9px;
+    width: 6px;
+    height: 3.5px;
+    /*border-radius: 50%;*/
+    box-shadow: 21px 205px 0 yellow, 21px 205px 5px yellow, 21px 205px 10px yellow;
+    animation: 4s radio infinite;
+}
+
+.radio7:after {
+    top: -70px;
+    margin: 2.6vh 0 0 5vw;
+    left: 9px;
+    width: 6px;
+    height: 3.5px;
+    /*border-radius: 50%;*/
+    box-shadow: 0 65px 0 yellow, 0 65px 5px yellow, 0 65px 10px yellow;
+    animation: 4.6s radio infinite;
+}
+
+.radio8:after {
+    top: -70px;
+    margin: 5.5vh 0 0 1.4vw;
+    left: 9px;
+    width: 6px;
+    height: 3.5px;
+    /*border-radius: 50%;*/
+    box-shadow: 21px 205px 0 yellow, 21px 205px 5px yellow, 21px 205px 10px yellow;
+    animation: 1.7s radio infinite;
+}
+
+.radio9:after {
+    top: -70px;
+    margin: 12.3vh 0 0 0;
+    left: 9px;
+    width: 6px;
+    height: 3.5px;
+    /*border-radius: 50%;*/
+    box-shadow: 50px 5px 0 yellow, 50px 5px 5px yellow, 50px 5px 10px yellow;
+    animation: 2.7s radio infinite;
+}
+
+.radio10:after {
+    top: -70px;
+    margin: 9.4vh 0 0 8.2vw;
+    left: 9px;
+    width: 6px;
+    height: 3.5px;
+    /*border-radius: 50%;*/
+    box-shadow: 0 65px 0 yellow, 0 65px 5px yellow, 0 65px 10px yellow;
+    animation: 3s radio infinite;
+}
 
 .building:nth-child(2) .radio:after {
     animation-delay: .2s; }
@@ -329,7 +443,7 @@
     left: 50%;
     width: 200px;
     height: 43px;
-    margin-left: -100px;
+    margin-left: -11vw;
     text-align: center;
     text-transform: uppercase;
     background: #1b1b1b;
@@ -348,33 +462,33 @@
     color: #999; }
 
 .welcome h2 span {
-    color: #333;
+    color: white;
     text-shadow: 0 0 0;
-    animation: 2s letter infinite; }
+    animation: 2s letter; }
 
 @keyframes letter {
     10% {
-        color: #333;
+        color: red;
         text-shadow: 0 0 0; }
 
     20% {
-        color: #999;
+        color: orange;
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
-
-    30% {
-        color: #333;
-        text-shadow: 0 0 0; }
 
     40% {
-        color: #999;
+        color: yellow;
+        text-shadow: 0 0 0; }
+
+    60% {
+        color: green;
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
 
-    50% {
-        color: #333;
+    80% {
+        color: blue;
         text-shadow: 0 0 0; }
 
     100% {
-        color: #333;
+        color: violet;
         text-shadow: 0 0 0; } }
 .welcome:before, .welcome:after {
     top: -10px;
@@ -507,4 +621,14 @@
         margin-left: -310px; }
 
     .foreground {
-        margin-left: -310px; } }
+        margin-left: -310px;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 640px){
+    .welcome {
+        width: 45vw;
+        margin-left: -27.5vw;
+    }
+
+}

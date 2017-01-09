@@ -16,6 +16,10 @@
     ctrl.showNav = false;
     ctrl.maxWidth = 0;
     detect();
+
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
     
     function detect () {
       angular.element(window).bind("scroll", function(){

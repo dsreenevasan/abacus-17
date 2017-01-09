@@ -1,7 +1,7 @@
 <div ng-controller="SampleController as ctrl" id="bg" ng-keydown="ctrl.move($event)" tabindex="1" class="eventsMainDiv">
 
     <div class="topTransparentDiv">
-        <i class="fa fa-home fa-icons" aria-hidden="true" ng-click="ctrl.go('main')" style="margin: 3vh 0 0 2vw; color: white"  title="Home"></i><br>
+        <i class="fa fa-home fa-icons" aria-hidden="true" ng-click="ctrl.go('main')" style="margin: 3vh 0 0 2vw; color: white" data-toggle="tooltip" data-placement="right"  title="Home"></i><br>
     </div>
     <div class="bottomTransparentDiv">
         <label style="float: left" class="footer">Copyright 2016 @ CSEA.<br> All rights reserved.</label>
@@ -46,10 +46,11 @@
                 </div>
                 <div class="midContentsDiv" ng-if="ctrl.show == 4">{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].contact}}</div>
                 <div class="midDivNavRing">
-                    <i class="fa fa-file-text fa-icons" aria-hidden="true" ng-click="ctrl.show = 1" title="Description" data-toggle="tooltip" data-placement="left"></i><br>
-                    <i class="fa fa-gavel fa-icons" aria-hidden="true" ng-click="ctrl.show = 2" title="Rules" data-toggle="tooltip" data-placement="left"></i><br>
-                    <i class="fa fa-pencil fa-icons" aria-hidden="true" ng-click="ctrl.show = 3" title="Format" data-toggle="tooltip" data-placement="left"></i><br>
-                    <i class="fa fa-phone fa-icons" aria-hidden="true" ng-click="ctrl.show = 4" title="Contact" data-toggle="tooltip" data-placement="left"></i><br>
+
+                    <i class="fa fa-file-text fa-icons" aria-hidden="true" ng-click="ctrl.show = 1" data-toggle="tooltip" data-placement="left" title="Description"></i><br>
+                    <i class="fa fa-gavel fa-icons" aria-hidden="true" ng-click="ctrl.show = 2" data-toggle="tooltip" data-placement="left" title="Rules"></i><br>
+                    <i class="fa fa-pencil fa-icons" aria-hidden="true" ng-click="ctrl.show = 3" data-toggle="tooltip" data-placement="left" title="Format"></i><br>
+                    <i class="fa fa-phone fa-icons" aria-hidden="true" ng-click="ctrl.show = 4" data-toggle="tooltip" data-placement="left" title="Contact"></i><br>
                 </div>
                 <div id="bottomDiv" class=mainMidBottomDiv>{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].name}}</div>
             </div>
@@ -57,6 +58,7 @@
     </div>
 
 </div>
+
 
 <!--
 ng-hide="((ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == -15
