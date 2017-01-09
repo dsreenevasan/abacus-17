@@ -45,7 +45,7 @@
                 rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions.",
                 "Participants are not allowed to bring any additional material.", "Any kind of malpractice will lead to disqualification.", "Decisions made by the administrators will be final and binding."]},
                 format: {rounds: ["A Written round consisting of questions based on Data Structures, Algorithms and Programming logic.", "The final round will be similar to ACM-ICPC."]},
-                contact: "Adhitya - +91 8939222530",
+                contact: "Will be updated soon",
                 image: "../images/events/ospc.jpg"},
                 { id: 2, name: "Debugging",
                     description: "'Testing proves a programmer's failure.Debugging is the porgrammer's vindication.' -Boris Beizer" +
@@ -53,7 +53,7 @@
                         "Prove your skills in seeking the bugs, racing against time and your peers to be crowned the ultimate grand master of debugging.",
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["A written round consisting of simple debugging questions.", "You will be given the code which may or may not have logical/syntactic bugs.  You have to identify the errors and fix them."]},
-                    contact: "Arjun - +91 7598306818",
+                    contact: "Will be updated soon",
                     image: "../images/events/debugging.jpg"},
                 { id: 3, name: "Unlock the deadlock",
                     description: "Known as the freaky programmer or passionate coder?" +
@@ -72,9 +72,9 @@
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["This will be the preliminary round. Basic questions on Data Structures and Algorithms, Computer Architecture, Database Management Systems,Operating Systems,Web Technology, Theory of Computation and Networks will be put forth.",
                     "Will be revealed on-spot"]},
-                    contact: "Pavitra - +91 9940699306",
+                    contact: "Will be updated soon",
                     image: "../images/events/gon.jpg"},
-                { id: 5, name: "Re'Present'",
+                /*{ id: 5, name: "Re'Present'",
                     description: "'Success begins at the end of your comfort zone!'" +
                     "Pen your ideaology! Present and represent!" +
                     "Kill your fears and  exhibit your innovative thoughts!",
@@ -85,7 +85,7 @@
                     "DNA computing", "Data interlinking - web services", "Data mining in Healthcare", "Challenges in the migration to 4G mobile system",
                     "Gait recognition - Image processing", "Human Computer Interaction"]},
                     contact: "Ramya V - +91 9629369543, Keerthana c - +91 7708113087",
-                    image: "../images/events/math.jpg"},
+                    image: "../images/events/math.jpg"},*/
                 { id: 6, name: "Cyber Wars",
                     description: "'If you want to go fast, go alone!" +
                     "If you want to go far, go with others!'" +
@@ -94,7 +94,7 @@
                     "Brace yourself for the deadly combat!",
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["Will be updated soon"]},
-                    contact: "Premkumar R - 7845660996",
+                    contact: "Will be updated soon",
                     image: "../images/events/net.jpg"},
                 { id: 7, name: "Reverse Coding",
                     description: "'A programmer is an organism that turns caffeine and pizza into code.'" +
@@ -113,21 +113,60 @@
                     "Plagiarism to be strictly avoided and the team so found will be disqualified.", "Judges decision will be final."]},
                     format: {rounds: ["Questions from HTML,CSS, JAVASCRIPT, JQUERY, PHP. No of Questions : 40. Duration :30 mins", "Develop webpages using HTML,CSS,JS without any references.",
                     "Develop a website using these. 1.  Google Maps API. 2.  Use any database using any backend language. 3.  encoding / decoding"]},
-                    contact: "Giritharan T - 8098380066, Sakthivel S  - 8760480028",
+                    contact: "will be updated soon.",
                     image: "../images/events/web.jpg"}],
             marginValue: [-35, -25, -15, 4, 45, 83, 105, 115], margins :['-35vw', '-25vw', '-15vw', '4vw', '45vw', '83vw', '105vw', '115vw']},
             {genreId: 2, genre: "General", events: [
-                {id: 1, name: "Math Maze",
+                {id: 1, name: "Mathrix",
+                    description: "What is more fun than a good play with numbers?"+
+                    "Tease your brain and test your skills."+
+                    "Come explore the world of mathematics via witty puzzles!"+
+                    "Infinity is just the Beginning.",
+                    rules: {points:["Each team can have a maximum of three members.",
+                        "The members of a team can be from different colleges/institutions."]},
+                    format: {rounds:["Consists of two rounds.(Round 1 and Finals).",
+                    "Consists of three sections of varying difficulties.",
+                        "Hard Questions carry higher scores than Medium and Easy Questions.",
+                        "Some questions are starred and will be considered in the case of Tie-breakers. "]},
+                    contact: "Will be updated soon",
                     image: "../images/events/math.jpg"},
-                {id: 2, name: "Quiz Wiz",
+                /*{id: 2, name: "Quiz Wiz",
                     image: "../images/events/quiz.jpg"},
                 {id: 3, name: "Go Game",
-                    image: "../images/events/gaming.jpg"},
-                {id: 4, name: "Design Mania",
+                    image: "../images/events/gaming.jpg"},*/
+                {id: 4, name: "Selfie-hunt",
+                    description: "Will be updated soon",
+                    rules: {points:["Will be updated soon"]},
+                    format: {rounds:["Will be updated soon"]},
+                    contact: "Will be updated soon",
                     image: "../images/events/design.jpg"},
                 {id: 5, name: "IPL Bidding",
+                    description: "Have you ever thought of building your own IPL team."+
+                    "Are you a cricket enthusiast who dreamt having Dhoni as your captain,Watson as your opener with Devillers,Starc,Steyn in your team…???"+
+                    "Then this is the right place to exhibit your cricketing passion with management capabilities. "+
+                    "This March, grab the chance of building your very own IPL team with the money we offer you."+
+                    "Be the next Shah rukh khan or Vijay Mallaya or Preity Zinta. The ball is in your court now.!!!",
+                    rules: {points:["Two or Three members per team.",
+                        "The competition will be conducted in two rounds.",
+                        "First round consists of set of questions related to cricket to be answered.",
+                        "The top 8 teams from the first round will get qualified to the final round",
+                        "In the final round each team will be given a franchise name Each player will be auctioned separately and the teams has to bid for the players they like to buy.",
+                        "Teams which do not adhere to the rules and regulations can be disqualified at any phase of the event.",
+                        "In case of any dispute, the decision of the Organizing Committee will be final and binding"]},
+                    format: {rounds:[""]},
+                    contact: "Will be updated soon",
                     image: "../images/events/ipl.jpg"},
                 {id: 6, name: "Housefull",
+                    description: "All work and no play makes Jack a dull boy"+
+                    "Bored of all the technical stuff? Looking for a fun filled event with your gang of friends?"+
+                    "House full is an ideal place for you.The event is mainly focused on CINEMA,CRICKET and OTHER ENTERTAINING STUFF."+
+                    "Grab some popcorn.Get ready for the fun ride!!!!!",
+                    rules: {points:["Three members per team.",
+                        "A Team can consist of members from any department or any college.",
+                        "Teams which do not adhere to the rules and regulations can be disqualified at any phase of the event."]},
+                    format: {rounds:["It is a written round.The questions will be based on all entertaining stuff.",
+                        "You will experience the real fun in these rounds.The format of these rounds will be revealed on the spot !"]},
+                    contact: "Will be updated soon",
                     image: "../images/events/android.jpg"}],
                 marginValue: [-25, -15, 3, 45, 83, 105], margins :['-25vw', '-15vw', '4vw', '45vw', '83vw', '105vw']},
             {genreId: 3, genre: "Night Events", events: [{id: 1, name: "Coding Hungama",
@@ -135,15 +174,30 @@
                 marginValue: [45], margins :['45vw']},
             {genreId: 4, genre: "Online Events", events: [
                 {id: 1, name: "OLPC",
+                    description:"'Talk is cheap. Show me the code' -Linus Torvalds" +
+                "Do you love coding? Are you the master of your dancing fingers?" +
+                    "Then show off your mastery in the terrific battle of online programming!"+" Happy coding, geeks!",
+                    rules: {points: ["It is a typical ACM-ICPC style programming contest.","A valid aBaCUS id is must.",
+                        "Any kind of malpractice will lead to disqualification."+"The contest link will be shared soon."]},
+                    contact: "Will be updated soon",
                     image: "../images/events/ospc.jpg"},
                 {id: 2, name: "Da Vinci Code",
-                    image: "../images/events/dav.jpg"},
+                    description: "'Everyone on earth has a treasure that awaits him' -Paulo Coelho"+
+                    "Waiting for your treasure? Squeeze your brain and explore the breath-taking online treasure hunt!"+
+                    "The adventurous ride with mystifying riddles and mind-bending puzzles is set!"+
+                    "All you have to do is, sit at your own place and google!"+
+                    "Break the code and make your mark!",
+                    rules: {points:["A valid aBaCUS id is must.","Any kind of malpractice will lead to disqualification.",
+                        "The contest link will be shared soon"]},
+                    format: {rounds:[" "]},
+                    contact: "Will be updated soon",
+                    image: "../images/events/dav.jpg"},/*
                 {id: 3, name: "Online Photography",
                     image: "../images/events/ospc.jpg"},
                 {id: 4, name: "Scribble Away",
                     image: "../images/events/paper.jpg"},
                 {id: 5, name: "ROS",
-                    image: "../images/events/ospc.jpg"}],
+                    image: "../images/events/ospc.jpg"}],*/],
                 marginValue: [-15, 4, 45, 83, 105], margins :['-15vw', '4vw', '45vw', '83vw', '105vw']},
             {genreId: 5, genre: "Workshops", events: [
                 {id: 1, name: "Data Mining",
