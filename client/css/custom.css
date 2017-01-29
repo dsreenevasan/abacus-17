@@ -1,7 +1,7 @@
 .eventsMainDiv {
     height: 100vh;
     margin: 0% 0 0 0;
-    /*background: url('../images/chip_computer_microchip_processor_5659_1920x1080.jpg');*/
+    background: url('../images/bg.jpg');
     font-family: 'Acme', sans-serif;
     background-size: 100% 100%;
 }
@@ -46,7 +46,7 @@
     position: fixed;
     height: 12vh;
     width: 30vw;
-    background-color: teal;
+    /*background-color: teal;*/
     z-index: 1;
     font-family: 'Acme', sans-serif;
     font-size: 5vh;
@@ -224,7 +224,7 @@
         position: fixed;
         height: 8vh;
         width: 30vw;
-        background-color: teal;
+        /*background-color: teal;*/
         z-index: 1;
         -webkit-transition: margin-top 0.7s ease-out;
         font-family: 'Acme', sans-serif;
@@ -255,7 +255,7 @@
 
     .mainMidDiv{
         height: 60vh;
-        width: 60vw;
+        width: 65vw;
         background-color: rgba(0, 0, 0, 0.7);
         margin:0vh 0 0 21vw;
         position: fixed;
@@ -266,7 +266,7 @@
     .mainInnerDiv{
         margin: 2vh 4vw 1vh 3vw;
         height: 56vh;
-        width: 90%;
+        width: 91%;
     }
 
     .mainMidBottomDiv{
@@ -286,7 +286,7 @@
 
     .midContentsDiv{
         height: 5vh;
-        width: 80%;
+        width: 90%;
         font-size: 0.75em;
     }
 
@@ -297,7 +297,7 @@
 
     .fa-icons{
         font-size: 1em;
-        margin: 3vh 0 0 0;
+        margin: 4vh 0 0 0;
     }
 
     .footer{
@@ -319,7 +319,7 @@
     .main-p {
         /*max-width: 50em;*/
         /*margin: 2em auto;*/
-        font-size: 3vh;
+        font-size: 0.9em;
     }
 
     .main-h1 {
@@ -388,7 +388,7 @@
         position: fixed;
         height: 8vh;
         width: 30vw;
-        background-color: teal;
+        /*background-color: teal;*/
         z-index: 1;
         -webkit-transition: margin-top 0.7s ease-out;
         font-family: 'Acme', sans-serif;
@@ -483,7 +483,7 @@
     .main-p {
         /*max-width: 50em;*/
         /*margin: 2em auto;*/
-        font-size: 3vh;
+        font-size: 2em;
     }
 
     .main-h1 {
@@ -515,10 +515,12 @@
     overflow:hidden;
 }
 
-.login-modal {
-    width: 30vw;/*
-    margin: 0 0 0 10vw;
-    padding: 0 0 0 0;*/
+.events-modal {
+    position: fixed;
+    z-index: 1050;
+    width: 90vw;
+    height: 90vh;
+    margin-left: -20vw;
 }
 
 .modal-margin {

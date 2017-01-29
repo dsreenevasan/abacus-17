@@ -6,9 +6,9 @@
             <a href="#"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/827672/computercard.png" id="computercard"/></a>
 
             <div id ="formbox">
-                <form class="form login-form">
-                    <input class="form-input" type="email" placeholder="email">
-                    <input class="form-input" type="password" placeholder="password">
+                <form class="form login-form" method="POST" action="register.php">
+                    <input class="form-input" type="email" name="email" ng-model="ctrl.email" placeholder="email">
+                    <input class="form-input" type="password" name="password" ng-model="ctrl.password" placeholder="password">
                 </form>
             </div>
         </header>

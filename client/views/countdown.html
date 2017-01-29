@@ -1,0 +1,5 @@
+<div ng-controller="CountdownController as ctrl" style="height: 97vh; background: -webkit-linear-gradient(bottom, #ffa191, #ffc247);
+    background: linear-gradient(to top, #ffa191, #ffc247); margin: 0 0 0 0">
+    <h1 style="padding: 40vh 0 0 41vw; font-size: 5em;" ng-click="ctrl.launch()" ng-if="!ctrl.startCountdown">Launch</h1>
+    <h1 style="padding: 40vh 0 0 47vw; font-size: 5em" ng-if="ctrl.startCountdown">{{ctrl.countdown}}</h1>
+</div>
