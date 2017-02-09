@@ -14,7 +14,7 @@
 }
 .navbar-default .navbar-brand:hover {
     color: #A9A9A9;
-    border: 1px solid #FFFF00;
+    /*border: 1px solid #FFFF00;*/
 }
 .navbar-default .navbar-nav > li > a {
     color: green;
@@ -22,7 +22,7 @@
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active, .navbar-default .navbar-nav > li > a:focus {
     color: green;
-    border: 1px solid #FFFF00;
+    /*border: 1px solid #FFFF00;*/
     background-color: transparent;
 }
 .navbar-default .navbar-nav > li > a:visited {

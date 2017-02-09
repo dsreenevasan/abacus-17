@@ -69,6 +69,21 @@
 
 </div>
 
+<script>
+    if($('html').hasClass('fp-enabled')){
+        $.fn.fullpage.destroy('all');
+    }
+
+    $(document).ready(function () {
+        $('#viewport').fullpage({
+            afterLoad: function(anchorLink, index){
+                $('#fp-nav').hide();
+            }
+        });
+
+
+    });
+</script>
 
 <!--
 ng-hide="((ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == -15
