@@ -55,7 +55,11 @@
                         <li ng-repeat="format in ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].format.rounds">{{format}}</li>
                     </ul>
                 </div>
-                <div class="midContentsDiv" ng-if="ctrl.show == 4">{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].contact}}</div>
+                <div class="midContentsDiv" ng-if="ctrl.show == 4">
+                    <ul>
+                        <li ng-repeat="contact in ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].contact">{{contact}}</li>
+                    </ul>
+                </div>
                 <div class="midDivNavRing" ng-hide="ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 3 || ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 5 || ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 6">
                     <i class="fa fa-file-text fa-icons" aria-hidden="true" ng-click="ctrl.show = 1" data-toggle="tooltip" data-placement="left" title="Description" style=" cursor: hand; cursor: pointer"></i><br>
                     <i class="fa fa-gavel fa-icons" aria-hidden="true" ng-click="ctrl.show = 2" data-toggle="tooltip" data-placement="left" title="Rules" style=" cursor: hand; cursor: pointer"></i><br>
