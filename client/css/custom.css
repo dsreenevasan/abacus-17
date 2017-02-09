@@ -524,5 +524,29 @@
 }
 
 .modal-margin {
-    margin-top: 10vh;
+    margin-top: 10vh !important;
+}
+
+.zoom:hover
+{
+    box-shadow: 0px 0px 100px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.2);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.2);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.2);
+    transition: all 200ms ease-in;
+    transform: scale(1.2);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.82);
+    z-index: 1001;
 }

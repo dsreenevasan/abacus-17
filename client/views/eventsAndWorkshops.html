@@ -1,4 +1,12 @@
 <div ng-controller="EventsAndWorkshopsController as ctrl" id="bg" ng-keydown="ctrl.move($event)" tabindex="1" class="eventsMainDiv">
+    <div class="overlay" ng-if="ctrl.showOverlay">
+        <img src="../images/eventsInstructions.svg" ng-if="!ctrl.isMobile" style="height:50vh; width: 80vw; margin: 15vh 0 0 10vw">
+        <h1 style="color: white; text-align: center; margin: 20vh 0 0 0" ng-if="ctrl.isMobile"><u>Navigation Controls</u></h1>
+        <img src="../images/mobile.png" ng-if="ctrl.isMobile" style="height:20vh; width: 30vw; margin: 5vh 0 0 35vw">
+
+        <h4 style="color: white; text-align: center; margin: 5vh 0 0 0" ng-if="ctrl.isMobile">Swipe up and down to change between categories and swipe left and right to navigate between different and workshops</h4>
+        <h2 style="color: white; text-align: center; margin: 10vh 0 0 0; cursor: pointer" ng-click="ctrl.changeOverlay()"><u>Explore</u></h2>
+    </div>
 
     <div class="topTransparentDiv">
         <i class="fa fa-home fa-icons" aria-hidden="true" ng-click="ctrl.go('main')" style="margin: 3vh 0 0 2vw; color: white; float: left; cursor: hand; cursor: pointer" data-toggle="tooltip" data-placement="right"  title="Home"></i><br>

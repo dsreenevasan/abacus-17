@@ -52,7 +52,7 @@
         templateUrl: '../views/' + page + '.html',
         backdrop: true,
         size: size,
-        /*windowTopClass: 'modal-margin',*/
+        windowTopClass: 'modal-margin',
         resolve: {
 
         }
@@ -70,6 +70,11 @@
         bodyRef.removeClass('ovh');
 
       });
+    };
+
+    ctrl.check= function(){
+      console.log("-a--------------");
+    //  alert('ok');
     };
   }
 

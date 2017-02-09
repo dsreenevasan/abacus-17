@@ -13,6 +13,22 @@
         ctrl.divPosition = 0; //for horizontal div movement
         ctrl.verticalDivPosition = 0; //for vertical div movement
         ctrl.show = 1;
+        ctrl.isMobile = false;
+        ctrl.showOverlay = true;
+        detectmob();
+
+        function detectmob() {
+            if (navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)) {
+                ctrl.isMobile = true;
+                /*$window.open('http://lite.kurukshetra.org.in');*/
+            }
+        }
 
         /*Setting focus to the div to listen to arrow keys*/
         document.getElementById('bg').focus();
@@ -297,7 +313,10 @@
                 }
                 ctrl.verticalDivPosition--;
                 ctrl.centreDiv.genreId = (ctrl.centreDiv.genreId+1) % ctrl.eventDetails.length;
-                ctrl.horizontalMidDiv = Math.floor(ctrl.eventDetails[ctrl.centreDiv.genreId].events.length/2);
+                ctrl.horizontalMidDiv = Math.ceil(ctrl.eventDetails[ctrl.centreDiv.genreId].events.length/2);
+                if(ctrl.eventDetails[ctrl.centreDiv.genreId].events.length == 1){
+                    ctrl.horizontalMidDiv = Math.floor(ctrl.eventDetails[ctrl.centreDiv.genreId].events.length/2);
+                }
             }
             else if(key.keyCode === 40) {  //down
                 resetAnimation();
@@ -307,7 +326,10 @@
                     ctrl.centreDiv.genreId = ctrl.eventDetails.length;
                 }
                 ctrl.centreDiv.genreId = (ctrl.centreDiv.genreId-1) % ctrl.eventDetails.length;
-                ctrl.horizontalMidDiv = Math.floor(ctrl.eventDetails[ctrl.centreDiv.genreId].events.length/2);
+                ctrl.horizontalMidDiv = Math.ceil(ctrl.eventDetails[ctrl.centreDiv.genreId].events.length/2);
+                if(ctrl.eventDetails[ctrl.centreDiv.genreId].events.length == 1){
+                    ctrl.horizontalMidDiv = Math.floor(ctrl.eventDetails[ctrl.centreDiv.genreId].events.length/2);
+                }
             }
         };
 
@@ -337,6 +359,9 @@
             console.log("change display");
         };
 
+        ctrl.changeOverlay = function () {
+            ctrl.showOverlay = false;
+        };
         /*function hideCondition(direction){
             if(direction === 'left'){
                 ctrl.hideCondition = "(ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == 105" +
