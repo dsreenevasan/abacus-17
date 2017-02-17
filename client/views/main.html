@@ -118,7 +118,7 @@
 		</div>-->
 		<div ng-class="{ 'column col-md-10' : ctrl.maxWidth != 0, 'column col-md-12' : ctrl.maxWidth == 0 }">
 
-			<div id="fullpage">
+			<div id="fullpage" style="font-family: 'Josefin Sans', sans-serif;">
 				<div class="section " id="section0" style="height: 80vh">
 					<div class='city' style="zoom: 1.9; margin: -57.6vh 0 0 0">
 					<!--<div class='city' style="margin-left: 20vw">-->
@@ -264,11 +264,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="section" id="section1" style=" background-color: #E5CF43; height: 80vh " >
+				<div class="section" id="section1" style=" background-color: #00ACC1; height: 80vh " >
 
 					<div class="row aboutusdiv" >
-						<h1 class="main-h1"><span class="main-span">aBaCUS '17</span></h1>
-						<p class="main-p">aBaCUS, the national level technical symposium, conducted by CSEA primarily focuses on showcasing the skills of some of the best brains in the country.
+						<h1 class="main-h1 " style="color: #FDD835"><span class="main-span">aBaCUS '17</span></h1>
+						<p class="main-p" style="color:#FFFFFF">aBaCUS, the national level technical symposium, conducted by CSEA primarily focuses on showcasing the skills of some of the best brains in the country.
 							aBaCuS, over the years has weaved a technical web, connecting smart minds in digital era, thus helping them unleash their expertness.
 							With an interesting array of events and workshops piled up, aBaCUS 2017 is all set to set trends.</p>
 						<br>
@@ -276,20 +276,24 @@
 
 					</div>
 				</div>
-				<div class="section" id="section2" style="background-color: #E5CF43">
+				<div class="section" id="section2" style="background-color: #1abc9c">
                     <div class="row aboutusdiv" >
-					<h1 class="main-h1"><span class="main-span">CSEA</span></h1>
-					<p class="main-p">CSEA (Computer Science and Engineering Association), the student body of the department of Computer Science and Engineering has always been successful in its mission of quenching the technical thirst of the tech-wizards.
+					<h1 class="main-h1" style="color: #FDD835"><span class="main-span" style="border-bottom-color: #4CAF50" >CSEA</span></h1>
+					<p class="main-p" style="color: #FFFFFF;">CSEA (Computer Science and Engineering Association), the student body of the department of Computer Science and Engineering has always been successful in its mission of quenching the technical thirst of the tech-wizards.
 						Sync, the intra-college symposium and aBaCUS, the inter-college symposium are the two juggernauts of this enthralling team of students.
 						Undoubtedly, they have always been great triumphs in emboldening the student community.</p>
                         <br>
                     </div>
 
 				</div>
-				<div class="section fp-auto-height" id="section3" style="background-color: #23282d">
+				<div class="section" id="section3" style="background-color: #27ae60">
+
+				</div>
+				<div class="section fp-auto-height" id="section4" style="background-color: #23282d">
 					<label style="float: left;color: white" class="footer">Copyright 2017 @ CSEA.<br> All rights reserved.</label>
 					<label style="float: right;color: white"class="footer">For further queries,<br> Contact <strong class="webteam">webteam@abacus.org.in</strong></label>
 				</div>
+
 			</div>
 		</div>
 	</div>
@@ -343,10 +347,21 @@
 					window.location.href = "http://stackoverflow.com";
 				}*/
 				console.log(index);
-				if(index>1)
-					$('.navbar').addClass('solid');
-				else
+				if(index == 1)
 					$('.navbar').removeClass('solid');
+				else if(index>1 && index==2) {
+					$('.navbar').addClass('solid');
+					$('.navbar').removeClass('solidone');
+				}
+				else if(index>1 && index==3){
+					$('.navbar').removeClass('solid');
+					$('.navbar').addClass('solidone');
+					$('.navbar').removeClass('solidtwo');
+				}
+				else if(index>1 && index==4) {
+					$('.navbar').removeClass('solidone');
+					$('.navbar').addClass('solidtwo');
+				}
 			}
 		});
 

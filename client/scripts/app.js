@@ -84,6 +84,18 @@
                     visible: false
                 }
             }
+        },
+        {
+            name: 'workshop',
+            state:
+            {
+                url:'/workshop',
+                templateUrl: 'views/workshop.html',
+                data: {
+                    text: "Workshop",
+                    visible: false
+                }
+            }
         }
     ];
 

@@ -4,6 +4,7 @@
     border: none;
     color: green;
     z-index: 100;
+    font-family: 'Josefin Sans', sans-serif;
     -webkit-transition: background-color 1s ease 0s;
     transition: background-color 1s ease 0s;
 }
@@ -50,7 +51,7 @@
 
 /* Solid class attached on scroll past first section */
 .navbar.solid {
-    background-color: #23282d;
+    background-color: #e74c3c;
     -webkit-transition: background-color 1s ease 0s;
     transition: background-color 1s ease 0s;
     box-shadow: 0 0 4px grey;
@@ -61,6 +62,40 @@
     transition: color 1s ease 0s;
 }
 .navbar.solid .navbar-nav > li > a {
+    color: #23282d;
+    -webkit-transition: color 1s ease 0s;
+    transition: color 1s ease 0s;
+}
+
+.navbar.solidone {
+    background-color: #f39c12;
+    -webkit-transition: background-color 1s ease 0s;
+    transition: background-color 1s ease 0s;
+    box-shadow: 0 0 4px grey;
+}
+.navbar.solidone .navbar-brand {
+    color: #23282d;
+    -webkit-transition: color 1s ease 0s;
+    transition: color 1s ease 0s;
+}
+.navbar.solidone .navbar-nav > li > a {
+    color: #23282d;
+    -webkit-transition: color 1s ease 0s;
+    transition: color 1s ease 0s;
+}
+
+.navbar.solidtwo {
+    background-color: #e53935;
+    -webkit-transition: background-color 1s ease 0s;
+    transition: background-color 1s ease 0s;
+    box-shadow: 0 0 4px grey;
+}
+.navbar.solidtwo .navbar-brand {
+    color: #23282d;
+    -webkit-transition: color 1s ease 0s;
+    transition: color 1s ease 0s;
+}
+.navbar.solidtwo .navbar-nav > li > a {
     color: #23282d;
     -webkit-transition: color 1s ease 0s;
     transition: color 1s ease 0s;

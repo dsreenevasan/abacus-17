@@ -1,7 +1,7 @@
 .eventsMainDiv {
     height: 100vh;
     margin: 0% 0 0 0;
-    background: url('../images/bg.jpg');
+    background: url('http://orig12.deviantart.net/ef42/f/2015/341/d/6/flat_landscape__winter_edition__by_jovicasmileski-d9jbz70.jpg');
     font-family: 'Acme', sans-serif;
     background-size: 100% 100%;
 }
@@ -11,7 +11,7 @@
     width: 100vw;
     position:fixed;
     z-index: 100;
-    background: rgba(0,0,0,1);
+    background: #166088;
 }
 
 .bottomTransparentDiv{
@@ -23,13 +23,38 @@
     background: rgba(0,0,0,1);
 }
 
+.workshopMainDiv {
+    height: 100vh;
+    margin: 0% 0 0 0;
+    background: url('https://s-media-cache-ak0.pinimg.com/originals/19/97/82/199782a389743ddb6434dd3819fdbea8.png');
+    font-family: 'Acme', sans-serif;
+    background-size: 100% 100%;
+}
+
+
+.wksptopTransparentDiv{
+    height: 10vh;
+    width: 100vw;
+    position:fixed;
+    z-index: 100;
+    background: rgba(120, 38, 42, 0.6);
+}
+
+.wkspbottomTransparentDiv{
+    margin: 93vh 0 0 0;
+    height: 7vh;
+    width: 100vw;
+    position:fixed;
+    z-index: 100;
+    background: rgba(0,0,0,1);
+}
 .verticalBackgroundDiv{
     height: 100vh;
     width: 33vw;
     margin: 0 0 0 32.5vw;
     position: fixed;
     z-index: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.31);
 }
 
 .horizontalBackgroundDiv{
@@ -37,7 +62,25 @@
     margin: 31vh 0 0 0;
     height: 30vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.31);
+    position: fixed;
+}
+
+.wkspverticalBackgroundDiv{
+    height: 100vh;
+    width: 33vw;
+    margin: 0 0 0 32.5vw;
+    position: fixed;
+    z-index: 0;
+    background-color: rgba(93, 27, 40, 0.31);
+}
+
+.wksphorizontalBackgroundDiv{
+    z-index: 0;
+    margin: 31vh 0 0 0;
+    height: 30vh;
+    width: 100vw;
+    background-color: rgba(93, 27, 40, 0.31);
     position: fixed;
 }
 
@@ -120,9 +163,10 @@
     height: 5vh;
     width: 45vw;
     padding: 7vh 3vw 3vh 5vw;
-    font-family: 'Acme', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 3vh;
     color: white;
+
 }
 
 .midDivNavRing{
@@ -169,7 +213,7 @@
 }
 .main-h1 .main-span:before, .main-h1 .main-span:after {
     content: "";
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #FDD835;
     width: 3em;
     margin: 0 1.5em;
     position: absolute;
@@ -201,13 +245,30 @@
         background: rgba(0,0,0,1);
     }
 
+    .wksptopTransparentDiv{
+        height: 10vh;
+        width: 100vw;
+        position:fixed;
+        z-index: 100;
+        background: rgba(120, 38, 42, 0.6);
+    }
+
+    .wkspbottomTransparentDiv{
+        margin: 90vh 0 0 0;
+        height: 10vh;
+        width: 100vw;
+        position:fixed;
+        z-index: 100;
+        background-color: rgba(93, 27, 40, 0.31);
+    }
+
     .verticalBackgroundDiv{
         height: 100vh;
         width: 33vw;
         margin: 0 0 0 32.5vw;
         position: fixed;
         z-index: 0;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.31);
     }
 
     .horizontalBackgroundDiv{
@@ -215,7 +276,25 @@
         margin: 36.5vh 0 0 0;
         height: 20vh;
         width: 100vw;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.31);
+        position: fixed;
+    }
+
+    .wkspverticalBackgroundDiv{
+        height: 100vh;
+        width: 33vw;
+        margin: 0 0 0 32.5vw;
+        position: fixed;
+        z-index: 0;
+        background-color: rgba(0, 0, 0, 0.31);
+    }
+
+    .wksphorizontalBackgroundDiv{
+        z-index: 0;
+        margin: 36.5vh 0 0 0;
+        height: 20vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.31);
         position: fixed;
     }
 
@@ -288,6 +367,7 @@
         height: 5vh;
         width: 90%;
         font-size: 0.75em;
+        font-family: 'Josefin Sans', sans-serif;
     }
 
     .midDivNavRing{
@@ -356,6 +436,14 @@
         background: rgba(0,0,0,1);
     }
 
+    .wksptopTransparentDiv{
+        height: 10vh;
+        width: 100vw;
+        position:fixed;
+        z-index: 100;
+        background: rgba(120, 38, 42, 0.6);
+    }
+
     .bottomTransparentDiv{
         margin: 90vh 0 0 0;
         height: 10vh;
@@ -371,7 +459,7 @@
         margin: 0 0 0 32.5vw;
         position: fixed;
         z-index: 0;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.31);
     }
 
     .horizontalBackgroundDiv{
@@ -379,7 +467,25 @@
         margin: 36.5vh 0 0 0;
         height: 27vh;
         width: 100vw;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.31);
+        position: fixed;
+    }
+
+    .wkspverticalBackgroundDiv{
+        height: 100vh;
+        width: 33vw;
+        margin: 0 0 0 32.5vw;
+        position: fixed;
+        z-index: 0;
+        background-color: rgba(93, 27, 40, 0.31);
+    }
+
+    .wksphorizontalBackgroundDiv{
+        z-index: 0;
+        margin: 36.5vh 0 0 0;
+        height: 27vh;
+        width: 100vw;
+        background-color: rgba(93, 27, 40, 0.31);
         position: fixed;
     }
 
@@ -452,6 +558,7 @@
         height: 5vh;
         width: 80%;
         font-size: 1.5em;
+        font-family: 'Josefin Sans', sans-serif;
     }
 
     .midDivNavRing{
@@ -648,8 +755,8 @@
 /* Yaku */
 .link--yaku {
     color: #D3D3D3;
-    font-family: 'Playfair Display';
-    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bolder;
     text-transform: uppercase;
     font-size: 1em;
     overflow: hidden;
