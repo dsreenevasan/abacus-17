@@ -1,4 +1,4 @@
-<div ng-controller="EventsAndWorkshopsController as ctrl" id="bg" ng-keydown="ctrl.move($event)" tabindex="1" class="eventsMainDiv">
+<div ng-controller="WorkshopsController as ctrl" id="bg" ng-keydown="ctrl.move($event)" tabindex="1" class="workshopMainDiv">
     <div class="overlay" ng-if="ctrl.showOverlay">
         <img src="../images/eventsInstructions.svg" ng-if="!ctrl.isMobile" style="height:50vh; width: 80vw; margin: 15vh 0 0 10vw">
         <h1 style="color: white; text-align: center; margin: 20vh 0 0 0" ng-if="ctrl.isMobile"><u>Navigation Controls</u></h1>
@@ -8,21 +8,21 @@
         <h2 style="color: white; text-align: center; margin: 10vh 0 0 0; cursor: pointer" ng-click="ctrl.changeOverlay()"><u>Explore</u></h2>
     </div>
 
-    <div class="topTransparentDiv">
+    <div class="wksptopTransparentDiv">
         <i class="fa fa-home fa-icons" aria-hidden="true" ng-click="ctrl.go('main')" style="margin: 3vh 0 0 2vw; color: white; float: left; cursor: hand; cursor: pointer" data-toggle="tooltip" data-placement="right"  title="Home"></i><br>
         <label class="fa-icons" style="color: white; margin: 0 0 0 42vw">{{ctrl.eventDetails[ctrl.centreDiv.genreId].genre}}</label>
     </div>
-    <div class="bottomTransparentDiv">
+    <div class="wkspbottomTransparentDiv">
         <label style="float: left" class="footer">Copyright 2016 @ CSEA.<br> All rights reserved.</label>
         <label style="float: right"class="footer">For further queries,<br> Contact <strong style="color: #f5f5f5">webteam@abacus.org.in</strong></label>
     </div>
 
-    <div class="verticalBackgroundDiv"></div>
-    <div class="horizontalBackgroundDiv"></div>
+    <div class="wkspverticalBackgroundDiv"></div>
+    <div class="wksphorizontalBackgroundDiv"></div>
 
     <div class="column col-md-1 verticalMainDiv" ng-repeat="genre in ctrl.eventDetails"
-         style="margin-top: {{ctrl.marginsTop[(ctrl.verticalDivPosition + $index + ctrl.eventDetails.length) %ctrl.eventDetails.length]}};  background-size: 100% 100%; color: white"
-            ng-if="ctrl.marginTopValue[(ctrl.verticalDivPosition + $index + ctrl.eventDetails.length) %ctrl.eventDetails.length] < 125">
+         style="margin-top: {{ctrl.marginsTop[(ctrl.verticalDivPosition + $index + ctrl.eventDetails.length) %ctrl.eventDetails.length]}}; background: url('../images/events/bg-1.jpg'); background-size: 100% 100%; color: grey"
+         ng-if="ctrl.marginTopValue[(ctrl.verticalDivPosition + $index + ctrl.eventDetails.length) %ctrl.eventDetails.length] < 125">
         <!--ng-style="ctrl.marginTopValue[(ctrl.verticalDivPosition+$index+5) %5] < 6 || ctrl.marginTopValue[(ctrl.verticalDivPosition+$index+5) %5] > 50.6  && {'display': 'none'} || {}"-->
         {{genre.genre}}
         <!--<div style="height: 12vh; width: 30vw; background-color: teal">
@@ -33,7 +33,7 @@
         <div class="column col-md-1 horizontalMainDiv" ng-repeat="event in ctrl.eventDetails[ctrl.centreDiv.genreId].events"
              style="margin-left: {{ctrl.eventDetails[ctrl.centreDiv.genreId].margins[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length]}};
              background-image: url({{event.image}}); background-size: 100% 100%"
-                ng-if="(ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] > -16
+             ng-if="(ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] > -16
                 && ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] < 106)">
 
             {{event.name}}
