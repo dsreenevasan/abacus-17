@@ -1,21 +1,4 @@
-
 <div class="container" ng-controller="MainController as ctrl" style="height: 1000px; width: 100%; padding: 0 0 0 0;">
-	<!--<div id="header">
-		<label> logo and nav bar comes here</label>
-		<button class="btn btn-info" style="float: right; margin: 1% 10% 0 0 " ng-click="ctrl.stateChange('sample')">Events</button>
-		<button class="btn btn-info" style="float: right; margin: 1% 10% 0 0 " ng-click="ctrl.stateChange('login')">Login</button>
-
-		<!--<snap-content  ng-style="ctrl.maxWidth == 0 && {'color': '#f5f5f5', 'margin': '100% 0 0 1%', 'font-size': 'x-large'} || {'color': '#f5f5f5', 'margin': '0% 0 0 15%', 'font-size': 'x-large'}">
-
-		&lt;!&ndash;<snap-content  ng-style="ctrl.maxWidth == 0 && {'color': '#f5f5f5', 'margin': '100% 0 0 1%', 'font-size': 'x-large'} || {'color': '#f5f5f5', 'margin': '0% 0 0 15%', 'font-size': 'x-large'}">
-
-
-			<a ng-click="ctrl.displayNav()" >
-				<i ng-hide="ctrl.maxWidth != 0" class="fa fa-bars fa-2x" ></i>
-				<i ng-show="ctrl.maxWidth != 0" class="fa fa-times fa-2x" ></i>
-			</a>
-		</snap-content>&ndash;&gt;
-	</div>-->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<!--<img src="../images/test.png" style="height: 12vh; width: 4.90vw; margin: -1.5vh 0 0 -7vw; float: left">-->
@@ -37,43 +20,6 @@
 			</div><!--/.nav-collapse -->
 		</div>
 	</nav>
-	<!--<nav class="navbar navbar-default navbar-custom navbar-fixed-top" >
-		<div class="container-fluid">
-			&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;
-			<div class="navbar-header page-scroll">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand">aBaCUS'17</a>
-			</div>
-
-			&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-
-					<li><a ng-click="ctrl.stateChange('events')" style="color: black">Events</a></li>
-					<li><a ng-click="ctrl.openModal()" style="color: black">Login</a></li>
-					<li><a ng-click="ctrl.stateChange('register')" style="color: black">Register</a></li>
-					&lt;!&ndash;<li ng-repeat="title in ctrl.titles" ng-show="ctrl.dataLoaded">
-						<a ng-click="ctrl.scrollTo($index)">{{title}}</a>
-					</li>&ndash;&gt;
-					&lt;!&ndash;<li>
-                        <a href="http://frontend.cegtechforum.com/">FrontEnd</a>
-                    </li>&ndash;&gt;
-
-				</ul>
-			</div>
-			&lt;!&ndash; /.navbar-collapse &ndash;&gt;
-		</div>
-		&lt;!&ndash; /.container &ndash;&gt;
-	</nav>-->
-	<!--<div class="bottomTransparentDiv">
-		<label style="float: left" class="footer">Copyright 2017 @ CSEA.<br> All rights reserved.</label>
-		<label style="float: right"class="footer">For further queries,<br> Contact <strong style="color: #f5f5f5">webteam@abacus.org.in</strong></label>
-	</div>-->
 
 	<div class="row" style="background: black">
 		<div ng-class="{ 'column col-md-10' : ctrl.maxWidth != 0, 'column col-md-12' : ctrl.maxWidth == 0 }">
@@ -158,7 +104,7 @@
 										<div class='radio10'></div>
 										<div class='radio2'></div>
 									</div>
-									<div class='building zoom' ng-click="ctrl.stateChange('events')">
+									<div class='building zoom' ng-click="ctrl.stateChange('workshops')">
 										<div class='windows'  data-toggle="tooltip" data-placement="top" title="Workshops" style="cursor: pointer"></div>
 										<div class='radio7'></div>
 										<div class='radio10'></div>

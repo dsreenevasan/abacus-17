@@ -19,19 +19,7 @@
             state:
             {
                 url:'/events',
-                templateUrl: 'views/eventsAndWorkshops.html',
-                data: {
-                    text: "Sample",
-                    visible: false
-                }
-            }
-        },
-        {
-            name: 'bg',
-            state:
-            {
-                url:'/bg',
-                templateUrl: 'views/bg.html',
+                templateUrl: 'views/events.html',
                 data: {
                     text: "Sample",
                     visible: false
@@ -62,37 +50,13 @@
             }
         },
         {
-            name: 'underconstruction',
+            name: 'workshops',
             state:
             {
-                url:'/uc',
-                templateUrl: 'views/underconstruction.html',
-                data: {
-                    text: "Underconstruction",
-                    visible: false
-                }
-            }
-        },
-        {
-            name: 'countdown',
-            state:
-            {
-                url:'/countdown',
-                templateUrl: 'views/countdown.html',
-                data: {
-                    text: "Countdown",
-                    visible: false
-                }
-            }
-        },
-        {
-            name: 'workshop',
-            state:
-            {
-                url:'/workshop',
+                url:'/workshops',
                 templateUrl: 'views/workshop.html',
                 data: {
-                    text: "Workshop",
+                    text: "Workshops",
                     visible: false
                 }
             }

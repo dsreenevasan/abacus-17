@@ -38,19 +38,6 @@
             $('[data-toggle="tooltip"]').tooltip();
         });
 
-        /*Background color generation*/
-        /* var rn = Math.floor((Math.random() * 150) + 60);
-         var rs = Math.floor((Math.random() * 11) + 4);
-         var t = new Trianglify({
-         x_gradient: Trianglify.colorbrewer.Spectral[rs],
-         noiseIntensity: 0,
-         cellsize: rn
-         });
-         var pattern = t.generate(window.innerWidth, window.innerWidth+200);
-         var element = document.getElementById('bg');
-         element.setAttribute('style', 'background-image: '+pattern.dataUrl);*/
-
-
         /*Events Details in the form of JSON*/
         ctrl.eventDetails = [
             {genreId: 1, genre: "Workshops", events: [
@@ -176,17 +163,7 @@
         ctrl.changeOverlay = function () {
             ctrl.showOverlay = false;
         };
-        /*function hideCondition(direction){
-         if(direction === 'left'){
-         ctrl.hideCondition = "(ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == 105" +
-         "&&ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+1+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == -15)";
-         }
-         else{
-         ctrl.hideCondition = "(ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == -15" +
-         "&&ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition-1+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] == 105)";
-         }
-         }*/
-
+        
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
