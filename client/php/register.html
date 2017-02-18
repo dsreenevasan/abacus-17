@@ -1,8 +1,8 @@
-<div id="canvas-wrap" ng-controller="IndexController as ctrl">
+<div id="canvas-wrap" >
 <!--<canvas id="c" style="width: 130vw;"></canvas>-->
     <!--<div id="overlay">-->
 
-    <form class="form-horizontal register-form" role="form" method="POST" action="../php/register.php">
+    <form class="form-horizontal register-form" role="form"  method="POST" action="registerphp.php">
 
     <h1 class="register-h1">Register</h1>
 
@@ -13,13 +13,6 @@
 
         <label class="register-label" for="mail">Email:</label>
         <input class="register-input" type="email" id="mail" name="user_email" required="true" placeholder="Enter Email">
-
-        <label class="register-label" for="password">Password:</label>
-        <input class="register-input" type="password" id="password" name="user_password" required="true" placeholder="Enter Password">
-
-        <label class="register-label" for="confirmPassword">Confirm Password:</label>
-        <input class="register-input" type="password" id="confirmPassword" name="user_confirm_password" required="true" placeholder="Confirm Password">
-        <p>Passwords do not match</p>
 
         <label class="register-label" for="phone">Phone Number:</label>
         <input class="register-input" type="text" id="phone" name="user_phone" required="true" placeholder="Enter Phone no.">
@@ -36,10 +29,10 @@
 
         <label class="register-label" for="year">Year:</label>
         <select class="register-select" id="year" name="user_year">
-            <option value="first">1</option>
-            <option value="second">2</option>
-            <option value="third">3</option>
-            <option value="fourth">4</option>
+        <option value="first">1</option>
+        <option value="second">2</option>
+        <option value="third">3</option>
+        <option value="fourth">4</option>
         </select>
     </fieldset>
     <button class="register-button" type="submit" >Submit</button>

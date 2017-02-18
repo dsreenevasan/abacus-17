@@ -3,22 +3,20 @@
 
 
         <header class="card__thumb">
-            <a href="#"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/827672/computercard.png" id="computercard"/></a>
+            <a href="#"><img src="../images/computercard.png" id="computercard"/></a>
 
             <div id ="formbox">
-                <form class="form login-form" method="POST" action="register.php">
+                <form class="form login-form"  method="POST" action="../php/login.php">
                     <input class="form-input" type="email" name="email" ng-model="ctrl.email" placeholder="email">
                     <input class="form-input" type="password" name="password" ng-model="ctrl.password" placeholder="password">
+                    <a href="#" class="btn gold">LOGIN</a>
                 </form>
             </div>
         </header>
 
-        <div class="card__body">
-
+        <!--<div class="card__body">
             <a href="#" class="btn gold">LOGIN</a>
-
-        </div>
-
+        </div>-->
         <footer class="card__footer">
             <span class="glyphicon glyphicon-user"></span><a href="#"> signup </a>
             &emsp;

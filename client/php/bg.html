@@ -1,52 +1,4 @@
-<div id="canvas-wrap" ng-controller="IndexController as ctrl">
-<!--<canvas id="c" style="width: 130vw;"></canvas>-->
-    <!--<div id="overlay">-->
-
-    <form class="form-horizontal register-form" role="form" method="POST" action="../php/register.php">
-
-    <h1 class="register-h1">Register</h1>
-
-    <fieldset class="register-fieldset">
-        <legend class="register-legend"><span class="number">1</span>Your basic info</legend>
-        <label class="register-label" for="name">Full Name:</label>
-        <input class="register-input" type="text" id="name" name="user_name" required="true" placeholder="Enter Full name">
-
-        <label class="register-label" for="mail">Email:</label>
-        <input class="register-input" type="email" id="mail" name="user_email" required="true" placeholder="Enter Email">
-
-        <label class="register-label" for="password">Password:</label>
-        <input class="register-input" type="password" id="password" name="user_password" required="true" placeholder="Enter Password">
-
-        <label class="register-label" for="confirmPassword">Confirm Password:</label>
-        <input class="register-input" type="password" id="confirmPassword" name="user_confirm_password" required="true" placeholder="Confirm Password">
-        <p>Passwords do not match</p>
-
-        <label class="register-label" for="phone">Phone Number:</label>
-        <input class="register-input" type="text" id="phone" name="user_phone" required="true" placeholder="Enter Phone no.">
-
-
-    </fieldset>
-
-        <legend class="register-legend"><span class="number">2</span>Your educational info</legend>
-        <label class="register-label" for="College">College:</label>
-        <input class="register-input" type="text" id="college" name="user_college" required="true" placeholder="Enter College name">
-
-        <label class="register-label" for="dept">Department:</label>
-        <input class="register-input" type="text" id="dept" name="user_dept" required="true" placeholder="Enter department">
-
-        <label class="register-label" for="year">Year:</label>
-        <select class="register-select" id="year" name="user_year">
-            <option value="first">1</option>
-            <option value="second">2</option>
-            <option value="third">3</option>
-            <option value="fourth">4</option>
-        </select>
-    </fieldset>
-    <button class="register-button" type="submit" >Submit</button>
-</form>
-    <!--</div>-->
-</div>
-
+<canvas id="c"></canvas>
 <script>
     var c = document.getElementById("c");
     var ctx = c.getContext("2d");
@@ -257,4 +209,27 @@
         document.dispatchEvent(fauxClick);
     }
 </script>
+<!--
+<div id="bg">
 
+</div>
+
+<script>
+    //by @nodws
+    /*
+     Using trianglify.js and d3.js library
+     Also not possible without Tim Berners Lee creator of the www, Brendan Eich creator of javascript, Michael S. Dell founder of Dell Computer who manufactured my PC, my Mom and Dad who manufactured me and The BigBang creator of the universe.
+     Hope these credits are enough  to satisfy my impostor syndrome
+     */
+    //Click to change bg
+    var rn = Math.floor((Math.random() * 150) + 60);
+    var rs = Math.floor((Math.random() * 11) + 4);
+    var t = new Trianglify({
+        x_gradient: Trianglify.colorbrewer.Spectral[rs],
+        noiseIntensity: 0,
+        cellsize: rn
+    });
+    var pattern = t.generate(window.innerWidth, window.innerWidth+200);
+    var element = document.getElementById('bg');
+    element.setAttribute('style', 'background-image: '+pattern.dataUrl);
+</script>-->

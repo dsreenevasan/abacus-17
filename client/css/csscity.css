@@ -34,7 +34,8 @@
     position: relative;
     width: 100vw;
     height: 80vh;
-    margin: 0 auto; }
+    margin: -4vh 0 0 0;
+}
 
 .building {
     position: absolute;
