@@ -883,3 +883,58 @@
         color: grey;
         text-shadow: 0 0 0; }
 }
+
+.tile {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    cursor: pointer;
+    perspective: 300px;
+}
+.tile > div, .tile a {
+    width: 200px;
+    height: 100px;
+    left: 50%;
+    position: absolute;
+    margin-left: -100px;
+    color: #30261c;
+    background-color: #e4ecb9;
+    font-size: 45px;
+    text-align: center;
+    margin-left: 50px;
+}
+.tile > a {
+    display: block;
+    text-decoration: none;
+    background-color: #d88e8f;
+}
+.switch {
+    overflow: hidden;
+}
+.switch > div, .switch a {
+    transition: 0.1s all linear;
+    position: absolute;
+}
+.switch > a {
+    transform: translate(200px, 0);
+}
+.switch:hover > div {
+    transform: translate(-200px, 0);
+}
+.switch:hover > a {
+    transform: translate(0, 0);
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background:#27ae60;
+}
