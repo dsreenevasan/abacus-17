@@ -1,6 +1,6 @@
 <?php
-		
-	include('db_connect.php');
+		echo "hi";
+	 include('db_connect.php');
 
 
 								$emailexist=0; 
@@ -43,20 +43,41 @@
 											$sql_insert	 	= " INSERT INTO `CSEA`.`personal_details` (`EMAIL`, `NAME`, `DEPARTMENT`, `PHONE_NUMBER`, `COLLEGE`, `YEAR`, `A_ID`, `PASSWORD`) VALUES ('$email', '$name', '$dept', '$mobno', '$college', '$year', '$aid', '$pass')";
 											
 											if(mysqli_query($connection, $sql_insert))
-											{  echo("true");
-												header("location: login.html");
+											{  		
+													//echo("REGISTERED SUCCESSFULLY");
+													//echo("WAIT FOR 5 SECONDS");
+													//echo("REDIRECTING TO MAIN PAGE");
+													$_SESSION["email"] = $email;
+													
+													setcookie("LOGGED_IN", $email);
+													setcookie("REGISTERED_SUCCESS","YES");
+													//echo $_COOKIE["LOGGED_IN"];
+
+													$user->name = $name;
+													$user->dept = $dept;
+													$user->phno = $mobno;
+													$user->college = $college;
+													$user->year = $year;
+													$user->a_id = $aid;
+													$userJSON = json_encode($user);
+													$output = "<script>console.log( 'Debug Objects: " . "INSERTED" . "' );</script>";
+    echo $output;
+													echo $userJSON;
+												//header("location: main.html");
 											}
 									}
 										else{
 											echo 'MOBILE NUMBER ALREADY EXISTS' ;
-											header("location: register.html");
+											setcookie("REGISTERED_SUCCESS","NO");
+											//header("location: register.html");
 											$mobexist=1;
 										}
 								}
 								else{
 										echo 'EMAIL ID ALREADY EXISTS' ;
+										setcookie("REGISTERED_SUCCESS","NO");
 										$emailexist=1;
-										header("location: register.html");
+										//header("location: register.html");
 									}
 								
 								

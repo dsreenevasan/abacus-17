@@ -5,9 +5,8 @@
         .module('abacus')
         .controller('WorkshopsController', WorkshopsController);
 
-    WorkshopsController.$inject = ['$state', '$compile', '$scope', '$window'];
-
-    function WorkshopsController($state, $compile, $scope, $window){
+    WorkshopsController.$inject = ['$state', '$compile', '$scope', '$rootScope', '$window', '$uibModal', 'MainService', 'toaster', '$uibModalStack', '$cookieStore'];
+    function WorkshopsController($state, $compile, $scope, $rootScope, $window, $uibModal, MainService, toaster, $uibModalStack, $cookieStore){
 
         var ctrl = this;
         ctrl.divPosition = 0; //for horizontal div movement
@@ -15,7 +14,24 @@
         ctrl.show = 1;
         ctrl.isMobile = false;
         ctrl.showOverlay = true;
+        ctrl.loggedIn = false;
         detectmob();
+        checkCookies();
+
+        MainService.PayForWorkshop().then(function(response){
+            console.log(JSON.stringify(response));
+        });
+
+        function checkCookies() {
+            if($cookieStore.get('userDetails')){
+                console.log("logged in");
+                ctrl.userDetails = $cookieStore.get('userDetails');
+                ctrl.loggedIn = true;
+            }
+            else{
+                console.log("not logged in");
+            }
+        }
 
         function detectmob() {
             if (navigator.userAgent.match(/Android/i)
@@ -41,24 +57,33 @@
         /*Events Details in the form of JSON*/
         ctrl.eventDetails = [
             {genreId: 1, genre: "Workshops", events: [
-                {id: 1, name: "",
-                    description: "Will be updated soon",
-                    rules: {points:["Will be updated soon"]},
-                    format: {rounds:["Will be updated soon"]},
+                {id: 1, name: "HOW TO DO WEB DEVELOPMENT WITH REACT [FRONT END FRAMEWORK]",
+                    description: "“Websites should look good from the inside and out. ― Paul Cookson" +
+                        "How many times you check out the website of any entity before judging it? Quite obviously the front runners for any business, websites are quintessential. Developing such a superpower requires smart skills and creative thinking. The workshop agenda is to transform anyone with absolute zero knowledge on the domain to be a creator of a unique design. REACT helps you to create an efficient UI, and the workshop, will help to create an efficient Web Developer. ",
                     contact: "Will be updated soon",
                     image: "../images/events/ospc.jpg"},
-                /*{id: 1, name: "Data Mining",
-                 image: "../images/workshop/mining.jpg"},
-                 {id: 2, name: "Internet Of Things",
-                 image: "../images/workshop/iot.jpg"},
-                 {id: 3, name: "Ruby On Rails",
+                 {id: 2, name: "HOW TO BUILD YOUR OWN FITBIT [FITNESS TRACKER]",
+                     description: "“The best project you’ll ever work on is YOU -Ella Wright" +
+                        "Fitness is what makes a human healthy. You eat, you exercise, you play and you strive hard to keep yourself fit. With the right fitness tracker, you can monitor how fit you are and what you have to do to reach your goals, from shedding the extra kilos to developing a sculpted body. Develop your own personalized FITBIT to become your own trainer who would never let you down. ",
+                     image: "../images/workshop/iot.jpg"},
+                {id: 3, name: "HOW TO BUILD YOUR OWN AMAZON.COM [ECOMMERCE DEVELOPMENT]",
+                    description: "“If you make a customer unhappy, they won’t tell five friends, they’ll tell 5,000 friends. So we are at a point now where we have all of the things we need to build an important and lasting company, and if we don’t, it will be shame on us. -	Jeff Bezos, CEO Amazon" +
+                    "Gone are the days when people go shopping and bring back bags of goods. With one click, you find the world’s best deals and options to choose from. The e-commerce industry is a force that no one can ignore. Come and learn about building an e-commerce site to transform yourself to an entrepreneur altogether!",
                  image: "../images/workshop/ruby.jpg"},
-                 {id: 4, name: "IBM bluemix and Dockers",
+                 {id: 4, name: "HOW TO ENHANCE THE REAL WORLD: AUGMENTED REALITY WORKSHOP",
+                     description: "“Why shouldn’t people be able to teleport wherever they want? -Palmer Lucky, Founder of Oculus VR" +
+                     "It’s quite sad we all missed our letters from Hogwarts. True that it does not exist, we still want   a magical world where we shape things, dream with our eyes wide open. Alternate realities exist when you are skilled enough to build your own versions, from flying dragons and unicorns to a whole new planet with ultra-cool gadgets and gizmos. Become the creator by learning the fundamentals of Augmented Reality!",
                  image: "../images/events/bluemix.jpg"},
-                 {id: 5, name: "Big Data",
-                 image: "../images/events/ospc.jpg"}*/],
+                 {id: 5, name: " LINUX",
+                     description: "“Linux is user friendly. It’s just picky about who its friends are!" +
+                     "It’s free, it’s open source, it’s secure and let’s just be honest, it’s cool! Probably the best thing about Linux is the Linux community. You will never feel alone in Linux world. Join with the rest of the geeks squad to become proficient in Linux.",
+                 image: "../images/events/ospc.jpg"},
+                {id: 6, name: " MACHINE LEARNING",
+                    description: "“Computers used to not be able to see very well, and now they’re starting to open their eyes –Jeff Dean, Senior Fellow, Google" +
+                        "The self-driving Google car, cyber fraud detection, friend recommendations on Facebook, movie recommendations on Netflix, recommendations from Amazon web search results, real-time ads on web pages and mobile devices, email spam filtering, pattern and image recognition – are all by-products of applying machine learning in the analysis of huge volumes of data. In short, ML is simply making computers behave like they do in the movies  As the hottest model in the technology industry and an upcoming revolutionary altogether, knowledge about Machine learning is nothing less than a basic need for all computer nerds. Come and learn, and we sure won’t let you down!",
+                    image: "../images/events/ospc.jpg"}],
                 /*marginValue: [-15, 4, 45, 83, 105], margins :['-15vw', '4vw', '45vw', '83vw', '105vw']*/
-                marginValue: [45], margins :['45vw']}
+                marginValue: [-25, -15, 4, 45, 83, 105], margins :['-25vw', '-15vw', '4vw', '45vw', '83vw', '105vw' ]},
         ];
 
         /*To track the centre div*/
@@ -67,23 +92,6 @@
             eventId : 1
         };
         ctrl.horizontalMidDiv = Math.floor(ctrl.eventDetails[ctrl.centreDiv.genreId].events.length/2);
-
-        /*ctrl.marginValue = [-35, -15, 3, 14, 45, 79, 89, 105, 125];
-         ctrl.margins = ['-35vw', '-15vw', '3vw', '14vw', '45vw', '79vw', '89vw', '105vw', '125vw'];*/
-
-        ctrl.marginValue = [-35, -25, -15, 7, 45, 81, 105, 115, 125];
-        ctrl.margins = ['-35vw', '-25vw', '-15vw', '7vw', '45vw', '81vw', '105vw', '115vw', '125vw'];
-
-        /*For mobiles*/
-        /*ctrl.marginValue = [-35, -15, 3, 13, 45, 65, 85, 105, 125];
-         ctrl.margins = ['-35vw', '-15vw', '5vw', '17vw', '45vw', '79vw', '91vw', '105vw', '125vw'];*/
-
-        ctrl.marginTopValue = [-20, 10, 45, 81, 110, 125];
-        ctrl.marginsTop = ['-20vh', '11vh', '45vh', '81vh', '110vh', '125vh'];
-
-        /*For Mobiles*/
-        /*ctrl.marginTopValue = [-20, 10, 45, 81, 110, 125];
-         ctrl.marginsTop = ['-20vh', '13vh', '45vh', '77vh', '110vh', '125vh'];*/
 
         ctrl.move = function(key){
             if(key.keyCode === 39){      //right
@@ -163,7 +171,67 @@
         ctrl.changeOverlay = function () {
             ctrl.showOverlay = false;
         };
-        
+
+        ctrl.ok = function () {
+            if(ctrl.loggedIn){
+                var obj = {
+                    a_id : ctrl.userDetails.a_id,
+                    workshop: $rootScope.workshop
+                };
+
+                console.log(JSON.stringify(obj));
+
+                MainService.RegisterWorkshop(obj).then(function(response){
+                    if(response.status == 200){
+                        if(response.data != 404){
+                            toaster.pop("success", "Success", "Registration Successful", 3000);
+                        }
+                        else{
+                            toaster.pop("error", "Error", "Error Registering", 3000);
+                        }
+                    }
+                    else{
+                        toaster.pop("error", "Error", "Error Registering", 3000);
+                    }
+                });
+            }
+            else{
+                console.log($rootScope.workshop);
+                toaster.pop("info", "", "Login to continue", 2000);
+                setTimeout(function () {
+                    $state.go('main');
+                }, 2000);
+            }
+            $uibModalStack.dismissAll();
+        };
+
+        ctrl.cancel = function () {
+            $uibModalStack.dismissAll();
+        };
+
+        ctrl.registerWorkshop = function() {
+            $rootScope.workshop = ctrl.horizontalMidDiv;
+            var modalInstance = $uibModal.open({
+                templateUrl: '../views/workshopRegisterModal.html',
+                backdrop: true,
+                size: 'md',
+                windowTopClass: 'modal-margin',
+                controller: 'WorkshopsController',
+                controllerAs: 'ctrl',
+                resolve: {
+
+                }
+            });
+            modalInstance.result.then(function () {
+                // Remove it on closing
+                console.log("result");
+
+            }, function () {
+                // Remove it on dismissal
+                console.log("result1");
+            });
+        };
+
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });

@@ -120,6 +120,20 @@
     margin-top: 15vh;
 }
 
+.workshop-horizontalMainDiv{
+    position: fixed;
+    height: 18vh;
+    width: 13vw;
+    color: white;
+    /*background-color: blue;*/
+    font-family: 'Acme', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    padding-top: 4vh;
+    -webkit-transition: margin-left 1s ease-out;
+    margin-top: 15vh;
+}
+
 .mainMidDiv{
     height: 60vh;
     width: 50vw;
@@ -153,6 +167,22 @@
     -webkit-animation: fadeUpIn 3s; /* Safari and Chrome */
 }
 
+.workshop-mainMidBottomDiv{
+    height: 12vh;
+    width: 100%;
+    margin: 38vh 0 0 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: 'Lato', Helvetica;
+    font-weight: 100;
+    top: 70px;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    padding-top: 1vh;
+    animation: fadeUpIn 3s;
+    -webkit-animation: fadeUpIn 3s; /* Safari and Chrome */
+}
+
 @-webkit-keyframes fadeUpIn /* Safari and Chrome */
 {
     from { opacity:0; top:150px; }
@@ -165,6 +195,16 @@
     padding: 7vh 3vw 3vh 5vw;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3vh;
+    color: white;
+
+}
+
+.workshop-midContentsDiv{
+    height: 5vh;
+    width: 45vw;
+    padding: 3vh 3vw 3vh 3vw;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3em;
     color: white;
 
 }
@@ -350,6 +390,18 @@
         text-align: center;
     }
 
+    .workshop-horizontalMainDiv{
+        position: fixed;
+        height: 13vh;
+        width: 15vw;
+        color: white;
+        /*background-color: blue;*/
+        -webkit-transition: margin-left 1s ease-out;
+        margin-top: 20vh;
+        font-size: 0.4em;
+        text-align: center;
+    }
+
     .mainMidDiv{
         height: 60vh;
         width: 65vw;
@@ -381,10 +433,32 @@
         -webkit-animation: fadeUpIn 3s;
     }
 
+    .workshop-mainMidBottomDiv{
+        height: 9vh;
+        width: 100%;
+        margin: 40vh 0 0 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-family: 'Lato', Helvetica;
+        font-weight: 100;
+        top: 70px;
+        font-size: 0.85em;
+        color: white;
+        padding: 1vh 0 0 2vw;
+        animation: fadeUpIn 3s;
+        -webkit-animation: fadeUpIn 3s;
+    }
+
     .midContentsDiv{
         height: 5vh;
         width: 90%;
         font-size: 0.75em;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .workshop-midContentsDiv{
+        height: 5vh;
+        width: 90%;
+        font-size: 0.7em;
         font-family: 'Josefin Sans', sans-serif;
     }
 
@@ -559,6 +633,18 @@
         text-align: center;
     }
 
+    .workshop-horizontalMainDiv{
+        position: fixed;
+        height: 16vh;
+        width: 15vw;
+        color: white;
+        /*background-color: blue;*/
+        -webkit-transition: margin-left 1s ease-out;
+        margin-top: 22vh;
+        font-size: 0.5em;
+        text-align: center;
+    }
+
     .mainMidDiv{
         height: 60vh;
         width: 60vw;
@@ -590,10 +676,32 @@
         -webkit-animation: fadeUpIn 3s;
     }
 
+    .workshop-mainMidBottomDiv{
+        height: 9vh;
+        width: 100%;
+        margin: 41vh 0 0 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-family: 'Lato', Helvetica;
+        font-weight: 100;
+        top: 70px;
+        font-size: 1em;
+        color: white;
+        padding: 1vh 0 0 2vw;
+        animation: fadeUpIn 3s;
+        -webkit-animation: fadeUpIn 3s;
+    }
+
     .midContentsDiv{
         height: 5vh;
         width: 80%;
         font-size: 1.5em;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .workshop-midContentsDiv{
+        height: 5vh;
+        width: 90%;
+        font-size: 0.8em;
         font-family: 'Josefin Sans', sans-serif;
     }
 

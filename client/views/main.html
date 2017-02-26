@@ -1,4 +1,5 @@
 <div class="container" ng-controller="MainController as ctrl" style="height: 1000px; width: 100%; padding: 0 0 0 0;">
+	<toaster-container toaster-options="{'position-class': 'toast-top-center', 'close-button':true }"></toaster-container>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<!--<img src="../images/test.png" style="height: 12vh; width: 4.90vw; margin: -1.5vh 0 0 -7vw; float: left">-->
@@ -15,9 +16,11 @@
 				<ul class="nav navbar-nav navbar-right">
 
 					<li><a ng-click="ctrl.stateChange('events')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>E</span><span>V</span><span>E</span><span>N</span><span>T</span><span>S</span></a></li>
-					<li><a ng-click="ctrl.stateChange('workshop')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>W</span><span>O</span><span>R</span><span>K</span><span>S</span><span>H</span><span>O</span><span>P</span><span>S</span></a></li>
-					<li><a style="color: white; cursor: hand; cursor: pointer" ng-click="ctrl.openModal('login', 'sm')" class="link link--yaku"><span>L</span><span>O</span><span>G</span><span>I</span><span>N</span></a></li>
-					<li><a style="color: white; cursor: hand; cursor: pointer" ng-click="ctrl.openModal('register', 'md')" class="link link--yaku"><span>R</span><span>E</span><span>G</span><span>I</span><span>s</span><span>T</span><span>E</span><span>R</span></a></li>
+					<li><a ng-click="ctrl.stateChange('workshops')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>W</span><span>O</span><span>R</span><span>K</span><span>S</span><span>H</span><span>O</span><span>P</span><span>S</span></a></li>
+					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="!ctrl.loggedIn" ng-click="ctrl.openModal('login', 'sm')" class="link link--yaku"><span>L</span><span>O</span><span>G</span><span>I</span><span>N</span></a></li>
+					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="!ctrl.loggedIn" ng-click="ctrl.openModal('register', 'md')" class="link link--yaku"><span>R</span><span>E</span><span>G</span><span>I</span><span>s</span><span>T</span><span>E</span><span>R</span></a></li>
+					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="ctrl.loggedIn" ng-click="ctrl.logout()" class="link link--yaku"><span>L</span><span>O</span><span>G</span><span>O</span><span>U</span><span>T</span></a></li>
+					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="ctrl.loggedIn" ng-click="ctrl.openModal('register', 'md')" class="link link--yaku"><span>H</span><span>i</span><span>!</span>&nbsp;&nbsp;<span>{{ctrl.userDetails.name}}</span></a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>

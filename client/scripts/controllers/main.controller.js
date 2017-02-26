@@ -5,21 +5,34 @@
     .module('abacus')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['$state', '$compile', '$scope', '$window' ,'$uibModal','$document'];
+  MainController.$inject = ['$state', '$compile', '$scope', '$window', 'toaster' ,'$uibModal','$document', 'MainService', '$cookieStore'];
 
-  function MainController($state, $compile, $scope, $window, $uibModal,$document){
+  function MainController($state, $compile, $scope, $window, toaster, $uibModal,$document, MainService, $cookieStore ){
 
-    var bodyRef = angular.element( $document[0].body );
-    console.log($document[0]);
+
     var ctrl = this;
+    var bodyRef = angular.element( $document[0].body );
     console.log("Success!");
     ctrl.showNav = false;
     ctrl.maxWidth = 0;
+    ctrl.loggedIn = false;
     detect();
+    checkCookies();
 
     $(document).ready(function(){
       $('[data-toggle="tooltip"]').tooltip();
     });
+
+    function checkCookies() {
+      if($cookieStore.get('userDetails')){
+        console.log("logged in");
+        ctrl.userDetails = $cookieStore.get('userDetails');
+        ctrl.loggedIn = true;
+      }
+      else{
+        console.log("not logged in");
+      }
+    }
     
     function detect () {
       angular.element(window).bind("scroll", function(){
@@ -76,6 +89,64 @@
       console.log("-a--------------");
     //  alert('ok');
     };
+
+    ctrl.login = function(){
+      var obj = {
+        email:  ctrl.email,
+        pass: ctrl.password
+      };
+
+      console.log(JSON.stringify(obj));
+      MainService.Login(obj).then(function (response) {
+        if(response.status == 200){
+          if(response.data != 404){
+            toaster.pop("success", "Success", "Successfully Logged In", 3000);
+            $cookieStore.put('userDetails', response.data);
+            checkCookies();
+          }
+          else{
+            toaster.pop("error", "Error", "Invalid Username or Password", 3000);
+            console.log("Invalid Username or Password");
+          }
+        }
+      })
+    };
+
+    ctrl.register = function () {
+
+      var obj = {
+       user_email : ctrl.emailId,
+       user_password : ctrl.password,
+       user_name: ctrl.name,
+       user_phone: ctrl.phoneNumber,
+       user_college: ctrl.collegeName,
+       user_dept: ctrl.department,
+       user_year: ctrl.year
+       };
+
+       console.log(JSON.stringify(obj));
+
+      MainService.Register(obj).then(function (response) {
+          //console.log(response);
+          if(response.status == 200){
+            if(response.data.a_id){
+              toaster.pop("success", "Success", "Successfully Logged In", 3000);
+              $cookieStore.put('userDetails', response.data);
+              checkCookies();
+            }
+            else{
+              toaster.pop("error", "Error", response.data, 3000);
+              console.log(response.data);
+            }
+          }
+       });
+    };
+
+    ctrl.logout = function(){
+      $cookieStore.remove('userDetails');
+      ctrl.loggedIn = false;
+      toaster.pop("success", "Success", "Successfully Logged Out!");
+    }
   }
 
 })();

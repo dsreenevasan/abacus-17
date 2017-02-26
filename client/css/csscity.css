@@ -466,7 +466,7 @@
 .welcome h2 span {
     color: white;
     text-shadow: 0 0 0;
-    animation: 2s letter; }
+    animation: 2s letter infinite; }
 
 @keyframes letter {
     10% {

@@ -64,11 +64,13 @@
     ];
 
     var abacus = angular.module('abacus', [
-        'ui.bootstrap',
         'ui.router',
         'ngAnimate',
+        'ngCookies',
+        'toaster',
         'fullPage.js',
-        'swipe'
+        'swipe',
+        'ui.bootstrap'
     ]);
     /*.run(
      function($location) {

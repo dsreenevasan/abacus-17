@@ -1,4 +1,5 @@
 <div ng-controller="WorkshopsController as ctrl" id="bg" ng-keydown="ctrl.move($event)" tabindex="1" class="workshopMainDiv">
+    <toaster-container toaster-options="{'position-class': 'toast-top-center', 'close-button':true }"></toaster-container>
     <div class="overlay" ng-if="ctrl.showOverlay">
         <img src="../images/eventsInstructions.svg" ng-if="!ctrl.isMobile" style="height:50vh; width: 80vw; margin: 15vh 0 0 10vw">
         <h1 style="color: white; text-align: center; margin: 20vh 0 0 0" ng-if="ctrl.isMobile"><u>Navigation Controls</u></h1>
@@ -30,7 +31,7 @@
         </div>&ndash;&gt;
     </div>-->
     <div class="row horizontalDivRow" ng-init="ctrl.setFocus()" id="navigation">
-        <div class="column col-md-1 horizontalMainDiv" ng-repeat="event in ctrl.eventDetails[ctrl.centreDiv.genreId].events"
+        <div class="column col-md-1 workshop-horizontalMainDiv" ng-repeat="event in ctrl.eventDetails[ctrl.centreDiv.genreId].events"
              style="margin-left: {{ctrl.eventDetails[ctrl.centreDiv.genreId].margins[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length]}};
              background-image: url({{event.image}}); background-size: 100% 100%"
              ng-if="(ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] > -16
@@ -44,17 +45,7 @@
         <div class="mainMidDiv" ng-swipe-up="ctrl.change(38)" ng-swipe-down="ctrl.change(40)" ng-swipe-left="ctrl.change(37)" ng-swipe-right="ctrl.change(39)"
              style="background-image: url({{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].image}}); background-size: 100% 100%">
             <div class="mainInnerDiv">
-                <div class="midContentsDiv" ng-if="ctrl.show == 1">{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].description}}</div>
-                <div class="midContentsDiv" ng-if="ctrl.show == 2">
-                    <ul>
-                        <li ng-repeat="rules in ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].rules.points">{{rules}}</li>
-                    </ul>
-                </div>
-                <div class="midContentsDiv" ng-if="ctrl.show == 3" >
-                    <ul>
-                        <li ng-repeat="format in ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].format.rounds">{{format}}</li>
-                    </ul>
-                </div>
+                <div class="workshop-midContentsDiv" ng-if="ctrl.show == 1">{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].description}}</div>
                 <div class="midContentsDiv" ng-if="ctrl.show == 4">
                     <ul>
                         <li ng-repeat="contact in ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].contact">{{contact}}</li>
@@ -62,11 +53,10 @@
                 </div>
                 <div class="midDivNavRing" ng-hide="ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 3 || ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 5 || ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 6">
                     <i class="fa fa-file-text fa-icons" aria-hidden="true" ng-click="ctrl.show = 1" data-toggle="tooltip" data-placement="left" title="Description" style=" cursor: hand; cursor: pointer"></i><br>
-                    <i class="fa fa-gavel fa-icons" aria-hidden="true" ng-click="ctrl.show = 2" data-toggle="tooltip" data-placement="left" title="Rules" style=" cursor: hand; cursor: pointer"></i><br>
-                    <i class="fa fa-pencil fa-icons" aria-hidden="true" ng-click="ctrl.show = 3" data-toggle="tooltip" data-placement="left" title="Format" style=" cursor: hand; cursor: pointer"></i><br>
                     <i class="fa fa-phone fa-icons" aria-hidden="true" ng-click="ctrl.show = 4" data-toggle="tooltip" data-placement="left" title="Contact" style=" cursor: hand; cursor: pointer"></i><br>
+                    <i class="fa fa-pencil fa-icons" aria-hidden="true" ng-click="ctrl.registerWorkshop()" data-toggle="tooltip" data-placement="left" title="Register" style=" cursor: hand; cursor: pointer"></i><br>
                 </div>
-                <div id="bottomDiv" class=mainMidBottomDiv>{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].name}}</div>
+                <div id="bottomDiv" class=workshop-mainMidBottomDiv>{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].name}}</div>
             </div>
         </div>
     </div>
