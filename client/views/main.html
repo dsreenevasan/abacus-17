@@ -15,7 +15,7 @@
 				<ul class="nav navbar-nav navbar-right">
 
 					<li><a ng-click="ctrl.stateChange('events')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>E</span><span>V</span><span>E</span><span>N</span><span>T</span><span>S</span></a></li>
-					<li><a ng-click="ctrl.stateChange('workshop')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>W</span><span>O</span><span>R</span><span>K</span><span>S</span><span>H</span><span>O</span><span>P</span><span>S</span></a></li>
+					<li><a ng-click="ctrl.stateChange('workshops')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>W</span><span>O</span><span>R</span><span>K</span><span>S</span><span>H</span><span>O</span><span>P</span><span>S</span></a></li>
 					<li><a style="color: white; cursor: hand; cursor: pointer" ng-click="ctrl.openModal('login', 'sm')" class="link link--yaku"><span>L</span><span>O</span><span>G</span><span>I</span><span>N</span></a></li>
 					<li><a style="color: white; cursor: hand; cursor: pointer" ng-click="ctrl.openModal('register', 'md')" class="link link--yaku"><span>R</span><span>E</span><span>G</span><span>I</span><span>s</span><span>T</span><span>E</span><span>R</span></a></li>
 				</ul>
@@ -187,7 +187,7 @@
 
 					</div>
 				</div>
-				<div class="section" id="section2" style="background-color: #1abc9c">
+				<div class="section" id="section2" style="background-color: #1abc9c; height: 70vh ">
                     <div class="row aboutusdiv" >
 					<h1 class="main-h1" style="color: #FDD835"><span class="main-span" style="border-bottom-color: #4CAF50" >CSEA</span></h1>
 					<p class="main-p" style="color: #FFFFFF;">CSEA (Computer Science and Engineering Association), the student body of the department of Computer Science and Engineering has always been successful in its mission of quenching the technical thirst of the tech-wizards.
@@ -199,42 +199,64 @@
 				</div>
 				<div class="section" id="section3" style="background-color: #27ae60; ">
 
-					<div class="row" style="width: 100vw; height: 90vh; overflow: auto">
-						<div class="row">
-							<div class="col-md-1"></div>
-							<div class="col-md-2 w3-white w3-hover-shadow w3-padding-64 w3-center"><strong>CHAIRMAN</strong><br>GIRITHARAN 8098380066</div>
-							<div class="col-md-1"></div>
-							<div class="col-md-1"></div>
-							<div class="col-md-2 w3-white w3-hover-shadow w3-padding-64 w3-center"><strong>EVENTS</strong><br>MANOJ KUMAR 9597250572</div>
-							<div class="col-md-1"></div>
-							<div class="col-md-1"></div>
-							<div class="col-md-2 w3-white w3-hover-shadow w3-padding-64 w3-center"><strong>EVENTS</strong><br>MUTHUNAGAPAN 9445811755</div>
-							<div class="col-md-1"></div>
-						</div>
+						<div class="slide active">
+							<div class="intro">
+								<h1 style="font-size: 70px; text-align: center">CHAIRMAN</h1>
+								<p style="font-size: 40px; text-align: center">Giritharan 8098380066</p>
+								<!--<img data-src="imgs/slider.png" alt="slider" height="132" width="662" id="slidersImg" />-->
+							</div>
 
-						<div class="row" style="padding-top: 30vh">
-							<div class="col-md-2 w3-white w3-hover-shadow w3-padding-64 w3-center" style="margin: 0 0 0 8.5vw"><strong>WORKSHOP</strong><br>FAIZAAN 9600103058</div>
-							<div class="col-md-1"></div>
-							<div class="col-md-1"></div>
-							<div class="col-md-2 w3-white w3-hover-shadow w3-padding-64 w3-center"><strong>WORKSHOP</strong><br>ASHWIN 8489456000</div>
-							<div class="col-md-1"></div>
-							<div class="col-md-1"></div>
-							<div class="col-md-2 w3-white w3-hover-shadow w3-padding-64 w3-center"><strong>MARKETING</strong><br>KEERTHIVASAN 7845531020</div>
-							<div class="col-md-1"></div>
 						</div>
-						<div class="row" style="padding-top: 30vh">
-							<div class="col-md-2 w3-white w3-hover-shadow w3-padding-64 w3-center" style="margin: 0 0 0 8.5vw"><strong>ACCOMODATION</strong><br>DEVA BHARATHI 9585724591</div>
-							<div class="col-md-1"></div>
-							<div class="col-md-1"></div>
-							<div class="col-md-2 w3-white w3-hover-shadow w3-padding-64 w3-center"><strong>WEB AND TECH</strong><br>MUTHURAJ 9655804033</div>
-							<div class="col-md-1"></div>
-							<div class="col-md-1"></div>
-							<div class="col-md-2 w3-white w3-hover-shadow w3-padding-64 w3-center"><strong>INDISTRIAL RELATIONS</strong><br>MANISH 8220653674</div>
-							<div class="col-md-1"></div>
+						<div class="slide">
+							<div class="intro">
+								<!--<img data-src="imgs/1.png" alt="simple" height="176" width="176" />-->
+								<h1 style="font-size: 70px; text-align: center">EVENTS</h1>
+								<p style="font-size: 40px; text-align: center">Manoj Kumar 9597250572</p>
+								<p style="font-size: 40px; text-align: center">Muthunagappan 9445811755</p>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="intro">
+								<!--<img data-src="imgs/2.png" alt="Cool" height="176" width="176" />-->
+								<h1 style="font-size: 70px; text-align: center">WORKSHOP</h1>
+								<p style="font-size: 40px; text-align: center">Faizaan 9600103058</p>
+								<p style="font-size: 40px; text-align: center">Ashwin 8489456000</p>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="intro">
+								<!--<img data-src="imgs/3.png" alt="Compatible" height="176" width="176" />-->
+								<h1 style="font-size: 70px; text-align: center">MARKETING</h1>
+								<p style="font-size: 40px; text-align: center">Keerthivasan 7845531020</p>
+							</div>
+						</div>
+					<div class="slide">
+						<div class="intro">
+							<!--<img data-src="imgs/3.png" alt="Compatible" height="176" width="176" />-->
+							<h1 style="font-size: 70px; text-align: center">ACCOMODATION</h1>
+							<p style="font-size: 40px; text-align: center">Deva Bharathi 9585724591</p>
 						</div>
 					</div>
+					<div class="slide">
+						<div class="intro">
+							<!--<img data-src="imgs/3.png" alt="Compatible" height="176" width="176" />-->
+							<h1 style="font-size: 70px; text-align: center">WEB AND TECH</h1>
+							<p style="font-size: 40px; text-align: center">Muthuraj 9655804033</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="intro">
+							<!--<img data-src="imgs/3.png" alt="Compatible" height="176" width="176" />-->
+							<h1 style="font-size: 70px; text-align: center">INDUSTRIAL RELATIONS</h1>
+								<p style="font-size: 40px; text-align: center">Manish 8220653674</p>
+						</div>
+					</div>
+
 				</div>
-				<div class="section fp-auto-height" id="section4" style="background-color: #23282d">
+				<div class="section" id="section4" style="background-color: black ">
+					<h1 style="font-size: 70px; text-align: center; color: yellow">SPONSORS WILL BE UPDATED SOON!!</h1>
+				</div>
+				<div class="section fp-auto-height" id="section5" style="background-color: #23282d">
 					<label style="float: left;color: white" class="footer">Copyright 2017 @ CSEA.<br> All rights reserved.</label>
 					<label style="float: right;color: white"class="footer">For further queries,<br> Contact <strong class="webteam">webteam@abacus.org.in</strong></label>
 				</div>
@@ -286,6 +308,12 @@
 			navigationPosition: 'right',
 			keyboardScrolling: true,
 			controlArrows: true,
+			loopBottom: true,
+			afterRender: function () {
+				setInterval(function () {
+					$.fn.fullpage.moveSlideRight();
+				}, 4000);
+			},
 			afterLoad: function(anchorLink, index){
 				// Section indexes in fullpage start at 1
 				/*if(index === $('#fullpage .section').length){
