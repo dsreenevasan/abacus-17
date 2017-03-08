@@ -15,7 +15,7 @@
         <input class="register-input" type="email" id="mail" name="user_email"  ng-model="ctrl.emailId" required="true" placeholder="Enter Email">
 
         <label class="register-label" for="password">Password:</label>
-        <input class="register-input" type="password" id="password" name="user_password" ng-model="ctrl.password" ng-minlength="8" data-toggle="tooltip" data-placement="right" title="Password Must be atleast 8 characters" required="true" placeholder="Enter Password">
+        <input class="register-input" type="password" id="password" name="user_password" ng-model="ctrl.password" ng-minlength="8" data-toggle="tooltip" data-placement="right" title="Password Must be atleast 8 characters" required="true" placeholder="Minimum 8 characters">
 
         <!--<label class="register-label" for="confirmPassword">Confirm Password:</label>
         <input class="register-input" type="password" id="confirmPassword" name="user_confirm_password"  ng-model="ctrl.confirmPassword" required="true" placeholder="Confirm Password">
@@ -42,6 +42,10 @@
             <option value="fourth">4</option>
         </select>
     </fieldset>
+
+        <div vc-recaptcha key="ctrl.publicKey" style="margin: 0 0 0 10vw" ></div>
+        <br>
+        <!--<div class="g-recaptcha" data-sitekey="6LetiBcUAAAAAHEsMJERL8lZNkryc0EfYbhK8XVR"></div>-->
     <button class="register-button" type="submit" ng-click="ctrl.register()" ng-disabled="registerForm.$invalid">Submit</button>
 </form>
     <!--</div>-->

@@ -1,7 +1,7 @@
 1) install node in your pc/ laptop
 2) run npm install in command line
 3) run bower install in command line
-4) run node app.js to serve
+4) run node abacus.js to serve
 5) open http://localhost:<port_number> in browser
 
 (or)

@@ -27,29 +27,6 @@
             }
         },
         {
-            name: 'register',
-            state: {
-                url: '/register',
-                templateUrl: 'views/register.html',
-                data: {
-                    text: "Register",
-                    visible: false
-                }
-            }
-        },
-        {
-            name: 'login',
-            state:
-            {
-                url:'/login',
-                templateUrl: 'views/login.html',
-                data: {
-                    text: "Login",
-                    visible: false
-                }
-            }
-        },
-        {
             name: 'workshops',
             state:
             {
@@ -57,6 +34,42 @@
                 templateUrl: 'views/workshop.html',
                 data: {
                     text: "Workshops",
+                    visible: false
+                }
+            }
+        },
+        {
+            name: 'workshops_reg_success',
+            state:
+            {
+                url:'/workshops_reg_success',
+                templateUrl: 'views/workshop_reg_success.html',
+                data: {
+                    text: "Workshops",
+                    visible: false
+                }
+            }
+        },
+        {
+            name: 'sa',
+            state:
+            {
+                url:'/sa',
+                templateUrl: 'views/sa.html',
+                data: {
+                    text: "Student Ambassador",
+                    visible: false
+                }
+            }
+        },
+        {
+            name: 'reach',
+            state:
+            {
+                url:'/reach',
+                templateUrl: 'views/reach.html',
+                data: {
+                    text: "Reach",
                     visible: false
                 }
             }
@@ -70,7 +83,8 @@
         'toaster',
         'fullPage.js',
         'swipe',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'vcRecaptcha'
     ]);
     /*.run(
      function($location) {
@@ -78,7 +92,14 @@
      }
      )*/
 
-    abacus.run(function($rootScope, $uibModalStack) {
+    abacus.run(function($rootScope, $uibModalStack, $window, $location) {
+        $window.ga('create', 'UA-93008925-1', 'auto');
+
+        // track pageview on state change
+        $rootScope.$on('$stateChangeSuccess', function (event) {
+            $window.ga('send', 'pageview', $location.path());
+        });
+
         $rootScope.$on('$locationChangeStart', function (event) {
             $uibModalStack.dismissAll();
         });

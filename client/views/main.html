@@ -20,7 +20,7 @@
 					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="!ctrl.loggedIn" ng-click="ctrl.openModal('login', 'sm')" class="link link--yaku"><span>L</span><span>O</span><span>G</span><span>I</span><span>N</span></a></li>
 					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="!ctrl.loggedIn" ng-click="ctrl.openModal('register', 'md')" class="link link--yaku"><span>R</span><span>E</span><span>G</span><span>I</span><span>s</span><span>T</span><span>E</span><span>R</span></a></li>
 					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="ctrl.loggedIn" ng-click="ctrl.logout()" class="link link--yaku"><span>L</span><span>O</span><span>G</span><span>O</span><span>U</span><span>T</span></a></li>
-					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="ctrl.loggedIn" ng-click="ctrl.openModal('register', 'md')" class="link link--yaku"><span>H</span><span>i</span><span>!</span>&nbsp;&nbsp;<span>{{ctrl.userDetails.name}}</span></a></li>
+					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="ctrl.loggedIn" class="link link--yaku"><span>H</span><span>i</span><span>!</span>&nbsp;&nbsp;<span>{{ctrl.userDetails.name}}</span></a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -31,8 +31,10 @@
 
 			<div id="fullpage" style="font-family: 'Josefin Sans', sans-serif;">
 				<div class="section " id="section0" style="height: 80vh">
-					<div class="logo-div">
+					<div class="logo-div" >
 						<img src="../images/abacus%20mouse_PNG.png" class="logo-image">
+						<!--<label style="margin: 23vh 0 0 3.3vw; font-size: 0.75em">Compute. Compete. Conquer.</label>-->
+						<!--<img src="../images/web_logo.png" class="logo-image">-->
 					</div>
 					<div class='city' style="zoom: 1.9; margin: -53.6vh 0 0 0">
 					<!--<div class='city' style="margin-left: 20vw">-->
@@ -77,7 +79,7 @@
 										<div class='radio5'></div>
 									</div>
 									<div class='building zoom1' ng-click="ctrl.openModal('register', 'md')">
-										<div class='windows' data-toggle="tooltip" data-placement="top" title="Register" style="cursor: pointer"></div>
+										<div class='windows' data-toggle="tooltip" data-placement="top" title="SA" style="cursor: pointer"></div>
 										<div class='radio4'></div>
 										<div class='radio5'></div>
 										<div class='radio6'></div>
@@ -88,7 +90,7 @@
 										<div class='radio2'></div>
 										<div class='radio8'></div>
 									</div>
-									<div class='building zoom1' ng-click="ctrl.stateChange('login')">
+									<div class='building zoom1' ng-click="ctrl.stateChange('sa')">
 										<div class='windows'  data-toggle="tooltip" data-placement="top" title="Contact" style="cursor: pointer"></div>
 										<div class='radio9'></div>
 										<div class='radio10'></div>
@@ -120,7 +122,7 @@
 										<div class='radio7'></div>
 										<div class='radio2'></div>
 									</div>
-									<div class='building zoom' ng-click="ctrl.stateChange('events')">
+									<div class='building zoom' ng-click="ctrl.stateChange('reach')">
 										<div class='windows'  data-toggle="tooltip" data-placement="top" title="Reach" style="cursor: pointer"></div>
 										<div class='radio7'></div>
 										<div class='radio1'></div>
@@ -186,8 +188,6 @@
 							aBaCuS, over the years has weaved a technical web, connecting smart minds in digital era, thus helping them unleash their expertness.
 							With an interesting array of events and workshops piled up, aBaCUS 2017 is all set to set trends.</p>
 						<br>
-
-
 					</div>
 				</div>
 				<div class="section" id="section2" style="background-color: #1abc9c; height: 70vh ">
@@ -201,38 +201,22 @@
 
 				</div>
 				<div class="section" id="section3" style="background-color: #27ae60; ">
-
-						<div class="slide active">
-							<div class="intro">
-								<h1 style="font-size: 70px; text-align: center">CHAIRMAN</h1>
-								<p style="font-size: 40px; text-align: center">Giritharan 8098380066</p>
-								<!--<img data-src="imgs/slider.png" alt="slider" height="132" width="662" id="slidersImg" />-->
-							</div>
-
+					<div class="slide active">
+						<div class="intro">
+							<!--<img data-src="imgs/2.png" alt="Cool" height="176" width="176" />-->
+							<h1 style="font-size: 70px; text-align: center">WORKSHOP</h1>
+							<p style="font-size: 40px; text-align: center">Faizaan 9600103058</p>
+							<p style="font-size: 40px; text-align: center">Ashwin 8489456000</p>
 						</div>
-						<div class="slide">
-							<div class="intro">
-								<!--<img data-src="imgs/1.png" alt="simple" height="176" width="176" />-->
-								<h1 style="font-size: 70px; text-align: center">EVENTS</h1>
-								<p style="font-size: 40px; text-align: center">Manoj Kumar 9597250572</p>
-								<p style="font-size: 40px; text-align: center">Muthunagappan 9445811755</p>
-							</div>
+					</div>
+					<div class="slide">
+						<div class="intro">
+							<!--<img data-src="imgs/1.png" alt="simple" height="176" width="176" />-->
+							<h1 style="font-size: 70px; text-align: center">EVENTS</h1>
+							<p style="font-size: 40px; text-align: center">Manoj Kumar 9597250572</p>
+							<p style="font-size: 40px; text-align: center">Muthunagappan 9445811755</p>
 						</div>
-						<div class="slide">
-							<div class="intro">
-								<!--<img data-src="imgs/2.png" alt="Cool" height="176" width="176" />-->
-								<h1 style="font-size: 70px; text-align: center">WORKSHOP</h1>
-								<p style="font-size: 40px; text-align: center">Faizaan 9600103058</p>
-								<p style="font-size: 40px; text-align: center">Ashwin 8489456000</p>
-							</div>
-						</div>
-						<div class="slide">
-							<div class="intro">
-								<!--<img data-src="imgs/3.png" alt="Compatible" height="176" width="176" />-->
-								<h1 style="font-size: 70px; text-align: center">MARKETING</h1>
-								<p style="font-size: 40px; text-align: center">Keerthivasan 7845531020</p>
-							</div>
-						</div>
+					</div>
 					<div class="slide">
 						<div class="intro">
 							<!--<img data-src="imgs/3.png" alt="Compatible" height="176" width="176" />-->
@@ -250,18 +234,32 @@
 					<div class="slide">
 						<div class="intro">
 							<!--<img data-src="imgs/3.png" alt="Compatible" height="176" width="176" />-->
+							<h1 style="font-size: 70px; text-align: center">MARKETING</h1>
+							<p style="font-size: 40px; text-align: center">Keerthivasan 7845531020</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="intro">
+							<!--<img data-src="imgs/3.png" alt="Compatible" height="176" width="176" />-->
 							<h1 style="font-size: 70px; text-align: center">INDUSTRIAL RELATIONS</h1>
 								<p style="font-size: 40px; text-align: center">Manish 8220653674</p>
 						</div>
 					</div>
+					<div class="slide">
+						<div class="intro">
+							<h1 style="font-size: 70px; text-align: center">CHAIRMAN</h1>
+							<p style="font-size: 40px; text-align: center">Giritharan 8098380066</p>
+							<!--<img data-src="imgs/slider.png" alt="slider" height="132" width="662" id="slidersImg" />-->
+						</div>
+					</div>
 
 				</div>
-				<div class="section" id="section4" style="background-color: black ">
+				<div class="section" id="section4" style="background-color: #AA8F00 ">
 					<h1 style="font-size: 70px; text-align: center; color: yellow">SPONSORS WILL BE UPDATED SOON!!</h1>
 				</div>
 				<div class="section fp-auto-height" id="section5" style="background-color: #23282d">
-					<label style="float: left;color: white" class="footer">Copyright 2017 @ CSEA.<br> All rights reserved.</label>
-					<label style="float: right;color: white"class="footer">For further queries,<br> Contact <strong class="webteam">webteam@abacus.org.in</strong></label>
+					<label style="float: left;color: white; padding-top: 5px" class="footer">Copyright 2017 @ CSEA.<br> All rights reserved.</label>
+					<label style="float: right;color: white; padding-top: 5px"class="footer">For further queries,<br> Contact <strong class="webteam">webteam@abacus.org.in</strong></label>
 				</div>
 
 			</div>
@@ -323,8 +321,10 @@
 					window.location.href = "http://stackoverflow.com";
 				}*/
 				console.log(index);
-				if(index == 1)
+				if(index == 1){
 					$('.navbar').removeClass('solid');
+					$('.navbar').removeClass('solidone');
+				}
 				else if(index>1 && index==2) {
 					$('.navbar').addClass('solid');
 					$('.navbar').removeClass('solidone');
@@ -337,6 +337,10 @@
 				else if(index>1 && index==4) {
 					$('.navbar').removeClass('solidone');
 					$('.navbar').addClass('solidtwo');
+				}
+				else if(index>1 && index==5) {
+					$('.navbar').removeClass('solidtwo');
+					$('.navbar').addClass('solidone');
 				}
 			}
 		});

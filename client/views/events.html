@@ -1,4 +1,4 @@
-<div ng-controller="EventsAndWorkshopsController as ctrl" id="bg" ng-keydown="ctrl.move($event)" tabindex="1" class="eventsMainDiv">
+<div ng-controller="EventsAndWorkshopsController as ctrl" id="bg" ng-keydown="ctrl.move($event)" tabindex="1" class="eventsMainDiv" ng-click="ctrl.changeOverlay()">
     <div class="overlay" ng-if="ctrl.showOverlay">
         <img src="../images/eventsInstructions.svg" ng-if="!ctrl.isMobile" style="height:50vh; width: 80vw; margin: 15vh 0 0 10vw">
         <h1 style="color: white; text-align: center; margin: 20vh 0 0 0" ng-if="ctrl.isMobile"><u>Navigation Controls</u></h1>
@@ -60,15 +60,23 @@
                         <li ng-repeat="contact in ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].contact">{{contact}}</li>
                     </ul>
                 </div>
-                <div class="midDivNavRing" ng-hide="ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 3 || ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 5 || ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 6">
-                    <i class="fa fa-file-text fa-icons" aria-hidden="true" ng-click="ctrl.show = 1" data-toggle="tooltip" data-placement="left" title="Description" style=" cursor: hand; cursor: pointer"></i><br>
-                    <i class="fa fa-gavel fa-icons" aria-hidden="true" ng-click="ctrl.show = 2" data-toggle="tooltip" data-placement="left" title="Rules" style=" cursor: hand; cursor: pointer"></i><br>
-                    <i class="fa fa-pencil fa-icons" aria-hidden="true" ng-click="ctrl.show = 3" data-toggle="tooltip" data-placement="left" title="Format" style=" cursor: hand; cursor: pointer"></i><br>
-                    <i class="fa fa-phone fa-icons" aria-hidden="true" ng-click="ctrl.show = 4" data-toggle="tooltip" data-placement="left" title="Contact" style=" cursor: hand; cursor: pointer"></i><br>
+                <div class="midDivNavRing" ng-hide="ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 5 || ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 6">
+                    <i class="fa fa-file-text fa-icons" aria-hidden="true" ng-click="ctrl.show = 1" data-toggle="tooltip" data-placement="left" title="Description" style=" cursor: hand; cursor: pointer"
+                    ng-style="ctrl.show == 1 && {'color' : '#00bcd4'} || {}"></i><br>
+                    <i class="fa fa-gavel fa-icons" aria-hidden="true" ng-click="ctrl.show = 2" data-toggle="tooltip" data-placement="left" title="Rules" style=" cursor: hand; cursor: pointer"
+                       ng-style="ctrl.show == 2 && {'color' : '#00bcd4'} || {}"></i><br>
+                    <i class="fa fa-pencil fa-icons" aria-hidden="true" ng-click="ctrl.show = 3" data-toggle="tooltip" data-placement="left" title="Format" style=" cursor: hand; cursor: pointer"
+                       ng-style="ctrl.show == 3 && {'color' : '#00bcd4'} || {}"></i><br>
+                    <i class="fa fa-phone fa-icons" aria-hidden="true" ng-click="ctrl.show = 4" data-toggle="tooltip" data-placement="left" title="Contact" style=" cursor: hand; cursor: pointer"
+                       ng-style="ctrl.show == 4 && {'color' : '#00bcd4'} || {}"></i><br>
                 </div>
                 <div id="bottomDiv" class=mainMidBottomDiv>{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].name}}</div>
             </div>
         </div>
+    </div>
+
+    <div class="navIconsEvents">
+        <img src="../images/arrows.png" class="navIconImage">
     </div>
 
 </div>

@@ -15,7 +15,7 @@
         service.Logout = Logout;
         service.Register = Register;
         service.RegisterWorkshop =RegisterWorkshop;
-        service.PayForWorkshop = PayForWorkshop;
+        service.RegisterSA = RegisterSA;
 
         return service;
 
@@ -32,29 +32,11 @@
         }
 
         function RegisterWorkshop(params) {
-            return $http.post(ConfigService.BaseURI() + '/registerWorkshop.php', params).then(handleSuccess, handleRemoteError);
+            return $http.post(ConfigService.BaseURI() + '/workshop_reg.php', params).then(handleSuccess, handleRemoteError);
         }
 
-        function PayForWorkshop(params) {
-            var headers =  {
-                'X-Api-Key': 'edb9b35399ff9858a2602861ff14d301',
-                'X-Auth-Token': '16ddfecc26956b97490d55117c6dd58e'
-            };
-
-            var payload = {
-                purpose: 'FIFA 16',
-                amount: '2500',
-                phone: '9999999999',
-                buyer_name: 'John Doe',
-                redirect_url: 'http://abacus.org.in',
-                send_email: true,
-                webhook: 'https://www.instamojo.com/@csea/',
-                send_sms: true,
-                email: 'dsreenevasan@gmail.com',
-                allow_repeated_payments: false
-            };
-
-            return $http.post('https://www.instamojo.com/api/1.1/payment-requests/', {form: payload,  headers: headers});
+        function RegisterSA(params) {
+            return $http.post(ConfigService.BaseURI() + '/sa_reg.php', params).then(handleSuccess, handleRemoteError);
         }
 
         function handleRemoteError(data) {

@@ -5,9 +5,9 @@
     .module('abacus')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['$state', '$compile', '$scope', '$window', 'toaster' ,'$uibModal','$document', 'MainService', '$cookieStore'];
+  MainController.$inject = ['$state', '$http', '$scope', '$window', 'toaster' ,'$uibModal','$document', 'MainService', '$cookieStore', 'vcRecaptchaService'];
 
-  function MainController($state, $compile, $scope, $window, toaster, $uibModal,$document, MainService, $cookieStore ){
+  function MainController($state, $http, $scope, $window, toaster, $uibModal,$document, MainService, $cookieStore, vcRecaptchaService ){
 
 
     var ctrl = this;
@@ -16,6 +16,7 @@
     ctrl.showNav = false;
     ctrl.maxWidth = 0;
     ctrl.loggedIn = false;
+    ctrl.publicKey = "6LetiBcUAAAAAHEsMJERL8lZNkryc0EfYbhK8XVR";
     detect();
     checkCookies();
 
@@ -102,7 +103,8 @@
           if(response.data != 404){
             toaster.pop("success", "Success", "Successfully Logged In", 3000);
             $cookieStore.put('userDetails', response.data);
-            checkCookies();
+            //checkCookies();
+            $window.location.reload();
           }
           else{
             toaster.pop("error", "Error", "Invalid Username or Password", 3000);
@@ -114,32 +116,40 @@
 
     ctrl.register = function () {
 
-      var obj = {
-       user_email : ctrl.emailId,
-       user_password : ctrl.password,
-       user_name: ctrl.name,
-       user_phone: ctrl.phoneNumber,
-       user_college: ctrl.collegeName,
-       user_dept: ctrl.department,
-       user_year: ctrl.year
-       };
+      if(vcRecaptchaService.getResponse() === ""){ //if string is empty
+         toaster.pop("error", "Error", "Please resolve the captcha and submit!", 3000);
+      }
+      else {
+        console.log(vcRecaptchaService.getResponse());
+        var obj = {
+          user_email    : ctrl.emailId,
+          user_password : ctrl.password,
+          user_name     : ctrl.name,
+          user_phone    : ctrl.phoneNumber,
+          user_college  : ctrl.collegeName,
+          user_dept     : ctrl.department,
+          user_year     : ctrl.year,
+          recaptcha     : vcRecaptchaService.getResponse()
+        };
 
-       console.log(JSON.stringify(obj));
+        console.log(JSON.stringify(obj));
 
-      MainService.Register(obj).then(function (response) {
+        MainService.Register(obj).then(function (response) {
           //console.log(response);
           if(response.status == 200){
             if(response.data.a_id){
               toaster.pop("success", "Success", "Successfully Logged In", 3000);
               $cookieStore.put('userDetails', response.data);
-              checkCookies();
+              //checkCookies();
+              $window.location.reload();
             }
             else{
               toaster.pop("error", "Error", response.data, 3000);
               console.log(response.data);
             }
           }
-       });
+        });
+      }
     };
 
     ctrl.logout = function(){

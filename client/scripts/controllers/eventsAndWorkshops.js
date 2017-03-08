@@ -42,41 +42,53 @@
         /*Events Details in the form of JSON*/
         ctrl.eventDetails = [
             {genreId: 1, genre: "Technical Events", events:[
-                { id: 1, name: "OSPC", description: "'A programmer is an organism that turns caffeine and pizza into code." +
-                " Great coders are the rock stars of abaCUS. Indulge yourself in solving the perplexing problems, designed to defeat you." +
-                " Prove yourself worthy of the exciting internships and prizes by battling against the exceptional coders across India. " +
-                "Get geared up to compile and run.",
+                { id: 1, name: "Coffee with Java",
+                    description: "Tired of pointers that make you go crazy ?" +
+                    "Are you an expert in cooking 'netbeans' ?" +
+                    "Are you a complete java package with essential knowledge imported in you ?" +
+                    "Do you believe in robust yet simple coding ?" +
+                    "Here's Coffee with java for you !" +
+                    "Take part in this exciting event to prove your expertise in the language and grab extraordinary prizes !!",
+                    rules: {points: ["Will be updated soon"]},
+                    format: {rounds: ["Will be updated soon"]},
+                    contact: ["Ramya - 9962256411",
+                        "Ilanchelian - 9445171664"],
+                    image: "../images/events/math.jpg"},
+                { id: 2, name: "OSPC", description: "Are you a superclass from whom 'the whole class' inherits the code during the frenzied lab sessions ?" +
+                    "Are you the kind of person who turns coffee into codes ?" +
+                    "Here is the event you are seeking!" +
+                    "Abacus brings you OSPC (OnSite Programming Contest) to get your Code dumped onsite to win amazing prizes.",
                 rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions.",
                 "Participants are not allowed to bring any additional material.", "Any kind of malpractice will lead to disqualification.", "Decisions made by the administrators will be final and binding."]},
                 format: {rounds: ["A Written round consisting of questions based on Data Structures, Algorithms and Programming logic.", "The final round will be similar to ACM-ICPC."]},
                 contact: ["Suresh - 9444136901", "Muthu Nagappan - 9445811755","Vishvesh Thangamani - 9195693399" ,"Tamilvendan - 7299802300"],
                 image: "../images/events/tech/ospc.jpg"},
-                { id: 2, name: "Debugging",
-                    description: "'Testing proves a programmer's failure.Debugging is the porgrammer's vindication.' -Boris Beizer" +
-                        "Debugging is twice as hard as writing the code in the first place." +
-                        "Prove your skills in seeking the bugs, racing against time and your peers to be crowned the ultimate grand master of debugging.",
+                { id: 3, name: "Debugging",
+                    description: "'To err is to be human' goes the saying." +
+                    "Sadly, computers don't seem to agree with the divinity in the imperfections of nature." +
+                "That's why it demands all it's code to be bug free and up and running." +
+                    "To all those perfectionists out there, come and take part in the Debugging contest where you get to find and fix bugs and unravel interesting results to complete the intriguing game of coding.",
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["A written round consisting of simple debugging questions.", "You will be given the code which may or may not have logical/syntactic bugs.  You have to identify the errors and fix them."]},
                     contact: ["Arjundhanraj - 7598306818",
                         "Sakthiprasath - 8110010630",
                         "Sultan - 8807777901"],
                     image: "../images/events/tech/debugging.jpg"},
-                { id: 3, name: "DBmania",
-                    description: "Known as the freaky programmer or passionate coder?" +
-                    "Is solving computational problem statements and pondering about future computing technology among your hobbies?" +
-                    "Even if your technical knowledge does not match the ideal coding paradigm fear not comrade!" +
-                    "Pragyan 2016 offers you a chance to attend its 2 day coding workshop followed by the GPU Coding contest.",
+                { id: 4, name: "DBmania",
+                    description: "You think you can wade through piles and piles of copious amounts of data without getting lost?" +
+                    "Are your magic spells powerful enough to do whatever is needed to get those data dancing to your tunes?" +
+                    "If you believe you are one daring data-wizard, then come and take part in  DB Mania where queries rule your thoughts more than anything else!",
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["Basic Questions on Database. (40 Questions)", "You will be given a schema and asked to build schema diagram ,queries, triggers, functions and procedures."]},
                     contact: ["Arun - 8124267121",
                         "Gowrishankar - 8903462709",
                         "MuthuThillai - 9655883077"],
                     image: "../images/events/tech/db_mania.jpg"},
-                { id: 4, name: "Game of Nerds",
-                    description: "'Live as if you were to die tomorrow; Learn as if you were to live forever!'-Mahatma Gandhi" +
-                    "To all the masters of technology! Unleash your mastery in the various fields of Computer Science" +
-                    "and grab the techie-throne!" +
-                    "Get ready to play the tech-fusion!",
+                { id: 5, name: "Game of Nerds",
+                    description: "'When you play the game of nerds,you win or you learn '" +
+                    "You think you are able to master all the trades of CS ?" +
+                    "Are you that geeky person in every class to whom people flock to get their doubts clarified ?You think you can battle it out with fellow nerds to prove your claim to the throne of nerds ?" +
+                    "Game of nerds presents you a platform to prove your excellence in the fundamentals of Computer engineering . Sharpen your brains to meet the best of nerds !",
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["This will be the preliminary round. Basic questions on Data Structures and Algorithms, Computer Architecture, Database Management Systems,Operating Systems,Web Technology, Theory of Computation and Networks will be put forth.",
                     "Will be revealed on-spot"]},
@@ -88,19 +100,10 @@
                         "sivagami - 7092935004",
                         "Priyadharshini - 9962327699"],
                     image: "../images/events/tech/game_of_nerds.jpg"},
-                { id: 5, name: "Coffee with Java",
-                    description: "Will be updated soon",
-                    rules: {points: ["Will be updated soon"]},
-                    format: {rounds: ["Will be updated soon"]},
-                    contact: ["Ramya - 9962256411",
-                        "Ilanchelian - 9445171664"],
-                    image: "../images/events/math.jpg"},
                 { id: 6, name: "Cyber Wars",
-                    description: "'If you want to go fast, go alone!" +
-                    "If you want to go far, go with others!'" +
-                    "Are you a real tech savvy in the field of networking? If yes, then it is your realm now!" +
-                    "Fight against the terrific war amidst your fellow-mates and show us your dexterity in the cyber world!" +
-                    "Brace yourself for the deadly combat!",
+                    description: "Dare to  venture a warzone filled with networking freaks ?" +
+                    "Are you capable of peeling off every layer of network with your expertise ?You consider yourself to be an intimidating hacker who poses a threat to cyber criminals ?" +
+                    "Here is one thriving opportunity to showcase your networking talents.Be a part of Cyberwars to tickle your brains and take home wonderful prizes !",
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["Will be updated soon"]},
                     contact: ["Radhika - 9962720188",
@@ -112,10 +115,9 @@
                         "Ajay - 8883339409"],
                     image: "../images/events/tech/cyber_wars.jpg"},
                 { id: 7, name: "Reverse Coding",
-                    description: "'A programmer is an organism that turns caffeine and pizza into code.'" +
-                "Great coders are the rock stars of abaCUS. Indulge yourself in solving the perplexing problems, designed to defeat you." +
-                    "Prove yourself worthy of the exciting internships and prizes by battling against the exceptional coders across India" +
-                    "Get geared up to compile and run.",
+                    description: "Sick of figuring out the results you are supposed to anticipate when you are stuck with complicated code ( which might look a lot like Greek and Latin ) ?" +
+                    "Thought of a million other easier ways you could derive a result with cleaner code?" +
+                    "Be your own code sculpture in 'Reverse coding' where you get to write code to make sure you get the output that you'd be promptly given!",
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["Written round consisting of various reverse coding questions.", "Same format as Prelims. Coding has to be done on computer."]},
                     contact: ["Manojkumar - 9597250572",
@@ -124,9 +126,8 @@
                     "Makisha - 9629078175"],
                     image: "../images/events/tech/reverse_coding.jpg"},
                 { id: 8, name: "Webaholic",
-                    description: "'Design is intelligence made visible'" +
-                    "- Alina Wheeler," +
-                    "To all the erudite web designers! Time to weave your artistry in the web world! Prove your knack in web designing and win jackpots!",
+                    description: "Bored of typing pages and pages of codes ?Wanna try something creative that attracts everyone's attention ?" +
+                    "This event is exclusively for those who could bring incredibly creative web designs into reality with their magical h(w)ands. Try out your luck in designing marvellous web stuff with html,javascript and css to win exciting rewards.",
                     rules: {points: ["Each team can have a maximum of two members.", "The members of a team can be from different colleges/institutions.",
                     "Plagiarism to be strictly avoided and the team so found will be disqualified.", "Judges decision will be final."]},
                     format: {rounds: ["Questions from HTML,CSS, JAVASCRIPT, JQUERY, PHP. No of Questions : 40. Duration :30 mins", "Develop webpages using HTML,CSS,JS without any references.",
@@ -136,7 +137,7 @@
                     image: "../images/events/tech/ospc.jpg"}],
             marginValue: [-35, -25, -15, 4, 45, 83, 105, 115], margins :['-35vw', '-25vw', '-15vw', '4vw', '45vw', '83vw', '105vw', '115vw']},
             {genreId: 2, genre: "General", events: [
-                {id: 1, name: "Mathrix",
+                {id: 1, name: "math.h",
                     description: "What is more fun than a good play with numbers?"+
                     "Tease your brain and test your skills."+
                     "Come explore the world of mathematics via witty puzzles!"+
@@ -154,17 +155,13 @@
                 {id: 3, name: "Go Game",
                     image: "../images/events/gaming.jpg"},*/
                 {id: 4, name: "Finding Nemo",
-                    description: "Will be updated soon",
+                    description: "Calling all 007’s, Sherlocks and Langdons! Do you have what it takes to decipher some of the hardest enigmas and explore unchartered territories? Like Marlin and Dory, can you connect the dots and locate Nemo? If you think you can crack and track your way out of this labyrinth, then this is your arena!",
                     rules: {points:["Will be updated soon"]},
                     format: {rounds:["Will be updated soon"]},
                     contact: ["Keerthana - 9042389902"],
                     image: "../images/events/general/selfie_hunt.jpg"},
                 {id: 5, name: "IPL Bidding",
-                    description: "Have you ever thought of building your own IPL team."+
-                    "Are you a cricket enthusiast who dreamt having Dhoni as your captain,Watson as your opener with Devillers,Starc,Steyn in your team…???"+
-                    "Then this is the right place to exhibit your cricketing passion with management capabilities. "+
-                    "This March, grab the chance of building your very own IPL team with the money we offer you."+
-                    "Be the next Shah rukh khan or Vijay Mallaya or Preity Zinta. The ball is in your court now.!!!",
+                    description: "Chance to pick top players at a price of your choice. Come and taste the actual recipe of an IPL Auction, where an auctioneer will roll out all the players to be selected by the franchises to make a strong team. Come in and find how well you can manage money matters and how strong your team can be picked!",
                     rules: {points:["Two or Three members per team.",
                         "The competition will be conducted in two rounds.",
                         "Teams which do not adhere to the rules and regulations can be disqualified at any phase of the event.",
@@ -189,19 +186,19 @@
                 /*marginValue: [-25, -15, 3, 45, 83, 105], margins :['-25vw', '-15vw', '4vw', '45vw', '83vw', '105vw']*/
                 marginValue: [-15, 3, 45, 83], margins :[ '-15vw', '4vw', '45vw', '83vw']},
             {genreId: 3, genre: "Night Events", events:
-                [{id: 1, /*name: "Coding Hungama",*/
-                    name: "",
-                    description: "Will be updated soon",
+                [{id: 1,
+                    name: "Hackathon",
+                    description: "If coffee, sleepless nights and the illuminated screen of your computer define your everyday routine, then this hackathon is for you. Team up with your friends and try your hand at coming up with cool apps, robots, games etc all in one night. Think you're up for the challenge? ",
                     rules: {points:["Will be updated soon"]},
                     format: {rounds:["Will be updated soon"]},
-                    contact: "Will be updated soon",
+                    contact: ["Renga Bashyam 	7598010654",
+                        "Bharath Bhargav	9787975416",
+                        "Sankara Narayanan   9488119314"],
                 image: "../images/events/ospc.jpg"}],
                 marginValue: [45], margins :['45vw']},
             {genreId: 4, genre: "Online Events", events: [
                 {id: 1, name: "OLPC",
-                    description:"'Talk is cheap. Show me the code' -Linus Torvalds" +
-                "Do you love coding? Are you the master of your dancing fingers?" +
-                    "Then show off your mastery in the terrific battle of online programming!"+" Happy coding, geeks!",
+                    description:"Is programming your weapon of choice in a heated room full of technocrats? If yes, then you're also probably lazy if you're here reading about the aBaCuS Online Programming Contest. But don't let that hinder you from showing off your coding skills to your opponents! Enjoy the comforts of home while making your way to being hailed as the ultimate coding ninja! ",
                     rules: {points: ["It is a typical ACM-ICPC style programming contest.","A valid aBaCUS id is must.",
                         "Any kind of malpractice will lead to disqualification."+"The contest link will be shared soon."]},
                     contact: ["Renga Bashyam - 7598010654",
@@ -209,13 +206,19 @@
                         "Sankara Narayanan - 9488119314"],
                     image: "../images/events/online/olpc.jpg"},
                 {id: 2, name: "The Beautiful Mind",
-                    description: "Will be updated soon",
+                    description: "This event consists of tricky questions and you have the answer them, simple as that. But here's comes the crux: You'll need to write code to find the answer, such are the questions. Lengthy calculations and complex answers are things humans little patience with. After all, that's what computers were made for, weren't they?",
                     rules: {points:["Will be updated soon"]},
                     format: {rounds:[" "]},
                     contact: ["Renga Bashyam - 7598010654",
                         "Bharath Bhargav - 9787975416",
                         "Sankara Narayanan - 9488119314"],
-                    image: "../images/events/online/davinci_code.jpg"},/*
+                    image: "../images/events/online/davinci_code.jpg"},
+                {id: 3, name: "Da Vinci Code",
+                    description: "Clues, links and puzzles excite you more than anything else. Join the online treasure hunt event by aBaCUs and prove your dexterity and persistence. With the little information you're given, only your intellect and wisdom will help you solve the DaVinci Code.",
+                    rules: {points:["Will be updated soon"]},
+                    format: {rounds:[" "]},
+                    contact: ["Raj Madhan - 9789231286"],
+                    image: "../images/events/online/davinci_code.jpg"}/*
                 {id: 3, name: "Online Photography",
                     image: "../images/events/ospc.jpg"},
                 {id: 4, name: "Scribble Away",
@@ -223,7 +226,7 @@
                 {id: 5, name: "ROS",
                     image: "../images/events/ospc.jpg"}],*/],
                 /*marginValue: [-15, 4, 45, 83, 105], margins :['-15vw', '4vw', '45vw', '83vw', '105vw']*/
-                marginValue: [4, 45], margins :['4vw', '45vw']},
+                marginValue: [4, 45, 83], margins :['4vw', '45vw', '83vw']}/*,
             {genreId: 5, genre: "Workshops", events: [
                 {id: 1, name: "",
                     description: "Will be updated soon",
@@ -231,7 +234,7 @@
                     format: {rounds:["Will be updated soon"]},
                     contact: "Will be updated soon",
                     image: "../images/events/ospc.jpg"},
-                /*{id: 1, name: "Data Mining",
+                /!*{id: 1, name: "Data Mining",
                     image: "../images/workshop/mining.jpg"},
                 {id: 2, name: "Internet Of Things",
                     image: "../images/workshop/iot.jpg"},
@@ -240,8 +243,8 @@
                 {id: 4, name: "IBM bluemix and Dockers",
                     image: "../images/events/bluemix.jpg"},
                 {id: 5, name: "Big Data",
-                    image: "../images/events/ospc.jpg"}*/],
-                /*marginValue: [-15, 4, 45, 83, 105], margins :['-15vw', '4vw', '45vw', '83vw', '105vw']*/
+                    image: "../images/events/ospc.jpg"}*!/],
+                /!*marginValue: [-15, 4, 45, 83, 105], margins :['-15vw', '4vw', '45vw', '83vw', '105vw']*!/
                 marginValue: [45], margins :['45vw']},
             {genreId: 6, genre: "Reach", events: [
                 {id: 1, name: "",
@@ -249,22 +252,22 @@
                     rules: {points:["Will be updated soon"]},
                     format: {rounds:["Will be updated soon"]},
                     contact: "Will be updated soon",
-                    /*image: "../images/events/android.jpg"*/
+                    /!*image: "../images/events/android.jpg"*!/
                     image: "../images/events/ospc.jpg"},
-                /*{id: 2, name: "Advanced Web Development",
+                /!*{id: 2, name: "Advanced Web Development",
                     description: "Will be updated soon",
                     rules: {points:["Will be updated soon"]},
                     format: {rounds:["Will be updated soon"]},
                     contact: "Will be updated soon",
                     /!*image: "../images/events/web.jpg"*!/
-                    image: ""}*/],
-                /*marginValue: [4, 45], margins :['4vw', '45vw']*/
-                marginValue: [45], margins :['45vw']}
+                    image: ""}*!/],
+                /!*marginValue: [4, 45], margins :['4vw', '45vw']*!/
+                marginValue: [45], margins :['45vw']}*/
         ];
 
         /*To track the centre div*/
         ctrl.centreDiv = {
-            genreId : 2,
+            genreId : 0,
             eventId : 1
         };
         ctrl.horizontalMidDiv = Math.floor(ctrl.eventDetails[ctrl.centreDiv.genreId].events.length/2);
