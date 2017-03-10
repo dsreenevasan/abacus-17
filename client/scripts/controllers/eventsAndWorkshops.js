@@ -43,104 +43,122 @@
         ctrl.eventDetails = [
             {genreId: 1, genre: "Technical Events", events:[
                 { id: 1, name: "Coffee with Java",
-                    description: "Tired of pointers that make you go crazy ?" +
-                    "Are you an expert in cooking 'netbeans' ?" +
-                    "Are you a complete java package with essential knowledge imported in you ?" +
-                    "Do you believe in robust yet simple coding ?" +
-                    "Here's Coffee with java for you !" +
+                    description: "Tired of pointers that make you go crazy ?<br>" +
+                    "Are you an expert in cooking 'netbeans' ?<br>" +
+                    "Are you a complete java package with essential knowledge imported in you ?<br>" +
+                    "Do you believe in robust yet simple coding ?<br>" +
+                    "Here's Coffee with java for you !<br>" +
                     "Take part in this exciting event to prove your expertise in the language and grab extraordinary prizes !!",
                     rules: {points: ["Will be updated soon"]},
                     format: {rounds: ["Will be updated soon"]},
-                    contact: ["Ramya - 9962256411",
-                        "Ilanchelian - 9445171664"],
+                    contact: [
+                        "Ramya - 9962256411",
+                        "Ilanchelian - 9445171664"
+                    ],
                     image: "../images/events/math.jpg"},
-                { id: 2, name: "OSPC", description: "Are you a superclass from whom 'the whole class' inherits the code during the frenzied lab sessions ?" +
-                    "Are you the kind of person who turns coffee into codes ?" +
-                    "Here is the event you are seeking!" +
+                { id: 2, name: "OSPC", description: "Are you a superclass from whom 'the whole class' inherits the code during the frenzied lab sessions ?<br>" +
+                    "Are you the kind of person who turns coffee into codes ?<br>" +
+                    "Here is the event you are seeking!<br>" +
                     "Abacus brings you OSPC (OnSite Programming Contest) to get your Code dumped onsite to win amazing prizes.",
                 rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions.",
                 "Participants are not allowed to bring any additional material.", "Any kind of malpractice will lead to disqualification.", "Decisions made by the administrators will be final and binding."]},
                 format: {rounds: ["A Written round consisting of questions based on Data Structures, Algorithms and Programming logic.", "The final round will be similar to ACM-ICPC."]},
-                contact: ["Suresh - 9444136901", "Muthu Nagappan - 9445811755","Vishvesh Thangamani - 9195693399" ,"Tamilvendan - 7299802300"],
+                contact: [
+                "Suresh - 9444136901",
+                    "Muthu Nagappan - 9445811755",
+                    "Vishvesh Thangamani - 9195693399" ,
+                    "Tamilvendan - 7299802300"],
                 image: "../images/events/tech/ospc.jpg"},
                 { id: 3, name: "Debugging",
-                    description: "'To err is to be human' goes the saying." +
+                    description: "'To err is to be human' goes the saying.'<br><br>" +
                     "Sadly, computers don't seem to agree with the divinity in the imperfections of nature." +
                 "That's why it demands all it's code to be bug free and up and running." +
                     "To all those perfectionists out there, come and take part in the Debugging contest where you get to find and fix bugs and unravel interesting results to complete the intriguing game of coding.",
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["A written round consisting of simple debugging questions.", "You will be given the code which may or may not have logical/syntactic bugs.  You have to identify the errors and fix them."]},
-                    contact: ["Arjundhanraj - 7598306818",
+                    contact: [
+                        "Arjundhanraj - 7598306818",
                         "Sakthiprasath - 8110010630",
-                        "Sultan - 8807777901"],
+                        "Sultan - 8807777901"
+                    ],
                     image: "../images/events/tech/debugging.jpg"},
                 { id: 4, name: "DBmania",
-                    description: "You think you can wade through piles and piles of copious amounts of data without getting lost?" +
-                    "Are your magic spells powerful enough to do whatever is needed to get those data dancing to your tunes?" +
+                    description: "You think you can wade through piles and piles of copious amounts of data without getting lost?<br>" +
+                    "Are your magic spells powerful enough to do whatever is needed to get those data dancing to your tunes?<br>" +
                     "If you believe you are one daring data-wizard, then come and take part in  DB Mania where queries rule your thoughts more than anything else!",
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["Basic Questions on Database. (40 Questions)", "You will be given a schema and asked to build schema diagram ,queries, triggers, functions and procedures."]},
-                    contact: ["Arun - 8124267121",
+                    contact: [
+                        "Arun - 8124267121",
                         "Gowrishankar - 8903462709",
-                        "MuthuThillai - 9655883077"],
+                        "MuthuThillai - 9655883077"
+                    ],
                     image: "../images/events/tech/db_mania.jpg"},
                 { id: 5, name: "Game of Nerds",
-                    description: "'When you play the game of nerds,you win or you learn '" +
-                    "You think you are able to master all the trades of CS ?" +
-                    "Are you that geeky person in every class to whom people flock to get their doubts clarified ?You think you can battle it out with fellow nerds to prove your claim to the throne of nerds ?" +
+                    description: "'When you play the game of nerds,you win or you learn'<br>" +
+                    "You think you are able to master all the trades of CS ?<br>" +
+                    "Are you that geeky person in every class to whom people flock to get their doubts clarified ?<br>You think you can battle it out with fellow nerds to prove your claim to the throne of nerds ?<br>" +
                     "Game of nerds presents you a platform to prove your excellence in the fundamentals of Computer engineering . Sharpen your brains to meet the best of nerds !",
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["This will be the preliminary round. Basic questions on Data Structures and Algorithms, Computer Architecture, Database Management Systems,Operating Systems,Web Technology, Theory of Computation and Networks will be put forth.",
                     "Will be revealed on-spot"]},
-                    contact: ["Gokila - 9841183871",
+                    contact: [
+                        "Gokila - 9841183871",
                         "Arun - 8012364643",
-                        "poonkuzhali - 9003273214",
+                        "Poonkuzhali - 9003273214",
                         "Monika - 9791228184",
                         "Thiru - 9486752704",
-                        "sivagami - 7092935004",
-                        "Priyadharshini - 9962327699"],
+                        "Sivagami - 7092935004",
+                        "Priyadharshini - 9962327699"
+                    ],
                     image: "../images/events/tech/game_of_nerds.jpg"},
                 { id: 6, name: "Cyber Wars",
-                    description: "Dare to  venture a warzone filled with networking freaks ?" +
-                    "Are you capable of peeling off every layer of network with your expertise ?You consider yourself to be an intimidating hacker who poses a threat to cyber criminals ?" +
+                    description: "Dare to  venture a warzone filled with networking freaks ?<br>" +
+                    "Are you capable of peeling off every layer of network with your expertise ?<br>You consider yourself to be an intimidating hacker who poses a threat to cyber criminals ?<br>" +
                     "Here is one thriving opportunity to showcase your networking talents.Be a part of Cyberwars to tickle your brains and take home wonderful prizes !",
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["Will be updated soon"]},
-                    contact: ["Radhika - 9962720188",
+                    contact: [
+                        "Radhika - 9962720188",
                         "Manimegalai - 8939321066",
                         "Rekha - 9094553868",
                         "Nandhini - 9444833190",
                         "Abirami - 9940220259",
                         "Pavithra - 8870603612",
-                        "Ajay - 8883339409"],
+                        "Ajay - 8883339409"
+                    ],
                     image: "../images/events/tech/cyber_wars.jpg"},
                 { id: 7, name: "Reverse Coding",
-                    description: "Sick of figuring out the results you are supposed to anticipate when you are stuck with complicated code ( which might look a lot like Greek and Latin ) ?" +
-                    "Thought of a million other easier ways you could derive a result with cleaner code?" +
+                    description: "Sick of figuring out the results you are supposed to anticipate when you are stuck with complicated code ( which might look a lot like Greek and Latin ) ?<br>" +
+                    "Thought of a million other easier ways you could derive a result with cleaner code?<br>" +
                     "Be your own code sculpture in 'Reverse coding' where you get to write code to make sure you get the output that you'd be promptly given!",
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["Written round consisting of various reverse coding questions.", "Same format as Prelims. Coding has to be done on computer."]},
-                    contact: ["Manojkumar - 9597250572",
+                    contact: [
+                        "Manojkumar - 9597250572",
                     "Harini - 9444850785",
                     "Sruthi - 9944263196",
-                    "Makisha - 9629078175"],
+                    "Makisha - 9629078175"
+                    ],
                     image: "../images/events/tech/reverse_coding.jpg"},
                 { id: 8, name: "Webaholic",
-                    description: "Bored of typing pages and pages of codes ?Wanna try something creative that attracts everyone's attention ?" +
+                    description: "Bored of typing pages and pages of codes ?Wanna try something creative that attracts everyone's attention ?<br>" +
                     "This event is exclusively for those who could bring incredibly creative web designs into reality with their magical h(w)ands. Try out your luck in designing marvellous web stuff with html,javascript and css to win exciting rewards.",
                     rules: {points: ["Each team can have a maximum of two members.", "The members of a team can be from different colleges/institutions.",
                     "Plagiarism to be strictly avoided and the team so found will be disqualified.", "Judges decision will be final."]},
                     format: {rounds: ["Questions from HTML,CSS, JAVASCRIPT, JQUERY, PHP. No of Questions : 40. Duration :30 mins", "Develop webpages using HTML,CSS,JS without any references.",
                     "Develop a website using these. 1.  Google Maps API. 2.  Use any database using any backend language. 3.  encoding / decoding"]},
-                    contact: ["Vagul - 9789117799",
-                        "Durai Sreenevasan- 9894543958"],
+                    contact: [
+                        "Vagul - 9789117799",
+                        "Durai Sreenevasan- 9894543958"
+                    ],
                     image: "../images/events/tech/ospc.jpg"}],
             marginValue: [-35, -25, -15, 4, 45, 83, 105, 115], margins :['-35vw', '-25vw', '-15vw', '4vw', '45vw', '83vw', '105vw', '115vw']},
             {genreId: 2, genre: "General", events: [
                 {id: 1, name: "math.h",
-                    description: "What is more fun than a good play with numbers?"+
-                    "Tease your brain and test your skills."+
-                    "Come explore the world of mathematics via witty puzzles!"+
+                    description: "What is more fun than a good play with numbers?<br>"+
+                    "Tease your brain and test your skills.<br>"+
+                    "Come explore the world of mathematics via witty puzzles!<br>"+
                     "Infinity is just the Beginning.",
                     rules: {points:["Each team can have a maximum of three members.",
                         "The members of a team can be from different colleges/institutions."]},
@@ -172,9 +190,9 @@
                     contact: ["Prasanna - 9003222748"],
                     image: "../images/events/tech/cyber_wars.jpg"},
                 {id: 6, name: "Housefull",
-                    description: "All work and no play makes Jack a dull boy"+
-                    "Bored of all the technical stuff? Looking for a fun filled event with your gang of friends?"+
-                    "House full is an ideal place for you.The event is mainly focused on CINEMA,CRICKET and OTHER ENTERTAINING STUFF."+
+                    description: "All work and no play makes Jack a dull boy.<br>" +
+                    "Bored of all the technical stuff? Looking for a fun filled event with your gang of friends?<br>"+
+                    "House full is an ideal place for you.The event is mainly focused on CINEMA,CRICKET and OTHER ENTERTAINING STUFF.<br>"+
                     "Grab some popcorn.Get ready for the fun ride!!!!!",
                     rules: {points:["Three members per team.",
                         "A Team can consist of members from any department or any college.",
@@ -346,6 +364,7 @@
         }
 
         ctrl.change = function(code){
+            console.log("Swipe");
             var obj = {
                 keyCode : code
             };
@@ -367,9 +386,16 @@
         ctrl.changeOverlay = function () {
             ctrl.showOverlay = false;
         };
-        
+
+        ctrl.check = function () {
+            console.log("ppp");
+        };
+
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
+            $("#events_rules").click(function(){
+                console.log("cliked");
+            });
         });
 
     }

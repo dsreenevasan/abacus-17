@@ -5,9 +5,9 @@
     .module('abacus')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['$state', '$http', '$scope', '$window', 'toaster' ,'$uibModal','$document', 'MainService', '$cookieStore', 'vcRecaptchaService'];
+  MainController.$inject = ['$state', '$http', '$scope', '$window', 'toaster' ,'$uibModal','$document', 'MainService', '$cookieStore', 'vcRecaptchaService', '$uibModalStack'];
 
-  function MainController($state, $http, $scope, $window, toaster, $uibModal,$document, MainService, $cookieStore, vcRecaptchaService ){
+  function MainController($state, $http, $scope, $window, toaster, $uibModal,$document, MainService, $cookieStore, vcRecaptchaService, $uibModalStack ){
 
 
     var ctrl = this;
@@ -150,6 +150,25 @@
           }
         });
       }
+    };
+
+    ctrl.openRegister = function() {
+      $uibModalStack.dismissAll();
+      var modalInstance = $uibModal.open({
+        templateUrl: '../views/register.html',
+        backdrop: true,
+        size: 'md',
+        windowTopClass: 'modal-margin',
+        resolve: {
+
+        }
+      });
+      modalInstance.result.then(function (selectedItem) {
+
+
+      }, function () {
+
+      });
     };
 
     ctrl.logout = function(){

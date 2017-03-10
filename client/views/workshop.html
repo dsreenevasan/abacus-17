@@ -5,7 +5,7 @@
         <h1 style="color: white; text-align: center; margin: 20vh 0 0 0" ng-if="ctrl.isMobile"><u>Navigation Controls</u></h1>
         <img src="../images/mobile.png" ng-if="ctrl.isMobile" style="height:20vh; width: 30vw; margin: 5vh 0 0 35vw">
 
-        <h4 style="color: white; text-align: center; margin: 5vh 0 0 0" ng-if="ctrl.isMobile">Swipe up and down to change between categories and swipe left and right to navigate between different and workshops</h4>
+        <h4 style="color: white; text-align: center; margin: 5vh 0 0 0" ng-if="ctrl.isMobile">Swipe up and down to change between categories and swipe left and right to navigate between different workshops.</h4>
         <h2 style="color: white; text-align: center; margin: 10vh 0 0 0; cursor: pointer" ng-click="ctrl.changeOverlay()"><u>Explore</u></h2>
     </div>
 
@@ -55,25 +55,25 @@
         <div class="mainMidDiv" ng-swipe-up="ctrl.change(38)" ng-swipe-down="ctrl.change(40)" ng-swipe-left="ctrl.change(37)" ng-swipe-right="ctrl.change(39)"
              style="background-image: url({{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].image}}); background-size: 100% 100%">
             <div class="mainInnerDiv">
-                <div ng-class="ctrl.horizontalMidDiv == 5 ? 'workshop-bigMidContentsDiv' : 'workshop-midContentsDiv'" ng-if="ctrl.show == 1">{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].description}}</div>
+                <div ng-class="ctrl.horizontalMidDiv == 5 ? 'workshop-bigMidContentsDiv' : 'workshop-midContentsDiv'" ng-if="ctrl.show == 1" ng-bind-html="ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].description"></div>
                 <div class="workshop-midContentsDiv" ng-if="ctrl.show == 3">
                     <ul>
                         <li ng-repeat="contact in ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].contact">{{contact}}</li>
                     </ul>
                 </div>
                 <div class="midDivNavRing" ng-hide="ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 3 || ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 5 || ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 6">
-                    <i class="fa fa-file-text fa-icons" aria-hidden="true" ng-click="ctrl.show = 1" data-toggle="tooltip" data-placement="left" title="Description" style=" cursor: hand; cursor: pointer"
+                    <i class="fa fa-file-text fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.show = 1" data-toggle="tooltip" data-placement="left" title="Description" style=" cursor: hand; cursor: pointer"
                     ng-style="ctrl.show == 1 && {'color': '#f97340'} || {}"></i><br>
-                    <i class="fa fa-phone fa-icons" aria-hidden="true" ng-click="ctrl.show = 3" data-toggle="tooltip" data-placement="left" title="Contact" style=" cursor: hand; cursor: pointer"
+                    <i class="fa fa-phone fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.show = 3" data-toggle="tooltip" data-placement="left" title="Contact" style=" cursor: hand; cursor: pointer"
                        ng-style="ctrl.show == 3 && {'color': '#f97340'} || {}"></i><br>
-                    <i class="fa fa-pencil fa-icons" aria-hidden="true" ng-click="ctrl.registerWorkshop()" data-toggle="tooltip" data-placement="left" title="Register" style=" cursor: hand; cursor: pointer"></i><br>
+                    <i class="fa fa-pencil fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.registerWorkshop()" data-toggle="tooltip" data-placement="left" title="Register" style=" cursor: hand; cursor: pointer"></i><br>
                 </div>
-                <div id="bottomDiv" ng-class="ctrl.horizontalMidDiv == 5 || ctrl.horizontalMidDiv == 4 ? 'workshop-bigMainMidBottomDiv' : 'workshop-mainMidBottomDiv'">{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].name}}</div>
+                <div id="bottomDiv" style="font-weight: 900" ng-class="ctrl.horizontalMidDiv == 5 || ctrl.horizontalMidDiv == 4 ? 'workshop-bigMainMidBottomDiv' : 'workshop-mainMidBottomDiv'">{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].name}}</div>
             </div>
         </div>
     </div>
 
-    <div class="navIcons">
+    <div class="navIcons" data-toggle="tooltip" data-placement="top" title="Use Left and Right Arrows">
         <i class="fa fa-chevron-circle-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <i class="fa fa-chevron-circle-right"></i>
     </div>

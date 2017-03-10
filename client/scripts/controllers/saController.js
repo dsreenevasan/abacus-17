@@ -91,14 +91,14 @@
                  MainService.RegisterSA(saObj).then(function(response){
                      if(response.status == 200){
                          if(response.data != 404){
-                         toaster.pop("success", "Success", "Registration Successful", 3000);
+                            toaster.pop("success", "Success", "Registration Successful", 3000);
                          }
                          else{
-                         toaster.pop("error", "Error", "Error Registering", 3000);
+                            toaster.pop("error", "Error", "Error Registering", 3000);
                          }
                      }
                      else{
-                         toaster.pop("error", "Error", "Error Registering", 3000);
+                            toaster.pop("error", "Error", "Error Registering", 3000);
                      }
                  });
             }
