@@ -13,11 +13,12 @@
 				<a class="navbar-brand" ng-click="ctrl.resetFullpage()"  style=" color: white; cursor: hand; cursor: pointer">Abacus '17</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-right" style="margin-right: -5vw">
 
 					<li><a ng-click="ctrl.stateChange('events')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>E</span><span>V</span><span>E</span><span>N</span><span>T</span><span>S</span></a></li>
 					<li><a ng-click="ctrl.stateChange('workshops')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>W</span><span>O</span><span>R</span><span>K</span><span>S</span><span>H</span><span>O</span><span>P</span><span>S</span></a></li>
 					<li><a ng-click="ctrl.stateChange('sa')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>S</span><span>T</span><span>U</span><span>D</span><span>E</span><span>N</span><span>T</span><span>A</span><span>M</span><span>B</span><span>A</span><span>S</span><span>S</span><span>A</span><span>D</span><span>O</span><span>R</span></a></li>
+					<li><a ng-click="ctrl.stateChange('accommodation')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>A</span><span>C</span><span>C</span><span>O</span><span>M</span><span>M</span><span>O</span><span>D</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span></a></li>
 					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="!ctrl.loggedIn" ng-click="ctrl.openModal('login', 'sm')" class="link link--yaku"><span>L</span><span>O</span><span>G</span><span>I</span><span>N</span></a></li>
 					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="!ctrl.loggedIn" ng-click="ctrl.openModal('register', 'md')" class="link link--yaku"><span>R</span><span>E</span><span>G</span><span>I</span><span>s</span><span>T</span><span>E</span><span>R</span></a></li>
 					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="ctrl.loggedIn" ng-click="ctrl.logout()" class="link link--yaku"><span>L</span><span>O</span><span>G</span><span>O</span><span>U</span><span>T</span></a></li>

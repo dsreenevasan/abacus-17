@@ -88,7 +88,7 @@
                     description: "You think you can wade through piles and piles of copious amounts of data without getting lost?<br>" +
                     "Are your magic spells powerful enough to do whatever is needed to get those data dancing to your tunes?<br>" +
                     "If you believe you are one daring data-wizard, then come and take part in  DB Mania where queries rule your thoughts more than anything else!",
-                    rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
+                    rules: {points: ["Each team can have a maximum of 2 members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["Basic Questions on Database. (40 Questions)", "You will be given a schema and asked to build schema diagram ,queries, triggers, functions and procedures."]},
                     contact: [
                         "Arun - 8124267121",
@@ -210,13 +210,13 @@
                                     "Completing the task on time is mandatory to win a coupon.", "In case of any discrepancy the organizer's decision is final."]},
                     format: {rounds:["The wheel has to be spun and correspondingly tasks are to be completed by the participant", "The tasks would be revealed only on the day of the event"]},
                     contact: ["Jenifer    9790718543"],
-                    image: "../images/events/spin.jpg"},
+                    image: "../images/events/general/spin.jpg"},
                 {id: 3, name: "Abacus General Quiz",
                     description: "He who questions,thinks. He who answers,knows. For all the thinkers and knowers,welcome to Abacus General Quiz. Come surprise us with your general awareness of stuff in this single round of quizzing, which will include questions from current affairs to science. Much prizes to be won. Top first-year only teams would bag a definite prize.(P.S: No questions will be asked about soppana sundari :P)",
                     rules: {points:["The teams could consist of two or three members.", "Lone wolves are expected to be social enough to form a team."]},
                     format: {rounds:["The teams would have to answer a single round of general quiz consisting of 40 questions", "Tie breaking would be done on the basis of starred questions"]},
                     contact: ["Prasath 94879 69618"],
-                    image: "../images/events/gen_quiz.jpg"},
+                    image: "../images/events/general/gen_quiz.jpg"},
                 {id: 4, name: "Finding Nemo",
                     description: "Calling all 007’s, Sherlocks and Langdons! Do you have what it takes to decipher some of the hardest enigmas and explore unchartered territories? Like Marlin and Dory, can you connect the dots and locate Nemo? If you think you can crack and track your way out of this labyrinth, then this is your arena!",
                     rules: {points:["Teams of three only", "Decision by the organisers are final",
@@ -235,7 +235,7 @@
                     format: {rounds:["20 questions to be solved in 30 minutes. Top 8 scorers progress to the final stage",
                         "8 teams. Each team will have a specific franchise. Real Auction with a purse of a specific amount which you can use to pick your team. Further rules will be announced on spot"]},
                     contact: ["Prasanna - 9003222748"],
-                    image: "../images/events/tech/apl.jpg"},
+                    image: "../images/events/general/apl.jpg"},
                 {id: 6, name: "Housefull",
                     description: "Projects...Internals..Lab_Sem... still stressed? <br>" +
                     "So to get out of these pressures, here comes completely fun- packed event for you. The event is mainly focused on cricket, cinema and other entertaining stuff.",
@@ -257,7 +257,7 @@
                     format: {rounds:["The First Round will be Written Round with built-in Tie Breakers.",
                         "Based on Scores, Top 8 Teams qualify for the Finals."]},
                     contact: ["Sukin Kumar - +919944513445", "Makesh Narsimhan - +919445657670", "Krishna Anandan - +919629138856"],
-                    image: "../images/events/fandom_quiz.jpg"},
+                    image: "../images/events/general/gen_quiz.jpg"},
                 {id: 8, name: "GAMINDROME",
                     description: "Tired of all the technical buzz going around you at aBaCus?<br>" +
                     "Are you also that gaming freak who just can't survive without laying your fingers on your PlayStation?<br>" +
@@ -268,7 +268,7 @@
                         "All participants must have a valid Abacus Id."]},
                     format: {rounds:["Format would be revealed only on the day of Abacus :P (24th March)"]},
                     contact: ["Mugilan - 81898 91645"],
-                    image: "../images/events/gamindrome.jpg"},
+                    image: "../images/events/general/gamindrome.jpg"},
                 {id: 9, name: "Randomise",
                     description: "Be weird, be random be who you are!<br>" +
                     "This event is here to test your thinking, your acting and your creativity! Find connections, act and enact.<br>" +
@@ -280,7 +280,7 @@
                         "Round 2:Silence Speaks - 1 min per act",
                         "Round 3:Channel Surfing -5 mins per team"]},
                     contact: ["Karishma - 91764 89785"],
-                    image: "../images/events/randomise.jpg"}],
+                    image: "../images/events/general/randomise.jpg"}],
                 marginValue: [-35, -25, -15, 3, 45, 83, 105, 115, 125], margins :['35vw', '-25vw', '-15vw', '4vw', '45vw', '83vw', '105vw', '115vw', '125vw']},
                 /*marginValue: [-15, 3, 45, 83], margins :[ '-15vw', '4vw', '45vw', '83vw']},*/
             {genreId: 3, genre: "Night Events", events:
@@ -299,7 +299,7 @@
                     contact: ["Renga Bashyam 	7598010654",
                         "Bharath Bhargav	9787975416",
                         "Sankara Narayanan   9488119314"],
-                image: "../images/events/ospc.jpg"}],
+                image: "../images/events/night/hackathon.jpg"}],
                 marginValue: [45], margins :['45vw']},
             {genreId: 4, genre: "Online Events", events: [
                 {id: 1, name: "OLPC",
@@ -312,7 +312,7 @@
                         "Sankara Narayanan - 9488119314"],
                     image: "../images/events/online/olpc.jpg"},
                 {id: 2, name: "The Beautiful Mind",
-                    description: "This event consists of tricky questions and you have the answer them, simple as that. But here's comes the crux: You'll need to write code to find the answer, such are the questions. Lengthy calculations and complex answers are things humans little patience with. After all, that's what computers were made for, weren't they?",
+                    description: "This event consists of tricky questions and you have the answer them, simple as that. But here's comes the crux: You'll need to write code to find the answer, such are the questions. Lengthy calculations and complex answers are things humans have little patience with. After all, that's what computers were made for, weren't they?",
                     rules: {points:["All participants must have a valid Abacus ID.",
                         "Be Choosy. The questions carry different weightage",
                         "Only the beholder decides the beauty of your mind. So please don't expect a score board while the event is going on!",
@@ -340,7 +340,7 @@
                     format: {rounds: ["The photographs must be sent to infocus@abacus.org.in",
                         "The last date for submitting the entries is 22 March,2017"]},
                     contact: ["Manish - 8220653574"],
-                    image: "../images/events/infocus.jpg"}/*
+                    image: "../images/events/online/infocus.jpg"}/*
                 {id: 4, name: "Scribble Away",
                     image: "../images/events/paper.jpg"},
                 {id: 5, name: "ROS",
@@ -431,6 +431,7 @@
                 console.log("div position" + ctrl.divPosition);
             }
             else if(key.keyCode === 38) {  //up
+                ctrl.show = 1;
                 resetAnimation();
                 ctrl.divPosition = 0;
                 ctrl.verticalDivPosition++;
@@ -449,6 +450,7 @@
                 //}
             }
             else if(key.keyCode === 40) {  //down
+                ctrl.show = 1;
                 resetAnimation();
                 ctrl.divPosition = 0;
                 if(ctrl.verticalDivPosition === 0){

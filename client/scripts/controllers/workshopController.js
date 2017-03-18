@@ -130,6 +130,7 @@
                 console.log("div position" + ctrl.divPosition);
             }
             else if(key.keyCode === 38) {  //up
+                ctrl.show = 2;
                 resetAnimation();
                 ctrl.divPosition = 0;
                 if(ctrl.verticalDivPosition === 0){
@@ -143,6 +144,7 @@
                 }
             }
             else if(key.keyCode === 40) {  //down
+                ctrl.show = 2;
                 resetAnimation();
                 ctrl.divPosition = 0;
                 ctrl.verticalDivPosition++;

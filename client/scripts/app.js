@@ -19,7 +19,7 @@
             state:
             {
                 url:'/events',
-                templateUrl: 'views/events.html',
+                templateUrl: 'views/events.html?v=1',
                 data: {
                     text: "Sample",
                     visible: false
@@ -31,7 +31,7 @@
             state:
             {
                 url:'/workshops',
-                templateUrl: 'views/workshop.html',
+                templateUrl: 'views/workshop.html?v=1',
                 data: {
                     text: "Workshops",
                     visible: false
@@ -63,13 +63,13 @@
             }
         },
         {
-            name: 'reach',
+            name: 'accommodation',
             state:
             {
-                url:'/reach',
-                templateUrl: 'views/reach.html',
+                url:'/accommodation',
+                templateUrl: 'views/accomodation.html',
                 data: {
-                    text: "Reach",
+                    text: "Accommodation",
                     visible: false
                 }
             }
