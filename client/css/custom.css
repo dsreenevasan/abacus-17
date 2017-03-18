@@ -356,6 +356,11 @@
     text-align: center;
 }
 
+.sponsor-logo {
+    height: 18vh !important;
+    width: 10vw !important;
+}
+
 @media(max-width: 640px){
 
     .topTransparentDiv{
@@ -363,7 +368,7 @@
         width: 100vw;
         position:fixed;
         z-index: 100;
-        background: rgba(0,0,0,1);
+        background: #166088;
     }
 
     .bottomTransparentDiv{
@@ -670,7 +675,7 @@
         width: 100vw;
         position:fixed;
         z-index: 100;
-        background: rgba(0,0,0,1);
+        background: #166088;
     }
 
     .wksptopTransparentDiv{
@@ -835,8 +840,8 @@
 
     .midContentsDiv{
         height: 5vh;
-        width: 80%;
-        font-size: 0.97em;
+        width: 90%;
+        font-size: 0.8em;
         font-family: 'Josefin Sans', sans-serif;
     }
 
@@ -860,7 +865,7 @@
     }
 
     .fa-icons{
-        font-size: 2em;
+        font-size: 1.7em;
         margin: 5vh 0 0 0;
     }
 

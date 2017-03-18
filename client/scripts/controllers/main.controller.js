@@ -5,9 +5,8 @@
     .module('abacus')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['$state', '$http', '$scope', '$window', 'toaster' ,'$uibModal','$document', 'MainService', '$cookieStore', 'vcRecaptchaService', '$uibModalStack'];
-
-  function MainController($state, $http, $scope, $window, toaster, $uibModal,$document, MainService, $cookieStore, vcRecaptchaService, $uibModalStack ){
+  MainController.$inject = ['$state', '$http', '$scope', '$window', 'toaster' ,'$uibModal','$document', 'MainService', '$cookieStore', '$uibModalStack'];
+  function MainController($state, $http, $scope, $window, toaster, $uibModal,$document, MainService, $cookieStore, $uibModalStack ){
 
 
     var ctrl = this;
@@ -16,9 +15,26 @@
     ctrl.showNav = false;
     ctrl.maxWidth = 0;
     ctrl.loggedIn = false;
+    ctrl.phoneNumberNotValid = false;
+    ctrl.passwordInvalid = false;
+    ctrl.isSubmitting = false;
     ctrl.publicKey = "6LetiBcUAAAAAHEsMJERL8lZNkryc0EfYbhK8XVR";
     detect();
     checkCookies();
+
+    ctrl.departments = [
+      "Aeronautical Engineering","Aerospace Engineering","Agricultural & Irrigation Engineering","Aircraft Maintenance Engineering","Animation","Apparel technology","Applied electronics","Applied Mathematics","Architecture","Automobile Engineering","Avionics","Bio Informatics","Bio Medical Engineering","Biotechnology","Ceramic Technology","Charted Accountancy","Chemical Engineering","Chemistry","Civil Engineering","Communication Systems","Computer Science & Engineering","Cryogenic Engineering","Elecrical Engineering","Electrical & Electronics Engineering","Electronic media","Electronics & Communication Engineering","Electronics & Instrumentation","Embedded Systems","Energy Engineering","Engineering Design","Engineering Physics","English Literature","Finance","Fluid Mechanics","Food Technology","Geo Informatics","Harbour Engineering ","High Voltage Engineering","Hospitality Administration","HR","Humanities & Social Sciences","Industrial Engineering","Information & Communications Technology","Information Technology","Internal Combustion Engineering","Logistics","M.Sc. CS-IT","M.Sc. E-Media","Manufacturing Engineering","Marine Engineering","Marketing","Material Science ","Mathematics","Mechanical Engineering","Mechatronics","Media Sciences","Metallurgy","Mining Engineering","Nano Science and Technology","Other","Photonics ","Physics","Printing Technology","Production Engineering","Remote Sensing","Software Engineering","Systems Engineering & Operations Research","Technology Managment","Telecommunication Engineering","Textile Technology","Theoretical Computer Science","Thermal","Transportation Engineering","VLSI Design","Other"
+    ];
+
+    MainService.GetColleges().then(function (response) {
+      if(response.status == 200){
+        ctrl.colleges = response.data.colleges;
+      }
+      else{
+        toaster.pop("error", "Error", "Error loading college list", 3000);
+      }
+    });
+    /*ctrl.department = ctrl.departments[1];*/
 
     $(document).ready(function(){
       $('[data-toggle="tooltip"]').tooltip();
@@ -51,6 +67,15 @@
 
     ctrl.stateChange = function(page) {
       $state.go(page);
+    };
+
+    ctrl.scrollDown = function () {
+      var esc = $.Event("keydown", { keyCode: 40 });
+      /*$(document).ready(function() {
+        $("body").trigger(esc);
+      });*/
+      var keyboardEvent = new KeyboardEvent("keydown", {bubbles : true, cancelable : true, key : "", char : "", shiftKey : false, code: "ArrowDown", keyCode: 40, which: 40, charCode: 0});
+      document.getElementById('main').dispatchEvent(keyboardEvent);
     };
 
     ctrl.resetFullpage = function() {
@@ -115,41 +140,47 @@
     };
 
     ctrl.register = function () {
-
-      if(vcRecaptchaService.getResponse() === ""){ //if string is empty
+      ctrl.isSubmitting = true;
+      /*if(vcRecaptchaService.getResponse() === ""){ //if string is empty
          toaster.pop("error", "Error", "Please resolve the captcha and submit!", 3000);
       }
-      else {
-        console.log(vcRecaptchaService.getResponse());
-        var obj = {
-          user_email    : ctrl.emailId,
-          user_password : ctrl.password,
-          user_name     : ctrl.name,
-          user_phone    : ctrl.phoneNumber,
-          user_college  : ctrl.collegeName,
-          user_dept     : ctrl.department,
-          user_year     : ctrl.year,
-          recaptcha     : vcRecaptchaService.getResponse()
-        };
+      else {*/
+        /*if(ctrl.phoneNumber >= 7000000000 && ctrl.phoneNumber <= 9999999999 && ctrl.password.length >= 8) {*/
+          /*console.log(vcRecaptchaService.getResponse());*/
+          var obj = {
+            user_email    : ctrl.emailId,
+            user_password : ctrl.password,
+            user_name     : ctrl.name,
+            user_phone    : ctrl.phoneNumber,
+            user_college  : ctrl.collegeName,
+            user_dept     : ctrl.department,
+            user_year     : ctrl.year
+            /*recaptcha     : 'abc'*/
+          };
 
-        console.log(JSON.stringify(obj));
+          console.log(JSON.stringify(obj));
 
-        MainService.Register(obj).then(function (response) {
-          //console.log(response);
-          if(response.status == 200){
-            if(response.data.a_id){
-              toaster.pop("success", "Success", "Successfully Logged In", 3000);
-              $cookieStore.put('userDetails', response.data);
-              //checkCookies();
-              $window.location.reload();
+          MainService.Register(obj).then(function (response) {
+            //console.log(response);
+            if(response.status == 200){
+              if(response.data.a_id){
+                toaster.pop("success", "Success", "Successfully Logged In", 3000);
+                $cookieStore.put('userDetails', response.data);
+                //checkCookies();
+                $window.location.reload();
+              }
+              else{
+                toaster.pop("error", "Error", response.data, 3000);
+                console.log(response.data);
+              }
             }
-            else{
-              toaster.pop("error", "Error", response.data, 3000);
-              console.log(response.data);
-            }
-          }
-        });
-      }
+            ctrl.isSubmitting = false;
+          });
+        /*}
+        else {
+          toaster.pop("error", "Error", "Enter valid phone number or password", 5000);
+        }*/
+      /*}*/
     };
 
     ctrl.openRegister = function() {
@@ -175,6 +206,37 @@
       $cookieStore.remove('userDetails');
       ctrl.loggedIn = false;
       toaster.pop("success", "Success", "Successfully Logged Out!");
+    };
+
+    ctrl.openUniq = function() {
+      $window.open("http://www.inplanttraining.org/");
+      $window.open("http://www.internshipinchennai.com/");
+      $window.open("http://www.ieeefinalyearprojects.org/");
+      $window.open("http://www.androidtraininginchennai.com/");
+    };
+
+    ctrl.checkPhoneNumber = function() {
+      console.log("Phoen");
+        if(ctrl.phoneNumber >= 7000000000 && ctrl.phoneNumber <= 9999999999){
+          ctrl.phoneNumberNotValid = false;
+        }
+      else {
+          ctrl.phoneNumberNotValid = true;
+        }
+    };
+
+    ctrl.checkPassword = function () {
+      console.log("pppp");
+      if(ctrl.password.length < 8){
+        ctrl.passwordInvalid = true;
+      }
+      else{
+        ctrl.passwordInvalid = false;
+      }
+    };
+
+    ctrl.openLink = function(link){
+      $window.open(link);
     }
   }
 

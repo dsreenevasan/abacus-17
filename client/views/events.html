@@ -14,7 +14,7 @@
     </div>
     <div class="bottomTransparentDiv">
         <label style="float: left" class="footer">Copyright 2016 @ CSEA.<br> All rights reserved.</label>
-        <label style="float: right"class="footer">For further queries,<br> Contact <strong style="color: #f5f5f5">webteam@abacus.org.in</strong></label>
+        <label style="float: right" class="footer">For further queries,<br> Contact <strong style="color: #f5f5f5">webteam@abacus.org.in</strong></label>
     </div>
 
     <div class="verticalBackgroundDiv"></div>
@@ -44,13 +44,15 @@
         <div class="mainMidDiv" ng-swipe-up="ctrl.change(38)" ng-swipe-down="ctrl.change(40)" ng-swipe-left="ctrl.change(37)" ng-swipe-right="ctrl.change(39)"
              style="background-image: url({{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].image}}); background-size: 100% 100%">
             <div class="mainInnerDiv">
-                <div class="midContentsDiv" ng-if="ctrl.show == 1" ng-bind-html="ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].description"><!--{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].description}}--></div>
+                <div ng-class="ctrl.horizontalMidDiv == 8 ? 'workshop-bigMidContentsDiv' : 'midContentsDiv'" ng-if="ctrl.show == 1" ng-bind-html="ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].description"><!--{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].description}}--></div>
                 <div class="midContentsDiv" ng-if="ctrl.show == 2">
                     <ul>
                         <li ng-repeat="rules in ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].rules.points">{{rules}}</li>
                     </ul>
                 </div>
-                <div class="midContentsDiv" ng-if="ctrl.show == 3" >
+                <div ng-class="ctrl.horizontalMidDiv == 8 ? 'workshop-bigMidContentsDiv' : 'midContentsDiv'" ng-if="ctrl.show == 3" >
+                    <h5 ng-if="ctrl.centreDiv.genreId == 0 && ctrl.horizontalMidDiv == 8" style="text-align: center">TOPICS:</h5>
+                    <h5 ng-if="ctrl.centreDiv.genreId == 2 && ctrl.horizontalMidDiv == 0">THEME:</h5>
                     <ul>
                         <li ng-repeat="format in ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].format.rounds">{{format}}</li>
                     </ul>
@@ -63,7 +65,7 @@
                 <div class="midDivNavRing" ng-init="ctrl.enableClick()" ng-hide="ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 5 || ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 6">
                     <i class="fa fa-file-text fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.show = 1" data-toggle="tooltip" data-placement="left" title="Description" style=" cursor: hand; cursor: pointer"
                     ng-style="ctrl.show == 1 && {'color' : '#00bcd4'} || {}"></i><br>
-                    <i class="fa fa-gavel fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.show = 2" data-toggle="tooltip" data-placement="left" title="Rules" style=" cursor: hand; cursor: pointer"
+                    <i class="fa fa-gavel fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.showRules()" data-toggle="tooltip" data-placement="left" title="Rules" style=" cursor: hand; cursor: pointer"
                        ng-style="ctrl.show == 2 && {'color' : '#00bcd4'} || {}"></i><br>
                     <i class="fa fa-pencil fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.show = 3" data-toggle="tooltip" data-placement="left" title="Format" style=" cursor: hand; cursor: pointer"
                        ng-style="ctrl.show == 3 && {'color' : '#00bcd4'} || {}"></i><br>
@@ -71,7 +73,7 @@
                        ng-style="ctrl.show == 4 && {'color' : '#00bcd4'} || {}"></i>
                     <br>
                 </div>
-                <div id="bottomDiv" class=mainMidBottomDiv>{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].name}}</div>
+                <div id="bottomDiv" ng-class="ctrl.horizontalMidDiv == 8 ? 'workshop-bigMainMidBottomDiv' : 'mainMidBottomDiv'">{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].name}}</div>
             </div>
         </div>
     </div>

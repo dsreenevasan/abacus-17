@@ -90,11 +90,11 @@
 
                  MainService.RegisterSA(saObj).then(function(response){
                      if(response.status == 200){
-                         if(response.data != 404){
+                         if(response.data == "done"){
                             toaster.pop("success", "Success", "Registration Successful", 3000);
                          }
                          else{
-                            toaster.pop("error", "Error", "Error Registering", 3000);
+                            toaster.pop("info", "", "You have already registered as Student Ambassador", 4000);
                          }
                      }
                      else{

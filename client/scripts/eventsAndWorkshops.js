@@ -5,9 +5,9 @@
         .module('abacus')
         .controller('EventsAndWorkshopsController', EventsAndWorkshopsController);
 
-    EventsAndWorkshopsController.$inject = ['$state', '$compile', '$scope', '$window', '$uibModal'];
+    EventsAndWorkshopsController.$inject = ['$state', '$compile', '$scope', '$window'];
 
-    function EventsAndWorkshopsController($state, $compile, $scope, $window, $uibModal){
+    function EventsAndWorkshopsController($state, $compile, $scope, $window){
 
         var ctrl = this;
         ctrl.divPosition = 0; //for horizontal div movement
@@ -54,7 +54,7 @@
                     format: {rounds: ["Pen and paper round that contains questions related to Unix,Linux. Question pattern consists of both MCQ and short answers.",
 				"Surprise Hacking Event based on Linux/Unix. No sudo access and Internet access provided."]},
                     contact: [
-                        "Prabhakaran - 7200210789",
+                        "Prabhakaran  - 7200210789",
                         "Ilanchelian - 9445171664"
                     ],
                     image: "../images/events/tech/nix.jpg"},
@@ -69,7 +69,7 @@
                 "Suresh - 9444136901",
                     "Muthu Nagappan - 9445811755",
                     "Vishvesh Thangamani - 9195693399" ,
-                    "Tamizh Vendhan - 7299802300"],
+                    "Tamilvendan - 7299802300"],
                 image: "../images/events/tech/ospc.jpg"},
                 { id: 3, name: "Debugging",
                     description: "'To err is to be human' goes the saying.'<br><br>" +
@@ -81,7 +81,7 @@
                     contact: [
                         "Arjundhanraj - 7598306818",
                         "Sakthiprasath - 8110010630",
-                        "Mahmood Sultan - 8807777901"
+                        "Sultan - 8807777901"
                     ],
                     image: "../images/events/tech/debugging.jpg"},
                 { id: 4, name: "DBmania",
@@ -92,8 +92,8 @@
                     format: {rounds: ["Basic Questions on Database. (40 Questions)", "You will be given a schema and asked to build schema diagram ,queries, triggers, functions and procedures."]},
                     contact: [
                         "Arun - 8124267121",
-                        "Gowri Shankar - 8903462709",
-                        "Muthu Thillai Natarajan - 9655883077"
+                        "Gowrishankar - 8903462709",
+                        "MuthuThillai - 9655883077"
                     ],
                     image: "../images/events/tech/db_mania.jpg"},
                 { id: 5, name: "Game of Nerds",
@@ -135,7 +135,7 @@
                     contact: [
                         "Manojkumar - 9597250572",
                     "Harini - 9444850785",
-                    "Shruthi - 9944263196",
+                    "Sruthi - 9944263196",
                     "Makisha - 9629078175"
                     ],
                     image: "../images/events/tech/reverse_coding.jpg"},
@@ -148,14 +148,14 @@
                     "Develop a website using these. 1.  Google Maps API. 2.  Use any database using any backend language. 3.  encoding / decoding"]},
                     contact: [
                         "Vagul - 9789117799",
-                        "Durai Sreenevasan - 9894543958"
+                        "Durai Sreenevasan- 9894543958"
                     ],
-                    image: "../images/events/tech/webaholic.jpg"},
+                    image: "../images/events/tech/ospc.jpg"},
                 { id: 9, name: "‘RE’PRESENT DESCRIPTION",
                     description: "How harmful can an idea be?Harmful?! <br>" +
                     "Yes, an idea can get as  infectious as a parasite. It grows on you till it completely numbs your senses, waiting for you to crystallize it to something tangible and worthy.<br>" +
                     "What if you are that person who has something so good of an idea that you are willing to put it to words?(Transforming it into a paper that has chances to be recognized by the biggest of conferences?)<br>" +
-                    "We can sense your heart rate rising already. Here is Abacus, presenting to you “Represent” an event where you get to flaunt your best,original ideas,(articulated into a paper), giving it the platform needed to be recognized by the brightest minds everywhere.<br><br>" +
+                    "We can sense your heart rate rising <alread></alread>y. Here is Abacus, presenting to you “Represent” an event where you get to flaunt your best,original ideas,(articulated into a paper), giving it the platform needed to be recognized by the brightest minds everywhere.<br><br>" +
                     "<b>Send your abstract to paperpresentation@abacus.org.in on or before March 20</b>",
                     rules: {points: ["Send your abstract to paperpresentation@abacus.org.in on or before March 20",
                         "Each team can have a maximum of 3 members.",
@@ -173,10 +173,10 @@
                         "Cloud computing(healthcare)",
                         "Artificial Intelligence in machines."]},
                     contact: [
-                        "Nivedhitha - 8870401260",
-                        "Loshmitha - 8870884010"
+                        "Nivedhitha.N - 8870401260",
+                        "Loshmitha.N - 8870884010"
                     ],
-                    image: "../images/events/tech/represent.jpg"},
+                    image: "../images/events/tech/ospc.jpg"},
                 { id: 10, name: "Mr or Ms Geek",
                     description: "Shyness is about the fear of social judgments - at a job interview you might be excessively worried about what people think of you.<br> Face your fears, your fear will get destroyed. Come try out the mock interview sessions at Abacus and get the real experience of an interview. Find your flaws, improve,strive harder and succeed!<br>",
                     rules: {points: ["The particpants must have a valid aBaCus id.",
@@ -188,8 +188,8 @@
                         "Round 2: Technical aptitude",
                         "Round 3: Face to face interview"]},
                     contact: ["Neeharika -  9566179068"],
-                    image: "../images/events/tech/geek.jpg"}],
-            marginValue: [-45, -35, -25, -15, 4, 45, 83, 105, 115, 125], margins :['-45vw', '-35vw', '-25vw', '-15vw', '4vw', '45vw', '83vw', '105vw', '115vw', '125vw']},
+                    image: "../images/events/tech/ospc.jpg"}],
+            marginValue: [-35, -25, -15, 4, 45, 83, 105, 115, 125], margins :['-35vw', '-25vw', '-15vw', '4vw', '45vw', '83vw', '105vw', '115vw', '125vw']},
             {genreId: 2, genre: "General", events: [
                 {id: 1, name: "math.h",
                     description: "What is more fun than a good play with numbers?<br>"+
@@ -210,17 +210,20 @@
                                     "Completing the task on time is mandatory to win a coupon.", "In case of any discrepancy the organizer's decision is final."]},
                     format: {rounds:["The wheel has to be spun and correspondingly tasks are to be completed by the participant", "The tasks would be revealed only on the day of the event"]},
                     contact: ["Jenifer    9790718543"],
-                    image: "../images/events/spin.jpg"},
+                    image: "../images/events/quiz.jpg"},
                 {id: 3, name: "Abacus General Quiz",
                     description: "He who questions,thinks. He who answers,knows. For all the thinkers and knowers,welcome to Abacus General Quiz. Come surprise us with your general awareness of stuff in this single round of quizzing, which will include questions from current affairs to science. Much prizes to be won. Top first-year only teams would bag a definite prize.(P.S: No questions will be asked about soppana sundari :P)",
                     rules: {points:["The teams could consist of two or three members.", "Lone wolves are expected to be social enough to form a team."]},
                     format: {rounds:["The teams would have to answer a single round of general quiz consisting of 40 questions", "Tie breaking would be done on the basis of starred questions"]},
                     contact: ["Prasath 94879 69618"],
-                    image: "../images/events/gen_quiz.jpg"},
+                    image: "../images/events/gaming.jpg"},
                 {id: 4, name: "Finding Nemo",
                     description: "Calling all 007’s, Sherlocks and Langdons! Do you have what it takes to decipher some of the hardest enigmas and explore unchartered territories? Like Marlin and Dory, can you connect the dots and locate Nemo? If you think you can crack and track your way out of this labyrinth, then this is your arena!",
-                    rules: {points:["Teams of three only", "Decision by the organisers are final",
-                        "Use of Google will be selectively allowed", "Violation of any or all of the above rules will lead to instant disqualification"]},
+                    rules: {points:["Teams of three only",
+				"Decision by the organisers are final",
+				"Use of Google will be selectively allowed",
+				"Violation of any or all of the above rules will lead to instant disqualification"
+]},
                     format: {rounds:["Will be updated soon"]},
                     contact: ["Keerthana - 9042389902"],
                     image: "../images/events/general/selfie_hunt.jpg"},
@@ -235,7 +238,7 @@
                     format: {rounds:["20 questions to be solved in 30 minutes. Top 8 scorers progress to the final stage",
                         "8 teams. Each team will have a specific franchise. Real Auction with a purse of a specific amount which you can use to pick your team. Further rules will be announced on spot"]},
                     contact: ["Prasanna - 9003222748"],
-                    image: "../images/events/tech/apl.jpg"},
+                    image: "../images/events/tech/cyber_wars.jpg"},
                 {id: 6, name: "Housefull",
                     description: "Projects...Internals..Lab_Sem... still stressed? <br>" +
                     "So to get out of these pressures, here comes completely fun- packed event for you. The event is mainly focused on cricket, cinema and other entertaining stuff.",
@@ -243,7 +246,7 @@
                         "The judge's’ decision would be binding and final."]},
                     format: {rounds:["Round 1 will be pen and paper round with 25 questions.",
                         "Round 2 and 3 will be logical and fun!"]},
-                    contact: ["Pradeepa - 9698111129", "Vishnu Piriya - 8526925200"],
+                    contact: ["Pradeepa     9698111129", "Vishnu Priya	8526925200"],
                     image: "../images/events/general/house_full.jpg"},
                 {id: 7, name: "FANDOM QUIZ",
                     description: "'We are here to see koothrapaali...Not kill batman!'<br>" +
@@ -257,31 +260,8 @@
                     format: {rounds:["The First Round will be Written Round with built-in Tie Breakers.",
                         "Based on Scores, Top 8 Teams qualify for the Finals."]},
                     contact: ["Sukin Kumar - +919944513445", "Makesh Narsimhan - +919445657670", "Krishna Anandan - +919629138856"],
-                    image: "../images/events/fandom_quiz.jpg"},
-                {id: 8, name: "GAMINDROME",
-                    description: "Tired of all the technical buzz going around you at aBaCus?<br>" +
-                    "Are you also that gaming freak who just can't survive without laying your fingers on your PlayStation?<br>" +
-                    "Then this is the place for you!<br>" +
-                    "Come and forget yourself in the virtual world of games. Discover joy as you toggle with the joystick with that plastered grin all day long!<br>" +
-                    "Let us know if the gamer inside you is satisfied later. ",
-                    rules: {points:["The decision of the judges is binding and final.",
-                        "All participants must have a valid Abacus Id."]},
-                    format: {rounds:["Format would be revealed only on the day of Abacus :P (24th March)"]},
-                    contact: ["Mugilan - 81898 91645"],
-                    image: "../images/events/gamindrome.jpg"},
-                {id: 9, name: "Randomise",
-                    description: "Be weird, be random be who you are!<br>" +
-                    "This event is here to test your thinking, your acting and your creativity! Find connections, act and enact.<br>" +
-                    "Come and have a gala time at aBaCus 17. Unleash your potential, have fun!<br>",
-                    rules: {points:["All the particiapants must have a valid Abacus Id.",
-                        "The judges' decision will be binding and final.",
-                        "Teams could consist of two or three members."]},
-                    format: {rounds:["Round 1: Connections -30 mins 25 questions and no negative marks",
-                        "Round 2:Silence Speaks - 1 min per act",
-                        "Round 3:Channel Surfing -5 mins per team"]},
-                    contact: ["Karishma - 91764 89785"],
-                    image: "../images/events/randomise.jpg"}],
-                marginValue: [-35, -25, -15, 3, 45, 83, 105, 115, 125], margins :['35vw', '-25vw', '-15vw', '4vw', '45vw', '83vw', '105vw', '115vw', '125vw']},
+                    image: "../images/events/gaming.jpg"}],
+                marginValue: [-25, -15, 3, 45, 83, 105, 115], margins :['-25vw', '-15vw', '4vw', '45vw', '83vw', '105vw', '115vw']},
                 /*marginValue: [-15, 3, 45, 83], margins :[ '-15vw', '4vw', '45vw', '83vw']},*/
             {genreId: 3, genre: "Night Events", events:
                 [{id: 1,
@@ -289,12 +269,11 @@
                     description: "It is said, if you give a toy to a hacker, the first thing he will do is take it apart. If you are the kind of person who loves to take a challenge head-on, Abacus has for you the perfect concoction of code, caffeine and complete frenzy - Hackathon 2017. Built to provoke the coder inside you, the Hackathon will force you to your limits rob you of your sleep, but the excitement will be worth it.<br><br>" +
                     "So eat, code repeat!",
                     rules: {points:["This is a team participation hackathon. You must have exactly 4 members in your team.",
-                        "The hackathon will start at 24-03-2017 hh:mm and end at 25-03-2017 hh:mm, you work on your hack during the allotted time only.",
-                        "It's a physical hackathon, the venue is College of Engineering Guindy, Anna University, Chennai-25.",
+                        "The hackathon will start at 24-03-2017 09:30p.m  and end at 25-03-2017 08:00a.m, you work on your hack during the allotted time only.",
+                        "It's an on-site hackathon, the venue is College of Engineering Guindy, Anna University, Chennai-25.",
                         "You are expected to come up with new and innovative ideas, any idea that has been copied from somewhere will be disqualified.",
                         "More weightage will be given to idea of your application and execution practices used to achieve the desired goal.",
                         "Your hack must be developed entirely during the Hackathon duration. You may use open source libraries and other freely available systems / services such as Google Maps, Facebook Connect, Twitter feeds etc."]},
-                    /*rules: {points: ["Will be updated soon"]},*/
                     format: {rounds:["Jot down all problems you want to crack. Choose the one that you can in the next 24 hours and Get Set Go! You are supposed to design and build your idea. The submission product can be Web app, Android, Windows, Gaming App or anything creative enough that you consider will win this Hackathon."]},
                     contact: ["Renga Bashyam 	7598010654",
                         "Bharath Bhargav	9787975416",
@@ -314,15 +293,15 @@
                 {id: 2, name: "The Beautiful Mind",
                     description: "This event consists of tricky questions and you have the answer them, simple as that. But here's comes the crux: You'll need to write code to find the answer, such are the questions. Lengthy calculations and complex answers are things humans little patience with. After all, that's what computers were made for, weren't they?",
                     rules: {points:["All participants must have a valid Abacus ID.",
-                        "Be Choosy. The questions carry different weightage",
-                        "Only the beholder decides the beauty of your mind. So please don't expect a score board while the event is going on!",
-                        "Any number of attempts could be taken to answer a question. But the final answer submitted would be taken for consideration.",
+			"Be Choosy. The questions carry different weightage",
+			"Only the beholder decides the beauty of your mind. So please don't expect a score board while the event is going on!",
+			"Any number of attempts could be taken to answer a question. But the final answer submitted would be taken for consideration.",
                         "Only individual participation is allowed."]},
                     format: {rounds:["A single round of 20 questions"," The event would go on from 9pm to 10.30pm on March 19,2017"]},
                     contact: ["Renga Bashyam - 7598010654",
                         "Bharath Bhargav - 9787975416",
                         "Sankara Narayanan - 9488119314"],
-                    image: "../images/events/online/tbm.jpg"},
+                    image: "../images/events/online/davinci_code.jpg"},
                 {id: 3, name: "Da Vinci Code",
                     description: "Clues, links and puzzles excite you more than anything else. Join the online treasure hunt event by aBaCUs and prove your dexterity and persistence. With the little information you're given, only your intellect and wisdom will help you solve the DaVinci Code.",
                     rules: {points:["Will be updated soon"]},
@@ -339,8 +318,8 @@
                         "Plagiarism if found might lead to disqualification."]},
                     format: {rounds: ["The photographs must be sent to infocus@abacus.org.in",
                         "The last date for submitting the entries is 22 March,2017"]},
-                    contact: ["Manish - 8220653574"],
-                    image: "../images/events/infocus.jpg"}/*
+                    contact: ["Manish 82206 53574"],
+                    image: "../images/events/ospc.jpg"}/*
                 {id: 4, name: "Scribble Away",
                     image: "../images/events/paper.jpg"},
                 {id: 5, name: "ROS",
@@ -501,29 +480,6 @@
 
         ctrl.check = function () {
             console.log("ppp");
-        };
-
-        ctrl.showRules = function(){
-            if(ctrl.centreDiv.genreId == 2 && ctrl.horizontalMidDiv == 0){
-                console.log("pp");
-                var modalInstance = $uibModal.open({
-                    templateUrl: '../views/hackathon_rules.html',
-                    backdrop: true,
-                    size: 'md',
-                    windowTopClass: 'modal-margin',
-                    resolve: {
-
-                    }
-                });
-                modalInstance.result.then(function (selectedItem) {
-
-                }, function () {
-
-                });
-            }
-            else{
-                ctrl.show = 2;
-            }
         };
 
         $(document).ready(function(){

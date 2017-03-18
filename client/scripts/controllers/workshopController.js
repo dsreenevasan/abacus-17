@@ -11,7 +11,7 @@
         var ctrl = this;
         ctrl.divPosition = 0; //for horizontal div movement
         ctrl.verticalDivPosition = 0; //for vertical div movement
-        ctrl.show = 1;
+        ctrl.show = 2;
         ctrl.isMobile = false;
         ctrl.showOverlay = true;
         ctrl.loggedIn = false;
@@ -58,28 +58,39 @@
             {genreId: 1, genre: "Workshops", events: [
                 {id: 1, name: "HOW TO DO WEB DEVELOPMENT WITH REACT [FRONT END FRAMEWORK]",
                     description: "'Websites should look good from the inside and out.' ― Paul Cookson<br><br>" +
-                        "How many times you check out the website of any entity before judging it? Quite obviously the front runners for any business, websites are quintessential. Developing such a superpower requires smart skills and creative thinking. The workshop agenda is to transform anyone with absolute zero knowledge on the domain to be a creator of a unique design. REACT helps you to create an efficient UI, and the workshop, will help to create an efficient Web Developer. ",
-                    contact: "Will be updated soon",
+                        "How many times you check out the website of any entity before judging it? Quite obviously the front runners for any business, websites are quintessential. Developing such a superpower requires smart skills and creative thinking. The workshop agenda is to transform anyone with absolute zero knowledge on the domain to be a creator of a unique design. REACT helps you to create an efficient UI, and the workshop, will help to create an efficient Web Developer. <br><br>",
+                    info: {date: "24 March 2017 - 9.30am - 6pm", fee: "600", members: "Members per team - 1"},
+                    contact: ["Faizaan - 96001 03058"],
                     image: "../images/workshop/3.jpg"},
                  {id: 2, name: "HOW TO BUILD YOUR OWN FITBIT [FITNESS TRACKER]",
                      description: "'The best project you’ll ever work on is YOU' -Ella Wright<br><br>" +
                         "Fitness is what makes a human healthy. You eat, you exercise, you play and you strive hard to keep yourself fit. With the right fitness tracker, you can monitor how fit you are and what you have to do to reach your goals, from shedding the extra kilos to developing a sculpted body. Develop your own personalized FITBIT to become your own trainer who would never let you down. ",
+                     info: {date: "24 March 2017 - 9.30am - 5pm", fee: "3000", members: "Members per team - 5 (Fee is for the entire team)"},
+                     contact: ["Ramya - 99622 56441"],
                      image: "../images/workshop/6.jpg"},
                 {id: 3, name: "HOW TO BUILD YOUR OWN AMAZON.COM [ECOMMERCE DEVELOPMENT]",
                     description: "'If you make a customer unhappy, they won’t tell five friends, they’ll tell 5,000 friends. So we are at a point now where we have all of the things we need to build an important and lasting company, and if we don’t, it will be shame on us.' -	Jeff Bezos, CEO Amazon<br><br>" +
                     "Gone are the days when people go shopping and bring back bags of goods. With one click, you find the world’s best deals and options to choose from. The e-commerce industry is a force that no one can ignore. Come and learn about building an e-commerce site to transform yourself to an entrepreneur altogether!",
+                    info: {date: "25 March 2017 - 9.30am - 5pm", fee: "600", members: "Members per team - 1"},
+                    contact: ["Aswin - 84894 56000"],
                  image: "../images/workshop/1.jpg"},
                  {id: 4, name: "HOW TO ENHANCE THE REAL WORLD: AUGMENTED REALITY WORKSHOP",
-                     description: "'Why shouldn’t people be able to teleport wherever they want?' -Palmer Lucky, Founder of Oculus VR<br><br>" +
-                     "It’s quite sad we all missed our letters from Hogwarts. True that it does not exist, we still want   a magical world where we shape things, dream with our eyes wide open. Alternate realities exist when you are skilled enough to build your own versions, from flying dragons and unicorns to a whole new planet with ultra-cool gadgets and gizmos. Become the creator by learning the fundamentals of Augmented Reality!",
+                     description: "Reality is merely an illusion, albeit a very persistent one. --ALBERT EINSTEIN <br><br>" +
+                     "So why don't we add more illusions to go with it? Most of us are still waiting to study in Hogwarts, check out the King's Landing or explore with elves in Rivendell. Instead of wishing to visit dream worlds, why not bring the dreams, into our world? Fight dragons, chase the snitch, duel with swords, in your college. Or simply, bring Potter or Batman home for a chat. Merge your world seamlessly with your favorite fantasies. Better still, merge them to create architectural wonders, navigate a jungle or simply try out new makeup. If you have the big dreams, we have the techies to guide you. Be there, to build a better reality!",
+                     info: {date: "25 March 2017 - 9.30am - 5pm", fee: "500", members: "Members per team - 1"},
+                     contact: ["Uma Maheshwari - 95669 95021"],
                  image: "../images/workshop/5.jpg"},
-                 {id: 5, name: " LINUX",
+                 {id: 5, name: "LINUX",
+                     contact: ["Faizaan - 96001 03058"],
                      description: "Linux is user friendly.<br> It’s just picky about who its friends are!<br>" +
                      "It’s free, it’s open source, it’s secure and let’s just be honest, it’s cool! <br>Probably the best thing about Linux is the Linux community. <br>You will never feel alone in Linux world. Join with the rest of the geeks squad to become proficient in Linux.",
+                     info: {date: "24 March 2017 - 9.30am - 3pm", fee: "300", members: "Members per team - 1"},
                  image: "../images/workshop/4.jpg"},
-                {id: 6, name: " MACHINE LEARNING",
+                {id: 6, name: "MACHINE LEARNING",
                     description: "'Computers used to not be able to see very well, and now they’re starting to open their eyes' –Jeff Dean, Senior Fellow, Google<br><br>" +
                         "The self-driving Google car, cyber fraud detection, friend recommendations on Facebook, movie recommendations on Netflix, recommendations from Amazon web search results, real-time ads on web pages and mobile devices, email spam filtering, pattern and image recognition – are all by-products of applying machine learning in the analysis of huge volumes of data. In short, ML is simply making computers behave like they do in the movies  As the hottest model in the technology industry and an upcoming revolutionary altogether, knowledge about Machine learning is nothing less than a basic need for all computer nerds. Come and learn, and we sure won’t let you down!",
+                    info: {date: "25 March 2017 - 9.30am - 6pm", fee: "600", members: "Members per team - 1"},
+                    contact: ["Sreenidhi - 99438 17406", "RamKumar Easwari - 94425 87788"],
                     image: "../images/workshop/2.jpg"}],
                 /*marginValue: [-15, 4, 45, 83, 105], margins :['-15vw', '4vw', '45vw', '83vw', '105vw']*/
                 marginValue: [-25, -15, 4, 45, 83, 105], margins :['-25vw', '-15vw', '4vw', '45vw', '83vw', '105vw' ]},
@@ -100,7 +111,7 @@
         ctrl.move = function(key){
             if(key.keyCode === 39){      //right
                 resetAnimation();
-                ctrl.show = 1;
+                ctrl.show = 2;
                 if(ctrl.horizontalMidDiv === 0){
                     ctrl.horizontalMidDiv = ctrl.eventDetails[ctrl.centreDiv.genreId].events.length;
                 }
@@ -109,7 +120,7 @@
                 console.log("div position" + ctrl.divPosition);
             }
             else if(key.keyCode === 37){  //left
-                ctrl.show = 1;
+                ctrl.show = 2;
                 resetAnimation();
                 ctrl.horizontalMidDiv = (ctrl.horizontalMidDiv+1) % ctrl.eventDetails[ctrl.centreDiv.genreId].events.length;
                 if(ctrl.divPosition === 0){

@@ -84,7 +84,7 @@
         'fullPage.js',
         'swipe',
         'ui.bootstrap',
-        'vcRecaptcha',
+        /*'vcRecaptcha',*/
         'ngSanitize'
     ]);
     /*.run(

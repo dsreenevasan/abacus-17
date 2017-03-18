@@ -55,20 +55,28 @@
         <div class="mainMidDiv" ng-swipe-up="ctrl.change(38)" ng-swipe-down="ctrl.change(40)" ng-swipe-left="ctrl.change(37)" ng-swipe-right="ctrl.change(39)"
              style="background-image: url({{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].image}}); background-size: 100% 100%">
             <div class="mainInnerDiv">
-                <div ng-class="ctrl.horizontalMidDiv == 5 ? 'workshop-bigMidContentsDiv' : 'workshop-midContentsDiv'" ng-if="ctrl.show == 1" ng-bind-html="ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].description"></div>
+                <div ng-class="ctrl.horizontalMidDiv == 3 || ctrl.horizontalMidDiv == 5 || ctrl.horizontalMidDiv == 2 ? 'workshop-bigMidContentsDiv' : 'workshop-midContentsDiv'" ng-if="ctrl.show == 1" ng-bind-html="ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].description">
+                </div>
                 <div class="workshop-midContentsDiv" ng-if="ctrl.show == 3">
                     <ul>
                         <li ng-repeat="contact in ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].contact">{{contact}}</li>
                     </ul>
                 </div>
+                <div class="workshop-midContentsDiv" ng-if="ctrl.show == 2">
+                    Date : {{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].info.date}}<br>
+                    Fees: Rs.{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].info.fee}}<br>
+                    {{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].info.members}}
+                </div>
                 <div class="midDivNavRing" ng-hide="ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 3 || ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 5 || ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 6">
                     <i class="fa fa-file-text fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.show = 1" data-toggle="tooltip" data-placement="left" title="Description" style=" cursor: hand; cursor: pointer"
                     ng-style="ctrl.show == 1 && {'color': '#f97340'} || {}"></i><br>
+                    <i class="fa fa-gavel fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.show = 2" data-toggle="tooltip" data-placement="left" title="Info" style=" cursor: hand; cursor: pointer"
+                       ng-style="ctrl.show == 2 && {'color': '#f97340'} || {}"></i><br>
                     <i class="fa fa-phone fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.show = 3" data-toggle="tooltip" data-placement="left" title="Contact" style=" cursor: hand; cursor: pointer"
                        ng-style="ctrl.show == 3 && {'color': '#f97340'} || {}"></i><br>
                     <i class="fa fa-pencil fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.registerWorkshop()" data-toggle="tooltip" data-placement="left" title="Register" style=" cursor: hand; cursor: pointer"></i><br>
                 </div>
-                <div id="bottomDiv" style="font-weight: 900" ng-class="ctrl.horizontalMidDiv == 5 || ctrl.horizontalMidDiv == 4 ? 'workshop-bigMainMidBottomDiv' : 'workshop-mainMidBottomDiv'">{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].name}}</div>
+                <div id="bottomDiv" style="font-weight: 900" ng-class="ctrl.horizontalMidDiv == 5 || ctrl.horizontalMidDiv == 4 ? 'workshop-bigMainMidBottomDiv' : 'workshop-mainMidBottomDiv'">&nbsp;&nbsp;{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].name}}</div>
             </div>
         </div>
     </div>

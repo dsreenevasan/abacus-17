@@ -18,7 +18,7 @@
 
         function BaseURI()
         {
-            return "http://"+server.wedo;
+            return "https://"+server.wedo;
         }
 
     }

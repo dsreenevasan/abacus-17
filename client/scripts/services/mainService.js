@@ -16,6 +16,9 @@
         service.Register = Register;
         service.RegisterWorkshop =RegisterWorkshop;
         service.RegisterSA = RegisterSA;
+        service.GetUserDetails = GetUserDetails;
+        service.GetColleges = GetColleges;
+        service.UpdateUser = UpdateUser;
 
         return service;
 
@@ -37,6 +40,18 @@
 
         function RegisterSA(params) {
             return $http.post(ConfigService.BaseURI() + '/sa_reg.php', params).then(handleSuccess, handleRemoteError);
+        }
+
+        function UpdateUser(params) {
+            return $http.post(ConfigService.BaseURI() + '/update.php', params).then(handleSuccess, handleRemoteError);
+        }
+
+        function GetUserDetails(params) {
+            return $http.get(ConfigService.BaseURI() + '/details.php', params).then(handleSuccess, handleRemoteError);
+        }
+
+        function GetColleges(params) {
+            return $http.get("https://gist.githubusercontent.com/dsreenevasan/c50f6e62ce911e3d22413a34182c542f/raw/colleges.json").then(handleSuccess, handleRemoteError);
         }
 
         function handleRemoteError(data) {
