@@ -1,0 +1,368 @@
+<div class="container" ng-controller="MainController as ctrl" style="height: 1000px; width: 100%; padding: 0 0 0 0;">
+	<!--<div id="header">
+		<label> logo and nav bar comes here</label>
+		<button class="btn btn-info" style="float: right; margin: 1% 10% 0 0 " ng-click="ctrl.stateChange('sample')">Events</button>
+		<button class="btn btn-info" style="float: right; margin: 1% 10% 0 0 " ng-click="ctrl.stateChange('login')">Login</button>
+
+		<!--<snap-content  ng-style="ctrl.maxWidth == 0 && {'color': '#f5f5f5', 'margin': '100% 0 0 1%', 'font-size': 'x-large'} || {'color': '#f5f5f5', 'margin': '0% 0 0 15%', 'font-size': 'x-large'}">
+
+		&lt;!&ndash;<snap-content  ng-style="ctrl.maxWidth == 0 && {'color': '#f5f5f5', 'margin': '100% 0 0 1%', 'font-size': 'x-large'} || {'color': '#f5f5f5', 'margin': '0% 0 0 15%', 'font-size': 'x-large'}">
+
+
+			<a ng-click="ctrl.displayNav()" >
+				<i ng-hide="ctrl.maxWidth != 0" class="fa fa-bars fa-2x" ></i>
+				<i ng-show="ctrl.maxWidth != 0" class="fa fa-times fa-2x" ></i>
+			</a>
+		</snap-content>&ndash;&gt;
+	</div>-->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<!--<img src="../images/test.png" style="height: 12vh; width: 4.90vw; margin: -1.5vh 0 0 -7vw; float: left">-->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only main-span">Toggle navigation</span>
+					<span class="icon-bar main-span"></span>
+					<span class="icon-bar main-span"></span>
+					<span class="icon-bar main-span"></span>
+				</button>
+				<a class="navbar-brand" ng-click="ctrl.resetFullpage()"  style="color: white; cursor: hand; cursor: pointer">aBaCuS '17</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a ng-click="ctrl.stateChange('events')" style="color: white; cursor: hand; cursor: pointer">Events</a></li>
+					<li><a style="color: white; cursor: hand; cursor: pointer" ng-click="ctrl.openModal('login', 'sm')">Login</a></li>
+					<li><a style="color: white; cursor: hand; cursor: pointer" ng-click="ctrl.openModal('register', 'md')">Register</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+	<!--<nav class="navbar navbar-default navbar-custom navbar-fixed-top" >
+		<div class="container-fluid">
+			&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand">aBaCuS'17</a>
+			</div>
+
+			&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+
+					<li><a ng-click="ctrl.stateChange('events')" style="color: black">Events</a></li>
+					<li><a ng-click="ctrl.openModal()" style="color: black">Login</a></li>
+					<li><a ng-click="ctrl.stateChange('register')" style="color: black">Register</a></li>
+					&lt;!&ndash;<li ng-repeat="title in ctrl.titles" ng-show="ctrl.dataLoaded">
+						<a ng-click="ctrl.scrollTo($index)">{{title}}</a>
+					</li>&ndash;&gt;
+					&lt;!&ndash;<li>
+                        <a href="http://frontend.cegtechforum.com/">FrontEnd</a>
+                    </li>&ndash;&gt;
+
+				</ul>
+			</div>
+			&lt;!&ndash; /.navbar-collapse &ndash;&gt;
+		</div>
+		&lt;!&ndash; /.container &ndash;&gt;
+	</nav>-->
+	<div class="bottomTransparentDiv">
+		<label style="float: left" class="footer">Copyright 2017 @ CSEA.<br> All rights reserved.</label>
+		<label style="float: right"class="footer">For further queries,<br> Contact <strong style="color: #f5f5f5">webteam@abacus.org.in</strong></label>
+	</div>
+	<div class="row" style="background: black">
+		<!--<div ng-class="{ 'column col-md-2' : ctrl.maxWidth != 0 , '' : ctrl.maxWidth == 0 }">
+			&lt;!&ndash;<snap-content  ng-style="ctrl.maxWidth == 0 && {'color': '#f5f5f5', 'margin': '15% 0 0 5%', 'font-size': 'x-large'} || {'color': '#f5f5f5', 'margin': '15% 0 0 10%', 'font-size': 'x-large'}">
+
+				<a ng-click="ctrl.displayNav()" >
+					<i ng-hide="ctrl.maxWidth != 0" class="fa fa-bars fa-2x" ></i>
+					<i ng-show="ctrl.maxWidth != 0" class="fa fa-times fa-2x" ></i>
+				</a>
+			</snap-content>&ndash;&gt;
+			<snap-drawers >
+				<snap-drawer ng-if="ctrl.navOpen" style=" height: 100vh;width: 100%; color: white;  z-index: 20">
+					<div style="height: 100px; background: blue; width: 100%"></div>
+					<nav ng-if="ctrl.navOpen" style="background: blue; height: 100vh; width: 100%; z-index: 20">
+						<ul class="nav-menu">
+							<li data-menuanchor="panelBlock1" class="active"><a href="index.html#panelBlock1">Home</a></li>
+							<li data-menuanchor="panelBlock2"><a href="index.html#panelBlock2">About Us</a></li>
+							<li data-menuanchor="panelBlock3"><a href="index.html#panelBlock3">Services</a></li>
+							<li data-menuanchor="panelBlock4"><a href="index.html#panelBlock4">Portfolio</a></li>
+							<li data-menuanchor="panelBlock5"><a href="index.html#panelBlock5">Our Team</a></li>
+							<li data-menuanchor="panelBlock6"><a href="index.html#panelBlock6">Contact Us</a></li>
+							<li><a href="#">Pages</a>
+								<ul>
+									<li><a href="about-us.html">About Us</a></li>
+									<li><a href="portfolio.html">Portfolio</a>
+										<ul>
+											<li><a href="portfolio-single01.html">Portfolio Single</a></li>
+										</ul>
+									</li>
+									<li><a href="blog.html">Blog</a>
+										<ul>
+											<li><a href="blog-single01.html">Blog Single</a></li>
+										</ul>
+									</li>
+									<li><a href="columns.html">Columns</a></li>
+									<li><a href="elements.html">Elements</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</snap-drawer>
+			</snap-drawers>
+		</div>-->
+		<div ng-class="{ 'column col-md-10' : ctrl.maxWidth != 0, 'column col-md-12' : ctrl.maxWidth == 0 }">
+
+			<div id="fullpage">
+				<div class="section " id="section0" style="height: 80vh">
+					<div class='city' style="zoom: 1.9; margin: -57.6vh 0 0 0">
+					<!--<div class='city' style="margin-left: 20vw">-->
+						<div class='landscape' style="margin: 0 0 0 -19.5vw">
+							<div class='inner'>
+								<div class='moon'></div>
+								<div class='cityscape'>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio1'></div>
+										<div class='radio2'></div>
+										<div class='radio3'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio1'></div>
+										<div class='radio4'></div>
+										<div class='radio3'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio1'></div>
+										<div class='radio5'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio7'></div>
+										<div class='radio2'></div>
+										<div class='radio8'></div>
+										<div class='radio5'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio4'></div>
+										<div class='radio5'></div>
+										<div class='radio6'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio7'></div>
+										<div class='radio2'></div>
+										<div class='radio8'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio9'></div>
+										<div class='radio10'></div>
+										<div class='radio2'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio1'></div>
+										<div class='radio4'></div>
+										<div class='radio6'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio7'></div>
+										<div class='radio10'></div>
+										<div class='radio2'></div>
+									</div>
+									<div class='building'  data-toggle="tooltip" data-placement="right" title="Events" ng-click="ctrl.stateChange('events')">
+										<div class='windows'></div>
+										<div class='radio7'></div>
+										<div class='radio10'></div>
+										<div class='radio2'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio7'></div>
+										<div class='radio2'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+										<div class='radio7'></div>
+										<div class='radio1'></div>
+										<div class='radio5'></div>
+									</div>
+									<div class='building'>
+										<div class='windows'></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='foreground' style="margin: 0 0 0 -19.5vw">
+							<div class='inner'>
+								<div class='welcome'>
+									<h1 class="main-h1">
+										Welcome to
+									</h1>
+									<h2 style="margin-top: -0.1vh">
+										<span class="main-span">aBaCuS</span>
+									</h2>
+								</div>
+								<!--<div class='trees'>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+								</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section" id="section1" style="height: 80vh " >
+
+					<div class="row aboutusdiv" >
+						<h1 class="main-h1"><span class="main-span">aBaCuS '17</span></h1>
+						<p class="main-p">aBaCuS, the national level technical symposium, conducted by CSEA primarily focuses on showcasing the skills of some of the best brains in the country.
+							aBaCuS, over the years has weaved a technical web, connecting smart minds in digital era, thus helping them unleash their expertness.
+							With an interesting array of events and workshops piled up, aBaCuS 2017 is all set to set trends</p>
+						<br>
+						<h1 class="main-h1"><span class="main-span">CSEA</span></h1>
+						<p class="main-p">aBaCuS, the national level technical symposium, conducted by CSEA primarily focuses on showcasing the skills of some of the best brains in the country.
+							aBaCuS, over the years has weaved a technical web, connecting smart minds in digital era, thus helping them unleash their expertness.
+							With an interesting array of events and workshops piled up, aBaCuS 2017 is all set to set trends</p>
+
+					</div>
+				</div>
+				<!--<div class="section" id="section2">
+					<div style="color: white; font-size: xx-large; padding: 5% 0 0 0; height: 80vh">
+						Page 3
+					</div>
+					<br>
+					&lt;!&ndash;<div class="row">
+						<div class="column col-md-4" style="height: 80vh; background: green;"></div>
+						<div class="column col-md-4" style="height: 80vh; background: yellow;"></div>
+						<div class="column col-md-4" style="height: 80vh; background: darkviolet;"></div>
+					</div>&ndash;&gt;
+					<div class="slide" id="slide1">
+						<div class="intro">
+							<h1 class="main-h1">Page for start up event</h1>
+						</div>
+					</div>
+
+					<div class="slide" id="slide2">
+						<h1 class="main-h1">Slide 2</h1>
+					</div>
+
+				</div>
+				<div class="section" id="section3">
+					contacts page is to be here
+				</div>-->
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	#header, #footer{
+		position:fixed;
+		height: 75px;
+		display:block;
+		width: 100%;
+		background: coral;
+		z-index:9;
+		/*text-align:center;*/
+		color: #f2f2f2;
+		padding: 0 0 0 0;
+	}
+
+
+</style>
+
+
+<script>
+
+	$(document).ready(function() {
+		// Transition effect for navbar
+		$(window).scroll(function() {
+			// checks if window is scrolled more than 500px, adds/removes solid class
+			if($(this).scrollTop() > 500) {
+				$('.navbar').addClass('solid');
+			} else {
+				$('.navbar').removeClass('solid');
+			}
+		});
+	});
+
+	//destroying
+	if($('html').hasClass('fp-enabled')){
+	    $.fn.fullpage.destroy('all');
+	}
+
+	$(document).ready(function () {
+		$('#fullpage').fullpage({
+			css3: true,
+			navigation: false,
+			navigationPosition: 'right',
+			keyboardScrolling: true,
+			controlArrows: true,
+			afterLoad: function(anchorLink, index){
+				// Section indexes in fullpage start at 1
+				/*if(index === $('#fullpage .section').length){
+					window.location.href = "http://stackoverflow.com";
+				}*/
+				console.log(index);
+				if(index>1)
+					$('.navbar').addClass('solid');
+				else
+					$('.navbar').removeClass('solid');
+			}
+		});
+
+
+	});
+
+</script>
