@@ -77,14 +77,16 @@
                  {id: 4, name: "HOW TO ENHANCE THE REAL WORLD: AUGMENTED REALITY WORKSHOP",
                      description: "Reality is merely an illusion, albeit a very persistent one. --ALBERT EINSTEIN <br><br>" +
                      "So why don't we add more illusions to go with it? Most of us are still waiting to study in Hogwarts, check out the King's Landing or explore with elves in Rivendell. Instead of wishing to visit dream worlds, why not bring the dreams, into our world? Fight dragons, chase the snitch, duel with swords, in your college. Or simply, bring Potter or Batman home for a chat. Merge your world seamlessly with your favorite fantasies. Better still, merge them to create architectural wonders, navigate a jungle or simply try out new makeup. If you have the big dreams, we have the techies to guide you. Be there, to build a better reality!",
-                     info: {date: "25 March 2017 - 9.30am - 5pm", fee: "500", members: "Members per team - 1"},
-                     contact: ["Uma Maheshwari - 95669 95021"],
+                     info: {date: "25 March 2017 - 9.30am - 5pm", fee: "300", members: "Members per team - 1"},
+                     contact: ["Umamaheswari - 95669 95021"],
                  image: "../images/workshop/5.jpg"},
                  {id: 5, name: "LINUX",
                      contact: ["Faizaan - 96001 03058"],
-                     description: "Linux is user friendly.<br> It’s just picky about who its friends are!<br>" +
-                     "It’s free, it’s open source, it’s secure and let’s just be honest, it’s cool! <br>Probably the best thing about Linux is the Linux community. <br>You will never feel alone in Linux world. Join with the rest of the geeks squad to become proficient in Linux.",
-                     info: {date: "24 March 2017 - 9.30am - 3pm", fee: "300", members: "Members per team - 1"},
+                     description: "Linux powers 96.6% servers in the world. With increasing focus on Cloud and cloud technologies, the need for Linux professionals is at an all time high.<br>" +
+                     "Knowledge of Linux guarantees you an evergreen job as a System Administrator / Systems Engineer / Cloud Architect / Cloud support engineer  Devops professional, and countless others. <br>"+
+		     "From Amazon to your humble lab in the Computer Science department, everyone needs Linux System professionals.<br>" + 
+		     "Come, learn the fundamentals of Linux, and let us set you on a path of learning Linux continuously, and the glorious duty of keeping the Web running.",
+                     info: {date: "24 March 2017 - 9.30am - 3pm", fee: "300", members: "Members per team - 1", info: "You will learn about the fundamentals of Linux, basic commands, SSH and will receive a command guide booklet. <br>No need to have any prior introduction to Linux in any manner.<br> Subject to strength, we will provide access to a Linux tutorial videos, for one month."},
                  image: "../images/workshop/4.jpg"},
                 {id: 6, name: "MACHINE LEARNING",
                     description: "'Computers used to not be able to see very well, and now they’re starting to open their eyes' –Jeff Dean, Senior Fellow, Google<br><br>" +

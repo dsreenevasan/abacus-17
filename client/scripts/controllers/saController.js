@@ -94,7 +94,7 @@
                             toaster.pop("success", "Success", "Registration Successful", 3000);
                          }
                          else{
-                            toaster.pop("info", "", "You have already registered as Student Ambassador", 4000);
+                            toaster.pop("info", "", "You have already registered as Student Ambassador", 3000);
                          }
                      }
                      else{

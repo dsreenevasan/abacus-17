@@ -1,5 +1,6 @@
 <div class="container" ng-controller="MainController as ctrl" style="height: 1000px; width: 100%; padding: 0 0 0 0;" id="main">
-	<toaster-container toaster-options="{'position-class': 'toast-top-center', 'close-button':true }"></toaster-container>
+	<toaster-container ng-if="!ctrl.right" toaster-options="{'position-class': 'toast-top-center', 'close-button':true }"></toaster-container>
+	<toaster-container ng-if="ctrl.right" toaster-options="{'position-class': 'toast-top-right', 'close-button':true }"></toaster-container>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<!--<img src="../images/test.png" style="height: 12vh; width: 4.90vw; margin: -1.5vh 0 0 -7vw; float: left">-->
@@ -286,6 +287,13 @@
 					<div class="slide" style="text-align: center; vertical-align: middle;">
 						<div class="intro">
 							<img src="../images/sponsors/ninjakart_logo.png">
+							<h1>Events sponsor</h1>
+						</div>
+					</div>
+
+					<div class="slide" style="text-align: center; vertical-align: middle;">
+						<div class="intro">
+							<img src="../images/sponsors/groupon_logo.jpg" height="75px" width="225px">
 							<h1>Events sponsor</h1>
 						</div>
 					</div>

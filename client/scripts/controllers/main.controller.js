@@ -5,8 +5,8 @@
     .module('abacus')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['$state', '$http', '$scope', '$window', 'toaster' ,'$uibModal','$document', 'MainService', '$cookieStore', '$uibModalStack'];
-  function MainController($state, $http, $scope, $window, toaster, $uibModal,$document, MainService, $cookieStore, $uibModalStack ){
+  MainController.$inject = ['$state', '$http', '$scope', '$window', 'toaster' ,'$uibModal','$document', 'MainService', '$cookieStore', '$uibModalStack', 'webNotification'];
+  function MainController($state, $http, $scope, $window, toaster, $uibModal,$document, MainService, $cookieStore, $uibModalStack, webNotification ){
 
 
     var ctrl = this;
@@ -18,27 +18,64 @@
     ctrl.phoneNumberNotValid = false;
     ctrl.passwordInvalid = false;
     ctrl.isSubmitting = false;
+    ctrl.right = false;
     ctrl.publicKey = "6LetiBcUAAAAAHEsMJERL8lZNkryc0EfYbhK8XVR";
     detect();
     checkCookies();
+    notification('Abacus17 schedule', 'Click to open the schedule', 'https://drive.google.com/file/d/0B16nUyywUnKPMEtiXzVVRXVoUUk/view');
+    /*routes();*/
+    schedule();
+    init();
 
-    ctrl.departments = [
-      "Aeronautical Engineering","Aerospace Engineering","Agricultural & Irrigation Engineering","Aircraft Maintenance Engineering","Animation","Apparel technology","Applied electronics","Applied Mathematics","Architecture","Automobile Engineering","Avionics","Bio Informatics","Bio Medical Engineering","Biotechnology","Ceramic Technology","Charted Accountancy","Chemical Engineering","Chemistry","Civil Engineering","Communication Systems","Computer Science & Engineering","Cryogenic Engineering","Elecrical Engineering","Electrical & Electronics Engineering","Electronic media","Electronics & Communication Engineering","Electronics & Instrumentation","Embedded Systems","Energy Engineering","Engineering Design","Engineering Physics","English Literature","Finance","Fluid Mechanics","Food Technology","Geo Informatics","Harbour Engineering ","High Voltage Engineering","Hospitality Administration","HR","Humanities & Social Sciences","Industrial Engineering","Information & Communications Technology","Information Technology","Internal Combustion Engineering","Logistics","M.Sc. CS-IT","M.Sc. E-Media","Manufacturing Engineering","Marine Engineering","Marketing","Material Science ","Mathematics","Mechanical Engineering","Mechatronics","Media Sciences","Metallurgy","Mining Engineering","Nano Science and Technology","Other","Photonics ","Physics","Printing Technology","Production Engineering","Remote Sensing","Software Engineering","Systems Engineering & Operations Research","Technology Managment","Telecommunication Engineering","Textile Technology","Theoretical Computer Science","Thermal","Transportation Engineering","VLSI Design","Other"
-    ];
+    function init() {
+      ctrl.departments = [
+        "Aeronautical Engineering","Aerospace Engineering","Agricultural & Irrigation Engineering","Aircraft Maintenance Engineering","Animation","Apparel technology","Applied electronics","Applied Mathematics","Architecture","Automobile Engineering","Avionics","Bio Informatics","Bio Medical Engineering","Biotechnology","Ceramic Technology","Charted Accountancy","Chemical Engineering","Chemistry","Civil Engineering","Communication Systems","Computer Science & Engineering","Cryogenic Engineering","Elecrical Engineering","Electrical & Electronics Engineering","Electronic media","Electronics & Communication Engineering","Electronics & Instrumentation","Embedded Systems","Energy Engineering","Engineering Design","Engineering Physics","English Literature","Finance","Fluid Mechanics","Food Technology","Geo Informatics","Harbour Engineering ","High Voltage Engineering","Hospitality Administration","HR","Humanities & Social Sciences","Industrial Engineering","Information & Communications Technology","Information Technology","Internal Combustion Engineering","Logistics","M.Sc. CS-IT","M.Sc. E-Media","Manufacturing Engineering","Marine Engineering","Marketing","Material Science ","Mathematics","Mechanical Engineering","Mechatronics","Media Sciences","Metallurgy","Mining Engineering","Nano Science and Technology","Other","Photonics ","Physics","Printing Technology","Production Engineering","Remote Sensing","Software Engineering","Systems Engineering & Operations Research","Technology Managment","Telecommunication Engineering","Textile Technology","Theoretical Computer Science","Thermal","Transportation Engineering","VLSI Design","Other"
+      ];
 
-    MainService.GetColleges().then(function (response) {
-      if(response.status == 200){
-        ctrl.colleges = response.data.colleges;
-      }
-      else{
-        toaster.pop("error", "Error", "Error loading college list", 3000);
-      }
-    });
-    /*ctrl.department = ctrl.departments[1];*/
+      MainService.GetColleges().then(function (response) {
+        if(response.status == 200){
+          ctrl.colleges = response.data.colleges;
+        }
+        else{
+          toaster.pop("error", "Error", "Error loading college list", 3000);
+        }
+      });
+      /*ctrl.department = ctrl.departments[1];*/
 
-    $(document).ready(function(){
-      $('[data-toggle="tooltip"]').tooltip();
-    });
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    }
+
+    function schedule() {
+      toaster.pop("info", "Info", "Check out the schedule @ https://drive.google.com/file/d/0B16nUyywUnKPMEtiXzVVRXVoUUk/view", 30000)
+    }
+
+    /*function routes() {
+      console.log("router");
+      ctrl.right = true;
+      toaster.pop("success", "Bus Route", "From koyambedu : M70, koyambedu to guindy, guindy to Anna university, Pondicherry buses.", 5000);
+      setTimeout(function () {
+        toaster.pop("success", "Bus Route", "From guindy : all Anna university buses.", 5000);
+      }, 50001);
+      setTimeout(function () {
+        toaster.pop("success", "Bus Route", "From egmore: Egmore to guindy Railway Station to Anna university.", 5000);
+      }, 100002);
+      ctrl.right = false;
+    }*/
+
+
+    function notification(title, body, link) {
+      webNotification.showNotification(title, {
+        body: body,
+        icon: '../images/test.png',
+        onClick: function onNotificationClicked() {
+          /*console.log('Notification clicked.');*/
+          $window.open(link);
+        },
+        autoClose: 15000
+      });
+    }
 
     function checkCookies() {
       if($cookieStore.get('userDetails')){

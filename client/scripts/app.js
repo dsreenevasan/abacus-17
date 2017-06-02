@@ -19,7 +19,7 @@
             state:
             {
                 url:'/events',
-                templateUrl: 'views/events.html?v=1',
+                templateUrl: 'views/events.html?v=2',
                 data: {
                     text: "Sample",
                     visible: false
@@ -51,11 +51,11 @@
             }
         },
         {
-            name: 'sa',
+            name: 'check',
             state:
             {
-                url:'/sa',
-                templateUrl: 'views/sa.html',
+                url:'/check',
+                templateUrl: 'views/login.html',
                 data: {
                     text: "Student Ambassador",
                     visible: false
@@ -63,13 +63,13 @@
             }
         },
         {
-            name: 'accommodation',
+            name: 'register',
             state:
             {
-                url:'/accommodation',
-                templateUrl: 'views/accomodation.html',
+                url:'/register',
+                templateUrl: 'views/register.html',
                 data: {
-                    text: "Accommodation",
+                    text: "register",
                     visible: false
                 }
             }
@@ -85,7 +85,8 @@
         'swipe',
         'ui.bootstrap',
         /*'vcRecaptcha',*/
-        'ngSanitize'
+        'ngSanitize',
+        'angular-web-notification'
     ]);
     /*.run(
      function($location) {
@@ -93,7 +94,7 @@
      }
      )*/
 
-    abacus.run(function($rootScope, $uibModalStack, $window, $location) {
+   /* abacus.run(function($rootScope, $uibModalStack, $window, $location) {
         $window.ga('create', 'UA-93008925-1', 'auto');
 
         // track pageview on state change
@@ -104,10 +105,10 @@
         $rootScope.$on('$locationChangeStart', function (event) {
             $uibModalStack.dismissAll();
         });
-    });
+    });*/
 
     abacus.config(function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/main');
+        $urlRouterProvider.otherwise('/register');
 
         angular.forEach(states, function (state) {
             $stateProvider.state(state.name, state.state);
