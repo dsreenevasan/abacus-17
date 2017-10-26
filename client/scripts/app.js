@@ -108,7 +108,7 @@
     });*/
 
     abacus.config(function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/register');
+        $urlRouterProvider.otherwise('/main');
 
         angular.forEach(states, function (state) {
             $stateProvider.state(state.name, state.state);
